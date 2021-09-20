@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="main-div">
+    <div class="main-service">
+        <div class="main-div " style="width: 60%;">
+            <div class="main-title-page">
+                Nos services
+            </div>
+        </div>
+        <div class="main-div" style="width: 60%;">
+            <p class="intro-main-div-service">
+                HBH gère vos projets de construction et répond aux besoins de ses clients, tant<br/>
+                en assistance au Maître d’Ouvrageque pour la gestion de la sécurité et la santé<br/>
+                des travailleurs. Nous proposons également d'autres services permettant le <br/>
+                bon déroulement de vos projets de construction.
+            </p>
+        </div>
+        </div>
+        <div class=" main-div-img-service">
+            <div class="main-div div-img-services div-img-services-man" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main img-services-main-man"  src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}">
+            </div>
+
+            <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})" >
+                <img class="img-services-main"  src="assets/img/secu.png">
+            </div>
+
+            <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main"  src="assets/img/securite.png">
+            </div>
+
+            <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main"  src="assets/img/labellisation.png">
+            </div>
+        </div>
+    </div>
+    <div class="div-elmt">
+    <div class="div-elmt-services-1"></div>
+    </div>
+    <div class="div-elmt-services-2 div-elmt">
+        <img class="elmt-services-2" src="{{ asset('assets/img/Nos_services_all/service-all_mains.png') }}"  />
+    </div>
+    <div class="main-div" style="color: white;background-color: #102242;">
+    <div class="div-other">
+        <div class="main-div" style="width: 60%;">
+            <div class="main-title-page">
+                Autres services
+            </div>
+        </div>
+        <div class="main-div" style="width: 60%;">
+            <div>
+            <p class="txt-other-bold">
+                HBH peut offrir à un Maître d'Ouvrage des services complémentaires à ceux de son core business en tant que nouveau
+                 partenaire ou en prolongation de sa mission initiale.
+            </p>
+            </div>
+            <div>
+            <p class="txt-other">
+                Elle assiste alors le Maître d'Ouvrage en amont de son projet de construction (étude de faisabilité et de
+                 rentabilité, détermination du programme, organisation de concours d'architecte ou d'urbanisme, audit
+                  énergétique de bâtiments existants) ou pendant le déroulement du projet de construction (seconde opinion)
+                  ou en aval du projet de construction (claim management).
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

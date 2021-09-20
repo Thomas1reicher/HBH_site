@@ -1,0 +1,150 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!--{{ include('_parts/fil.html.twig') }} -->
+<div class="div-main-actu">
+<div class="div-left-actu">
+    <div class="div-title-actu">
+        <h1 class="title-actu">Lorem ipsum dolor sit amet</h1>
+        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> 07-06-2021</span></p>
+    </div>
+    <div class="div-img-actu">
+        <img class="img-actu" src="{{ asset('assets/img/Nos_projets_single/exemple_projet.png') }}"/>
+    </div>
+    <div class="div-text-actu">
+        <p class="text-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Orci phasellus egestas tellus rutrum tellus pellentesque. Nibh tellus molestie nunc non blandit massa enim
+  nec. <br /><br />Et malesuada fames ac turpis. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Cras
+  pulvinar mattis nunc sed blandit. Id velit ut tortor pretium viverra. Sed elementum tempus egestas sed sed risus
+  pretium quam. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Orci phasellus egestas tellus rutrum tellus
+  pellentesque eu tincidunt tortor. <br /><br />Egestas integer eget aliquet nibh praesent tristique magna. Nunc sed
+  augue lacus viverra vitae congue eu consequat. In ornare quam viverra orci sagittis. Facilisi nullam vehicula ipsum a
+  arcu cursus vitae congue mauris. Ultrices sagittis orci a scelerisque purus semper eget. Ullamcorper a lacus
+  vestibulum sed arcu non odio euismod. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a.</p>
+    </div>
+     <div class="div-pdf-actu">
+    <p class="pdf-actu"><img class="img-pdf-actu" src="{{ asset('assets/img/picto_pdf.svg') }}" />Télécharger notre Lorem ipsum</p>
+    </p>
+     <div class="div-share-actu">
+      
+        <p class="share-actu">Partager cet article</p>
+        <div class="div-hover-share-actu">
+        <div class="hover-share-actu">
+            <img class="first-img-hover-share-actu img-hover-share-actu" src="{{ asset('assets/img/facebook.svg') }}"/>
+            <img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/>
+            <img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/>
+        </div>
+        <img class="img-share-actu" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
+        </div>
+       
+    </div>
+</div>
+</div>
+<div class="div-right-actu">
+    <div class="div-ajout-actu">
+        <h1 class="title-new-actu">Actualités <br/>récentes</h1>
+        <div class="div-new-actu">
+            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="date-new-actu">03-06-2021</p>
+        </div>
+        <div class="div-new-actu">
+            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="date-new-actu">03-06-2021</p>
+        </div>
+        <div class="div-new-actu">
+            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="date-new-actu">03-06-2021</p>
+        </div>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+<div class="div-lightgrey" style="width: 100%;min-height: 500px;background-color: var(--nevada);color: white">
+  <div class="txt-low-weight-black txt-part-cred" style="text-align: center;padding-bottom: 30px">Grâce à nos Lorem ipsum, nous sommes en mesure de vous proposer<br>
+   des crédits à des taux défiants toutes concurrences.</div>
+  <div class="slider slider-credits">
+
+    <div class="slide" style="width: 5%">
+        <p class="montserrat-bold-nevada-20px title-credits" style="text-align:center">   test </p>
+        <div class="div-slide-button-align">
+          <div class="taeg montserrat-bold-web-orange-20px">
+ 
+          </div>
+          <p class="surname montserrat-light-tundora-16px">
+          </p>
+        </div>
+        <div class="div-dec-btn offrepretslide">
+            <div class="btn-pret">
+               
+            </div>
+        </div>
+    </div>
+
+
+
+
+  </div>
+  <div class="div-dot">
+    <span class="dot dot-active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>      
+    <span class="dot"></span>
+    <span class="dot"></span>   
+  </div>
+  <div class="cred-typo typo" style="text-align: right;color: white;padding-right: 30px;padding-bottom: 20px;padding-top: 80px">
+      *Taux préférenciel, sous réserve d'acceptation du dossier par la société de crédit.
+  </div>
+</div>
+
+<script type="text/javascript">
+    $('.slider').slick({
+        dots: false,
+        vertical: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+              breakpoint: 1500,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 1250,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 925,
+              settings: {
+                slidesToShow:2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 620,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+</script>
+</div>
+{% endblock %}

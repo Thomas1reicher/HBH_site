@@ -1,0 +1,69 @@
+{% extends 'admin/admin_master_view.html.twig' %}
+   {% block leftsidebaradmin %}
+       {% include 'admin/_parts/admin_left_sidebar.html.twig' with {'itemsMenu': itemsMenu} %}
+   {% endblock %}
+{% block contenuadmin %}
+<div>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-right">
+                <a href="{{ path('catAdminAdd', {name:name }) }}" class="btn cur-p btn-success">Create {{ name }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="mT-30">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="bgc-white bd bdrs-3 p-20">
+                    <h4 class="c-grey-900 mB-40">Liste des {{ name }}s</h4>
+
+		{%  if(objects is not empty) %}
+
+			<table id="table-liste" class="table table-sortable table-hover table-striped table-bordered table-condensed">
+                    <thead><tr>
+                        {% for key, variable  in tbl_var%}
+                        <td>{{ variable }}</td>
+                        {% endfor %}
+                        <td style="text-align: center">Action</td>
+                        </tr></thead>
+                <tbody id="#sortable">
+                {% for key2, object in objects %}
+                   <tr>
+                       {% set vals =  object.val  %}
+                       {% for key3, val  in vals %}
+                            
+                        {% if val|length == 0 %}
+                            {% if val.nom is defined %}
+                            <td >{{ val.nom }}</td>
+                             {% else %}
+                            <td >{{ val }}</td>
+                             {% endif %}
+                          {% else %}
+                       <td >{{ val }}</td>
+                            {% endif %}
+                       {% endfor %}
+                       <td class="center">
+                            <form method="DELETE" action="{{url('catAdminDelete',{'name': name , 'id' : object.id})}}">
+                                <a class="btn cur-p btn-warning" href='{{url('catAdminUpdate',{'name': name , 'id' : object.id})}}'>Modifier</a>
+                                <button type="submit" class="btn cur-p btn-danger">Supprimer</button>
+                            </form>
+
+
+                            </td>
+                           </tr>
+                {% endfor %}
+
+                   </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                    </table>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,228 @@
+<?php
+
+namespace App\Entity;
+
+use App\Repository\ProjetRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=ProjetRepository::class)
+ */
+class Projet
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $titre;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $titre_1;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $text_1;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $titre_2;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $text_2;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $maitreouvrage;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $type_marche;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $budget;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $architecte;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $delais;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $fin_travaux;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTitre(): ?string
+    {
+        return $this->titre;
+    }
+
+    public function setTitre(string $titre): self
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getTitre1(): ?string
+    {
+        return $this->titre_1;
+    }
+
+    public function setTitre1(?string $titre_1): self
+    {
+        $this->titre_1 = $titre_1;
+
+        return $this;
+    }
+
+    public function getText1(): ?string
+    {
+        return $this->text_1;
+    }
+
+    public function setText1(?string $text_1): self
+    {
+        $this->text_1 = $text_1;
+
+        return $this;
+    }
+
+    public function getTitre2(): ?string
+    {
+        return $this->titre_2;
+    }
+
+    public function setTitre2(?string $titre_2): self
+    {
+        $this->titre_2 = $titre_2;
+
+        return $this;
+    }
+
+    public function getText2(): ?string
+    {
+        return $this->text_2;
+    }
+
+    public function setText2(?string $text_2): self
+    {
+        $this->text_2 = $text_2;
+
+        return $this;
+    }
+
+    public function getMaitreouvrage(): ?string
+    {
+        return $this->maitreouvrage;
+    }
+
+    public function setMaitreouvrage(?string $maitreouvrage): self
+    {
+        $this->maitreouvrage = $maitreouvrage;
+
+        return $this;
+    }
+
+    public function getTypeMarche(): ?string
+    {
+        return $this->type_marche;
+    }
+
+    public function setTypeMarche(?string $type_marche): self
+    {
+        $this->type_marche = $type_marche;
+
+        return $this;
+    }
+
+    public function getBudget(): ?string
+    {
+        return $this->budget;
+    }
+
+    public function setBudget(?string $budget): self
+    {
+        $this->budget = $budget;
+
+        return $this;
+    }
+
+    public function getArchitecte(): ?string
+    {
+        return $this->architecte;
+    }
+
+    public function setArchitecte(?string $architecte): self
+    {
+        $this->architecte = $architecte;
+
+        return $this;
+    }
+
+    public function getDelais(): ?string
+    {
+        return $this->delais;
+    }
+
+    public function setDelais(?string $delais): self
+    {
+        $this->delais = $delais;
+
+        return $this;
+    }
+
+    public function getFinTravaux(): ?string
+    {
+        return $this->fin_travaux;
+    }
+
+    public function setFinTravaux(?string $fin_travaux): self
+    {
+        $this->fin_travaux = $fin_travaux;
+
+        return $this;
+    }
+}

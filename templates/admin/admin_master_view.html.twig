@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Admin-Dashboard</title>
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
+    <link href="<?php echo base_url(); ?>/assets/admin/css/admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=lvvb1kdgdkmznvwrfv4xlihguzmf2guncbmdan91383b38g4"></script>
+    <script src="<?php echo base_url(); ?>/assets/admin/js/init-tinymce.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/admin/js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>/assets/lib/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/admin/css/jquery.fancybox.min.css" type="text/css" media="screen"/>
+    <link rel="shortcut icon" href="https://www.redsquare.lu/wp-content/themes/redsquare/css/favicon.gif" type="image/x-icon"/>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body class="app">
+<div id='loader'>
+    <div class="spinner"></div>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+            loader.classList.add('fadeOut');
+        }, 300);
+    });
+</script>
+
+<!-- @App Content -->
+<!-- =================================================== -->
+<div>
+    <!-- #Left Sidebar ==================== -->
+    {% block leftsidebaradmin  %}
+
+    {% endblock %}
+
+
+    <!-- #Main ============================ -->
+    <div class="page-container">
+        <!-- ### $Topbar ### -->
+        {% block headeradmin %}
+            {% include 'admin/_parts/admin_master_header_view.html.twig' %}
+        {% endblock %}
+
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+            <div id='mainContent'>
+                <div class="">
+                    {% block contenuadmin %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+
+        {% block footeradmin %}
+            {% include 'admin/_parts/admin_master_footer_view.html.twig' %}
+
+        {% endblock %}
+    </div>
+</div>
+<script type="text/javascript" src="assets/admin/js/script.js"></script>
+</body>
+
+</html>

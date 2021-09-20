@@ -1,0 +1,82 @@
+{% extends 'admin/admin_master_view.html.twig' %}
+   {% block leftsidebaradmin %}
+       {% include 'admin/_parts/admin_left_sidebar.html.twig' with {'itemsMenu': itemsMenu} %}
+   {% endblock %}
+
+
+
+{% block contenuadmin %}
+
+<div class="container">
+
+    <div class="row gap-20">
+        {% set lastNum = 0 %}
+        {% set first = true %}
+        {% for key, itemMenu in itemsMenu %}
+        {% if lastNum != itemMenu.div_num  %}
+        {% if first == false  %}
+            </div>
+        </div>
+        {% else  %}
+        {% set first = false %}
+        {% endif  %}
+<div class="col-lg-4 col-md-6">
+    <div class="layers bd bgc-white p-20">
+           {% set lastNum = itemMenu.div_num %}
+        {% endif  %}
+        <div class="layer w-100 mB-10">
+            <div class="peers ai-sb fxw-nw">
+                <div class="peer peer-greed row">
+
+				<!--	if ($itemsMenu[$cptMenu]['lien'] == null) {
+						echo '<a class=" admin-home-a sidebar-link" >' . $itemsMenu[$cptMenu]['nom'] . '</a>';
+                    } else {-->
+                    <a class=" admin-home-a sidebar-link" href="{{ path('catAdmin', {name:itemMenu.nom }) }}">
+                      <span class=" admin-link icon-holder">
+					    <i class="{{ itemMenu.picto }}" style="color:{{itemMenu.color}}"></i>
+						</span>
+                        <span class="title" >
+						 {{ itemMenu.nom }}
+						</span>
+                        </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+          
+      
+      
+
+        {% endfor %}
+</div>
+</div>
+
+<div class="col-lg-8 col-md-6">
+    <div class="layers bd bgc-white p-20">
+        <div class="layer w-100 mB-10">
+
+            <div class="peers ai-sb fxw-nw">
+                <div class="peer peer-greed row">
+                </div>
+
+            </div>
+        </div>
+        <div class="layer w-100">
+            <div class="peers ai-sb fxw-nw">
+                <div class="peer peer-greed">
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+{% endblock %}

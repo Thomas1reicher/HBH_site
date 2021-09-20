@@ -1,0 +1,45 @@
+<div class="sidebar">
+    <div class="sidebar-inner">
+        <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+                <div class="peer peer-greed">
+                    <a class="sidebar-link td-n" href="<?= base_url(); ?>index.php/admin">
+                        <div class="peers ai-c fxw-nw">
+                            <div class="peer">
+                                <div class="logo">
+                                    <img src="{{asset('assets/front/img/image-1.png')}}" style="    width: 181%;" alt="Logo A3com">
+                                </div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <!--<div class="peer">
+                    <div class="mobile-toggle sidebar-toggle">
+                        <a href="" class="td-n">
+                            <i class="ti-arrow-circle-left"></i>
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+
+        <ul class="sidebar-menu scrollable pos-r">
+            {% for key, itemMenu in itemsMenu %}
+          <li class="nav-item mT-10">
+
+              <a class=" admin-home-a sidebar-link" href="{{ path('catAdmin', {name:itemMenu.nom }) }}">
+                      <span class=" admin-link icon-holder">
+					    <i class="{{ itemMenu.picto }}" style="color:{{itemMenu.color}}"></i>
+						</span>
+                  <span class="title">
+						 {{ itemMenu.nom }}
+						</span>
+              </a>
+
+          </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

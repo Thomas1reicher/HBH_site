@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="main-div main-sante" style="height:  660pxpx;">
+     
+        <div class="div-sante">
+            <div class="inner-sante">
+            <div class="service-service-title-div">
+                <p class="service-service-title">NOS SERVICES</p>
+            </div>
+            <div class="service-title-div">
+                <h1 class="service-title">Labellisation</h1>
+            </div>
+            <div class="sante-text-div">
+                <p class="service-text">Depuis 2019, HBH assiste les investisseurs et les Maîtres d’Ouvrage pour labelliser leurs projets en DGNB, la norme de référence allemande en construction durable.</p>
+            </div>
+            <div class="service-key-div">
+            <div class="div-service-key-img">
+                    <img class="service-key-img" src="{{ asset('assets/img/Services_labellisation/dgnb.png') }}" />
+                </div>
+            </div>
+        
+        </div>
+        </div>
+           <div class="main-div" style="width: 30%">
+        <div class="service-label-man-img" style="background-image: url(assets/img/Services_sécurité_santé/fond-services2.png);">
+            <img class="img-home-main"
+                style="width:100%;";
+                src="{{ asset('assets/img/Services_labellisation/labellisation.png') }}">
+                </div>
+        </div>
+        </div>
+        </div>
+ <div class="div-last-info main-div">
+        <div class="div-last-info-title"><h1 class="title-last-info">Les services HBH, c'est aussi...</h1></div>
+        <div class="div-last-info-propos">
+            <div class="last-info-propos"><a href="{{ path('services_securite_sante') }}"><h1 class="info-propos">Sécurité & santé </h1></a></div>
+            <div class="last-info-propos"><a href="{{ path('services_espace_collaboratif') }}"><h1 class="info-propos">Espace collaborative </h1></a></div>
+            <div class="last-info-propos"><a href="{{ path('services_labellisation') }}"><h1 class="info-propos">Labellisation </h1></a></div>
+        </div>
+    </div>
+{% endblock %}

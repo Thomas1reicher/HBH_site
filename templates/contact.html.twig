@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="contact-div">
+{{ form_start(form) }}
+<div class="main-div">
+    <div class="main-title-page">
+        Contact
+    </div>
+</div>
+<div class="main-div">
+    Besoin de plus amples informations, vous avez des questions<br>
+    ou un projet à nous confier. Prenez contact avec nous.
+</div>
+</div>
+<div class="main-div" style="padding-top: 50px;padding-bottom: 30px">
+    <div class="contact-info">
+    <p class="p-left" style="font-weight: bolder">HBH S.A.</p>
+    <p class="p-right"> 16, rue Robert Stümper </p>
+ <p class="p-left"> L-2557 Luxembourg </p>
+    <p class="p-right"> T : +352 40.49.901</p>
+     <p class="p-left"> F : +352 40.49.93</p>
+    <p class="p-right"> E : hbh@hbh.lu</p>
+    </div>
+</div>
+<div class="main-div">
+    <div class="main-title-div main-title-page" style="text-align: center">
+        Prenons contact
+    </div>
+</div>
+    <div class="div-elmt-contact-1 ">
+            <img class="elmt-contact-1 slide-in-left" src="assets/img/Contact/contact.png">
+        </div>
+             <div class="div-elmt-contact-2">
+            <img class="elmt-contact-2 slide-in-right" src="assets/img/Contact/element-graphic18.svg">
+        </div>
+             <div class="div-elmt-contact-3">
+            <img class="elmt-contact-3" src="assets/img/Contact/element-graphic19.svg">
+        </div>
+              <div class="div-elmt-contact-4">
+            <img class="elmt-contact-4" src="assets/img/Contact/element-graphic20.svg">
+        </div>
+         
+<div class="main-div main-div-contact">
+    <div class="main-div" style="text-align: center">{{form_widget(form.prenom)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.nom)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.societe)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.email)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.telephone)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.objet)}}</div>
+    <div class="main-div" style="text-align: center">{{form_widget(form.message)}}</div>
+    <div class="main-div">
+        <div style="margin: auto;width: 50%;">
+            <div style="float: left;width: 5%">{{form_widget(form.rgpd)}}</div>
+            <div style="float: left;width: 95%;padding-bottom: 50px;">
+                En soumettant ce formulaire, j'accepte que les informations saisies soient acceptées dans le cadre de ma demande et de la relation commerciale qui 
+                peut en découler. Les données personnelles collectées sont uniquement destinées à un usage interne chez Espace Crédits, en conformité avec la législation
+                 sur la protection des données. En aucun cas ces données ne seront cédées ou vendues à des tiers.<br>Pour plus d'informations, <a href="" style="font-weight: bold">cliquez-ici</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-div div-btn-contact" style="text-align: center;padding-bottom: 75px"><button type="submit" id="contact_envoyer" name="contact[envoyer]" class="button-symfony"><span>ENVOYER</span></button></div>
+</div>
+{{ form_end(form, {render_rest: false}) }}
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+    <div id="map" style="width: 100%;min-height: 400px;">
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYTNjb20iLCJhIjoiODczZjBhMmM3NjYwZWFkMDkzOTU2NDY1NjYwYThjN2YifQ.WP5AS_54dOPm3SX9SpLACA';
+            var map = new mapboxgl.Map({
+                container: 'map', // container id
+                style: 'mapbox://styles/a3com/ckpnpva8c0pv217tdaszwur06', // style URL
+                center: [6.11755962698456, 49.581583558483395], // starting position [lng, lat]
+                zoom: 15 // starting zoom
+            });
+            map.on('load', function () {
+                // Load an image from an external URL.
+                map.loadImage(
+                    '/assets/img/trac--375@1x.png',
+                    function (error, image) {
+                        if (error) throw error;
+
+                        // Add the image to the map style.
+                        map.addImage('pointer_takajo', image);
+
+                        // Add a data source containing one point feature.
+                        map.addSource('point', {
+                            'type': 'geojson',
+                            'data': {
+                                'type': 'FeatureCollection',
+                                'features': [
+                                    {
+                                        'type': 'Feature',
+                                        'geometry': {
+                                            'type': 'Point',
+                                            'coordinates': [ 6.11755962698456, 49.581583558483395]
+                                        }
+                                    }
+                                ]
+                            }
+                        });
+
+                        // Add a layer to use the image to represent the data.
+                        map.addLayer({
+                            'id': 'points',
+                            'type': 'symbol',
+                            'source': 'point', // reference the data source
+                            'layout': {
+                                'icon-image': 'pointer_takajo', // reference the image
+                                'icon-size': 1
+                            }
+                        });
+                    }
+                );
+            });
+        </script>
+    </div>
+
+{% endblock %}

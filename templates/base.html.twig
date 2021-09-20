@@ -12,8 +12,98 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script type="text/javascript" src="{{ asset('assets/js/index.js') }}"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <header>
+        <div class="main-div">
+            <ul >
+                <li class="icon-home" style="width: 35%"><a href="{{ path('accueil') }}"><img style="width: 130px;margin-left: 15%" src="/assets/img/logo_HBH.png"</a></li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('accueil') }}"><img style="width: 50px" src="/assets/img/home-icon.png"></a></li>
+                <li class="li-header-nav li-service" style="text-align: center;width: 8%"><a href="{{ path('services') }}">Services<img class="fleche_menu" src="{{ asset('assets/img/fleche_menu.svg') }}"></img></a></li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('projets') }}">Projets</a></li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('presentation') }}">Présentation</a></li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('actualites') }}">Actualités</a></li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('contact') }}">Contact</a></li>
+                <li class="li-header-nav" style="text-align: center;width: 5%;margin-left: 3%"><a target="_blank" href="https://lu.linkedin.com/company/hbh-s-a-"><img style="width: 20px;" src="/assets/img/linkedin-logo.png"></a></li>
+                <li class="li-header-nav nav-lg" style="text-align: center;width: 5%">
+                    <select>
+                        <option>FR</option>
+                        <option>EN</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="hover-service fade-in-top">
+        <ul class="hover-service-container" style="width:100%">
+               
+                <li class="li-header-nav-hover" style="text-align: right;width: 59%">
+          
+                    <div class="hover-service-div">
+                        <a class="link-hover management-link management" id="1" href="{{ path('services_management_projet') }}">Management de projets</a><br/>
+                        <a class="link-hover management-link sante" id="2" href="{{ path('services_securite_sante') }}">Sécurité et Santé</a><br/>
+                        <a class="link-hover management-link colab" id="3"  href="{{ path('services_espace_collaboratif') }}">Plateforme collaborative</a><br/>
+                        <a class="link-hover management-link label" id="4" href="{{ path('services_labellisation') }}">Labellisation</a><br/>
+                    </div>
+                           <div style="width: 12%;float: right;height: 150px;margin-right: 5%;">
+                    <div class="hover-management hover-cat slide-in-left-hover" id="1" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                        <img class="img-hover-management-1 slide-in-left-hover-img" src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}"></img>
+                    </div>
+                     <div class="hover-management hover-cat slide-in-left-hover" id="2"  style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }}) ">
+                        <img class="img-hover-management-1 slide-in-left-hover-img" src="{{ asset('assets/img/Services_sécurité_santé/securite_sante_casque.png') }}"></img>
+                    </div>
+                     <div class="hover-management hover-cat slide-in-left-hover" id="3" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                        <img class="img-hover-management-1 slide-in-left-hover-img" src="{{ asset('assets/img/Services_espace_collaboratif/espace_collaboratif.png') }}"></img>
+                    </div>
+                     <div class="hover-management hover-cat slide-in-left-hover" id="4" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                        <img class="img-hover-management-1 slide-in-left-hover-img" src="{{ asset('assets/img/Services_labellisation/labellisation.png') }}"></img>
+                    </div>
+                </div>
+                </li>
+                <li class="li-header-nav" style="text-align: center;width: 8%"></li>
+           </ul>
+        </div>
+    </header>
+
+
+    <section>
+        {% block body %}
+        
+
+        
+        {% endblock %}
+    </section>
+
+
+    <footer>
+        <div class="main-div" style="background-color: black;color: lightgrey;padding-top: 100px;padding-bottom: 100px">
+            <ul style="display: flex;list-style: none;padding: 0;margin: 0;align-items: center">
+                <li style="width: 20%;text-align: center"><img style="width: 120px" src="/assets/img/logo_HBH.png"></li>
+                <li style="width: 20%;border-left: 2px solid orange;padding-left: 10px">Lorem Ipsum azerazegergr terdgrvhtqed ergrgrdhb erbhgrdht arzerazer zerazeraze raze zea rzeredsfze ez rfezgv gr </li>
+                <li style="width: 20%"><img style="width: 80px" src="/assets/img/LUX.png"></li>
+                <li style="width: 20%">
+                    <div style="border-left: 2px solid cyan;padding-left: 10px">
+                        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=hbh+sa+luxembourg">16, rue Robert Stümper<br>
+                            L-2557 Luxembourg</a><br>
+                        <a href="tel:+3524049901">T : +352 40.49.901</a><br>
+                        <a href="tel:+352404993">F : +352 40.49.93</a><br>
+                        <a href="mailto:hbh@hbh.lu">E : hbh@hbh.lu</a>                       
+                    </div>
+                </li>
+                <li style="width: 20%"><a target="_blank" href="https://lu.linkedin.com/company/hbh-s-a-"><img style="width: 50px" src="/assets/img/linkedin-logo.png"></a></li>
+            </ul>
+        </div>
+        <div class="main-div" style="text-align: center;background-color: black;color: lightgrey;padding-top: 10px;padding-bottom: 10px;
+            font-weight: 300!important;font-size:13px;">
+            Mentions légales - Gestion des données - CGU<br>@2021 - Agence de communication A3COM
+        </div>
+    </footer>
     </body>
 </html>

@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <div class="main-div" style="height: 730px;">
+        <div class="main-div" style="width: 40%">
+        <div class="service-man-img" style="background-image: url(assets/img/Services_management_de_projet/Fond_page_service1.png);">
+            <img class="img-home-main"
+                style="width:100%;";
+                src="{{ asset('assets/img/Services_espace_collaboratif/espace_collaboratif.png') }}">
+                </div>
+        </div>
+        <div class="div-colab">
+            <div class="service-service-title-div">
+                <p class="service-service-title">NOS SERVICES</p>
+            </div>
+            <div class="service-title-div">
+                <h1 class="service-title">Espace <br/>collaboratif</h1>
+            </div>
+            <div class="service-text-div">
+                <p class="service-text">Dans le cadre des missions de Project Management, il importe<br/> de s’assurer que toutes les parties prenantes ont accès à la <br/> bonne information et au bon moment. Cela implique de <br/>mettre à leur disposition des outils de diffusion et de documentation de <br/>l’information, mis à jour en temps réel.</p>
+            </div>
+     
+        
+        
+        </div>
+        </div>
+        <div class="div-elmt-colab-1 div-elmt">
+            <img class="elmt-colab-1" src="{{ asset('assets/img/Services_espace_collaboratif/element-graphic9.svg') }}"/>
+        </div>
+        <div class="div-colab-left-text">
+            <p class="colab-text">C’est pourquoi, fort de l’expérience acquise, nous avons développé, sur base de Microsoft SharePoint, une plate-forme
+  de gestion de projet fiable et ergonomique. Ce produit, largement diffusé, est maîtrisé par de nombreux professionnels
+  et constitue de ce fait, une solution pérenne et évolutive.<br /><br />Notre plate-forme offre le maximum
+  d’informations pertinentes telles que rapports de chantier, plannings, fiches techniques, bilans financiers, plans… En
+  ajoutant un ensemble de métadonnées à ces documents (date, révision, référence, auteur, statut d’approbation,
+  commentaires,…), nous offrons la possibilité de trouver LE document souhaité.</p>
+        </div>
+        <div class="div-colab-img-container">
+            <img class="img-colab" src="{{ asset('assets/img/Services_espace_collaboratif/Schema_espace_collaboratif.png') }}"/>
+        
+        </div>
+       
+              <div class="div-elmt-colab-3 div-elmt">
+            <img class="elmt-colab-3" src="{{ asset('assets/img/Services_espace_collaboratif/element-graphic10.svg') }}"/>
+        </div>
+             <div class="div-elmt-colab-2 div-elmt">
+            <img class="elmt-colab-2" src="{{ asset('assets/img/Services_espace_collaboratif/espace_collaboratif-2.png') }}"/>
+        </div>
+     <div class="div-colab-right-text">
+            <p class="colab-text">Une authentification propre à chaque utilisateur nous permet de contrôler de manière rigoureuse l’identité des
+  personnes connectées et fournit le moyen de connaître précisément l’auteur de chaque document, de chaque commentaire
+  et de chaque action sur la plate-forme. Notre plate-forme utilise également un cryptage des données échangées,
+  certifié par LUXTRUST S.A.<br /><br />La manipulation de documents publiés sur une plate-forme unique aide à réduire
+  la diffusion de courriels entre intervenants.<br /><br />Les outils de recherche proposés offrent également la
+  possibilité de retrouver l’information sur l’ensemble du contenu, y compris dans les documents eux-mêmes. Ce qui
+  procure beaucoup de souplesse à notre produit, et en fait l’instrument idéal pour une gestion performante et qui
+  permet à notre produit de devenir l’outil de référence du projet.<br /><br />Ces éléments permettent ainsi d’avoir une
+  vision globale du projet, de contrôler l’information et sa diffusion, en accord avec les bonnes pratiques de gestion
+  de projet, avec toutes les sécurités nécessaires.</p>
+        </div>
+  
+
+   
+    
+   
+  
+    
+
+
+         <div class="elmt-colab-4"></div>
+    <div class="div-last-info ">
+        <div class="div-last-info-title"><h1 class="title-last-info">Les services HBH, c'est aussi...</h1></div>
+        <div class="div-last-info-propos">
+            <div class="last-info-propos info-propos-1 "><a href="{{ path('services_securite_sante') }}"><h1 class="info-propos">Sécurité & santé </h1></a></div>
+            <div class="last-info-propos info-propos-2 "><a href="{{ path('services_espace_collaboratif') }}"><h1 class="info-propos">Espace collaborative </h1></a></div>
+            <div class="last-info-propos info-propos-3 " ><a href="{{ path('services_labellisation') }}"><h1 class="info-propos">Labellisation </h1></a></div>
+        </div>
+    </div>
+{% endblock %}
