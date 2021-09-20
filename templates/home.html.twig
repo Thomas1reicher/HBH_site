@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="main-div" style="height:  777px;">
-        <div class="main-div" style="width: 50%">
-        <div class="home-img" style="background-image: url(assets/img/Homepage/fond_home.png);">
+    <div class="main-div no-main-div home-section" >
+        <div class="main-div no-main-div img-div-main height-0-mob" >
+        <div class="home-img" >
             <img class="img-home-main"
-                style="width:100%;";
-                src="assets/img/Homepage/home_management_projet.png">
+                style="background-image: url(assets/img/Homepage/fond_home.png);"
+                src="assets/img/HBH_homepage.png">
                 </div>
         </div>
-        <div class="main-div" style="width: 50%;float: right">
+        <div class="main-div no-main-div  div-home-mob" style="float: right">
             <div class="main-title-page slide-in-right">
-                La société leader en gestion de projets de construction
+                La société leader <br/>en gestion de <br/>projets de <br/>construction
             </div>
             <div class="main-div">
                 <div>
@@ -40,11 +40,11 @@
         class="main-div div-proj"
         style="color: white;background-color: #102242;text-align: center">
         <div >
-            <div class="main-title-page">
-                <h1 class="montserrat-bold-white-50px">Nos projets</h1>
+            <div class="main-title-page big-padding-mob">
+                <h1 class="montserrat-bold-white-50px title-page-resp">Nos projets</h1>
             </div>
             <div >
-                <div style="width: 35%;margin: auto;">
+                <div class="div-p-home-proj" >
                     <p class="p-home-proj  montserrat-light-white-16px">
                         HBH mène vos projets de construction et améliore la sécurité
                         <br/>et la santé des travailleurs à travers tout le Luxembourg.
@@ -176,10 +176,10 @@
 </div>
  <div class="div-elmt-2"></div>
     <div class="main-div">
-        <div style="width: 50%;float: left">
+        <div class="div-img-propos-main  " >
             <img class="img-propos-main  " src="assets/img/img2.png">
         </div>
-        <div class="main-div" style="float: right;width: 50%">
+        <div class="main-div a-propos-main-div" style="float: right;width: 50%">
             <div class="a-propos-main slide-in-left">
                 À propos de HBH
             </div>
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="text-center-mob">
             <a href="">
                 <button class="btn-propos-main" style="background-color: #103182;color: white"><span>À PROPOS</span></button>
             </a>

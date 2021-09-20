@@ -12,6 +12,7 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -24,20 +25,57 @@
     <body>
     <header>
         <div class="main-div">
-            <ul >
-                <li class="icon-home" style="width: 35%"><a href="{{ path('accueil') }}"><img style="width: 130px;margin-left: 15%" src="/assets/img/logo_HBH.png"</a></li>
-                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('accueil') }}"><img style="width: 50px" src="/assets/img/home-icon.png"></a></li>
-                <li class="li-header-nav li-service" style="text-align: center;width: 8%"><a href="{{ path('services') }}">Services<img class="fleche_menu" src="{{ asset('assets/img/fleche_menu.svg') }}"></img></a></li>
-                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('projets') }}">Projets</a></li>
-                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('presentation') }}">Présentation</a></li>
-                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('actualites') }}">Actualités</a></li>
-                <li class="li-header-nav" style="text-align: center;width: 8%"><a href="{{ path('contact') }}">Contact</a></li>
-                <li class="li-header-nav" style="text-align: center;width: 5%;margin-left: 3%"><a target="_blank" href="https://lu.linkedin.com/company/hbh-s-a-"><img style="width: 20px;" src="/assets/img/linkedin-logo.png"></a></li>
-                <li class="li-header-nav nav-lg" style="text-align: center;width: 5%">
+            <ul class="ul-nav">
+                <li class="icon-home " style="width: 35%"><a href="{{ path('accueil') }}"><img style="width: 130px;margin-left: 15%" src="/assets/img/logo_HBH.png"</a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('accueil') }}"><img style="width: 50px" src="/assets/img/home-icon.png"></a></li>
+                <li class="li-header-nav li-desktop li-service" style="text-align: center;width: 8%"><a href="{{ path('services') }}">Services<img class="fleche_menu" src="{{ asset('assets/img/fleche_menu.svg') }}"></img></a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('projets') }}">Projets</a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('presentation') }}">Présentation</a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('actualites') }}">Actualités</a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('contact') }}">Contact</a></li>
+                <li class="li-header-nav li-desktop" style="text-align: center;width: 5%;margin-left: 3%"><a target="_blank" href="https://lu.linkedin.com/company/hbh-s-a-"><img style="width: 20px;" src="/assets/img/linkedin-logo.png"></a></li>
+                <li class="li-header-nav nav-lg li-desktop" style="text-align: center;width: 5%">
                     <select>
                         <option>FR</option>
                         <option>EN</option>
                     </select>
+                </li>
+                <li class="li-mob">
+                    <div class="menu-burger">
+          	<button id="burger" class="open-main-nav">
+			<span class="burger"></span>
+		</button>
+		<nav class="main-nav" id="main-nav" style="background-image: url(/assets/front/img/oiseau_espace_credit.svg)">
+        
+			<ul>
+            <li>
+					<div class="img-main-nav">
+            <img src="/assets/front/img/logo-espace-credit-n-10@1x.png">
+        </div>
+				</li>
+				<li>
+					<a class="montserrat-bold-white-32px" href="/">Accueil</a>
+				</li>
+				<li>
+					<a class="montserrat-bold-white-32px" href="/credits">Crédits</a>
+				</li>
+				<li>
+					<a class="montserrat-bold-white-32px" href="/philosophie">Notre philosophie</a>
+				</li>
+				<li>
+					<a class="montserrat-bold-white-32px" href="/contact">Contact</a>
+				</li>
+                <li class="li-tel">
+					 <a href="tel:+3263677659" class="montserrat-light-white-16px"><img src="/assets/front/img/phone_responsive.svg">+32 63 677 659</a>
+				</li>
+			
+			</ul>
+           
+		</nav>
+        
+        
+        
+        </div>
                 </li>
             </ul>
         </div>
