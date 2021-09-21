@@ -200,7 +200,7 @@ class AdminController extends AbstractController
         if($type == "repository"){
             return $repository;
         }else if ($type="class"){
-
+            
             return $class;
         }
         

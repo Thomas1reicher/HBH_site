@@ -26,7 +26,7 @@
     <header>
         <div class="main-div">
             <ul class="ul-nav">
-                <li class="icon-home " style="width: 35%"><a href="{{ path('accueil') }}"><img style="width: 130px;margin-left: 15%" src="/assets/img/logo_HBH.png"</a></li>
+                <li class="icon-home " style="width: 35%"><a href="{{ path('accueil') }}"><img style="width: 130px;margin-left: 15%" src="/assets/img/logo_HBH.png"/></a></li>
                 <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('accueil') }}"><img style="width: 50px" src="/assets/img/home-icon.png"></a></li>
                 <li class="li-header-nav li-desktop li-service" style="text-align: center;width: 8%"><a href="{{ path('services') }}">Services<img class="fleche_menu" src="{{ asset('assets/img/fleche_menu.svg') }}"></img></a></li>
                 <li class="li-header-nav li-desktop" style="text-align: center;width: 8%"><a href="{{ path('projets') }}">Projets</a></li>
@@ -41,36 +41,34 @@
                     </select>
                 </li>
                 <li class="li-mob">
-                    <div class="menu-burger">
-          	<button id="burger" class="open-main-nav">
+             <button id="burger" class="open-main-nav">
 			<span class="burger"></span>
-		</button>
-		<nav class="main-nav" id="main-nav" style="background-image: url(/assets/front/img/oiseau_espace_credit.svg)">
-        
-			<ul>
-            <li>
-					<div class="img-main-nav">
-            <img src="/assets/front/img/logo-espace-credit-n-10@1x.png">
-        </div>
-				</li>
-				<li>
-					<a class="montserrat-bold-white-32px" href="/">Accueil</a>
-				</li>
-				<li>
-					<a class="montserrat-bold-white-32px" href="/credits">Crédits</a>
-				</li>
-				<li>
-					<a class="montserrat-bold-white-32px" href="/philosophie">Notre philosophie</a>
-				</li>
-				<li>
-					<a class="montserrat-bold-white-32px" href="/contact">Contact</a>
-				</li>
-                <li class="li-tel">
-					 <a href="tel:+3263677659" class="montserrat-light-white-16px"><img src="/assets/front/img/phone_responsive.svg">+32 63 677 659</a>
-				</li>
 			
+		</button>
+		<nav class="main-nav" id="main-nav">
+			<ul>
+                <li>
+					<img class="hbh-img-nav" src="{{ asset('assets/img/logo_HBH_blanc.svg') }}" />
+				</li>
+				<li class="li-link-nav">
+					<a href="{{ path('accueil') }}">Acceuil</a>
+				</li>
+				<li class="li-link-nav">
+					<a href="{{ path('services') }}">Nos services</a>
+				</li>
+				<li class="li-link-nav">
+					<a href="{{ path('projets') }}">Nos projets</a>
+				</li>
+                <li class="li-link-nav">
+					<a href="{{ path('presentation') }}">À propos</a>
+				</li>
+				<li class="li-link-nav">
+					<a href="{{ path('actualites') }}">Actualités</a>
+				</li>
+				<li class="li-link-nav">
+					<a href="{{ path('contact') }}">Contact</a>
+				</li>
 			</ul>
-           
 		</nav>
         
         
@@ -87,7 +85,7 @@
                     <div class="hover-service-div">
                         <a class="link-hover management-link management" id="1" href="{{ path('services_management_projet') }}">Management de projets</a><br/>
                         <a class="link-hover management-link sante" id="2" href="{{ path('services_securite_sante') }}">Sécurité et Santé</a><br/>
-                        <a class="link-hover management-link colab" id="3"  href="{{ path('services_espace_collaboratif') }}">Plateforme collaborative</a><br/>
+                        <a class="link-hover management-link colab" id="3"  href="{{ path('services_espace_collaboratif') }}">Plateforme collaboratif</a><br/>
                         <a class="link-hover management-link label" id="4" href="{{ path('services_labellisation') }}">Labellisation</a><br/>
                     </div>
                            <div style="width: 12%;float: right;height: 150px;margin-right: 5%;">

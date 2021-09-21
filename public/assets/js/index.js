@@ -1,4 +1,41 @@
 $(document).ready(function () {
+    
+    
+
+
+    let burger = $('.open-main-nav'),
+	 nav    = document.getElementById('main-nav'),
+	 slowmo = document.getElementById('slowmo');
+    console.log(burger);
+burger.click(function() {
+	this.classList.toggle('is-open');
+	nav.classList.toggle('is-open');
+});
+
+
+
+/* Onload demo - dirty timeout */
+let clickEvent = new Event('click');
+
+window.addEventListener('load', function(e) {
+	slowmo.dispatchEvent(clickEvent);
+	burger.dispatchEvent(clickEvent);
+	
+	setTimeout(function(){
+		burger.dispatchEvent(clickEvent);
+		
+		setTimeout(function(){
+			slowmo.dispatchEvent(clickEvent);
+		}, 3500);
+	}, 5500);
+});
+
+
+
+
+
+
+
     var chemin = window.location.pathname;
     console.log(chemin);
     currentheight =$(window).height();
@@ -273,6 +310,16 @@ $(document).ready(function () {
                         
                         
                     });
+                    $(".div-img-services").mouseover(function() {
+                        $(this).find(".title-services").addClass("title-services-hover");
+                        
+                        
+                    });
+                    $(".div-img-services").mouseout(function() {
+                        $(this).find(".title-services").removeClass("title-services-hover");
+                        
+                        
+                    });
                     $(".img-block-key-title").click(function() {
                         elmt = $(this).parent().parent().find('.div-block-key-text');
                         if($(elmt).is(":visible")){
@@ -289,12 +336,11 @@ $(document).ready(function () {
                     $(".no-active-img").click(function() {
 
                         id =$('.active-img:visible').hide().attr("id");
-                        
-                        console.log($('.no-active-img#'+id).show());
-
-                        console.log(idnew = $(this).hide().attr("id"));
-                        console.log('.active-img#'+idnew);
-                        console.log($('img#'+idnew+'.active-img').show());
+                        $('img#'+id+'.no-active-img').show();
+                        idnew = $(this).hide().attr("id");
+                        $('img#'+idnew+'.active-img').show();
+                        $('.active-txt-ouvrage').addClass('no-active-txt-ouvrage').removeClass('active-txt-ouvrage');
+                        $('div#'+idnew+'.no-active-txt-ouvrage').addClass('active-txt-ouvrage').removeClass('no-active-txt-ouvrage');
                     });
                     $(".service-key").click(function() {
 

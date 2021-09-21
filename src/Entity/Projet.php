@@ -225,4 +225,60 @@ class Projet
 
         return $this;
     }
+    public function vars() :array
+    {
+        $newTbl =get_class_vars(get_class($this));
+        $newTbl =array_keys($newTbl);
+      
+
+        return $newTbl;
+
+
+    }
+    public function typeVars() :array
+    {
+     $tbl = [];
+     $tbl[0]= "int";
+     $tbl[1]= "String";
+     $tbl[2]= "String";
+     $tbl[3]= "textarea";
+     $tbl[4]= "String";
+     $tbl[5]= "textarea";
+     $tbl[6]= "string";
+     $tbl[7]= "string";
+     $tbl[8]= "string";
+     $tbl[9]= "string";
+     $tbl[10]= "string";
+     $tbl[11]= "string";
+     return $tbl;
+    }
+    public function val() :array
+    {
+    
+       $tbl = [];
+        $tbl[0]=$this->getId();
+        $tbl[1]=$this->getTitre1();
+        $tbl[2]=$this->getImage();
+        $tbl[3]=$this->getTitre1();
+        $tbl[4]=$this->getText1();
+        $tbl[5]=$this->getTitre2();
+        $tbl[6]=$this->getText2();
+        $tbl[7]=$this->getMaitreouvrage();
+        $tbl[8]=$this->getTypeMarche();
+        $tbl[9]=$this->getBudget();
+        $tbl[10]=$this->getArchitecte();
+        $tbl[11]=$this->getDelais();
+        $tbl[12]=$this->getFinTravaux();
+
+        return $tbl;
+
+
+    }
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+
+       /* $tbl=$this->getEmail()."-".$this->getFullName().'-'.$this->getPassword().'-'.$this->getUsername();
+        */return "";
+    }
 }

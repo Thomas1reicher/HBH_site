@@ -59,13 +59,16 @@
         <div class="div-mission-container">
             <h1 class="mission-title"> Sa mission</h1>
             <div class="mission-list-div">
-                <ul class="mission-list">
-                    <li class="li-mission">Remplir toutes les obligations légales et contractuelles du Maître d’Ouvrage.</li>
-                    <li class="li-mission">Constituer l’équipe de conception et participer aux choix des entreprises.</li>
-                    <li class="li-mission">Veiller au respect des budgets et délais fixés.</li>
-                    <li class="li-mission">Prendre les décisions et régler les problèmes dans le cadre du programme défini par le Maître d’Ouvrage.</li>
-                    <li class="li-mission">Faire un reporting régulier au Maître d’Ouvrage et le solliciter pour tout fait hors programme défini.</li>
-                </ul>
+             <div class="div-dgnb-li ">
+                    <ol class="ol-dgnb">
+                            <li class=" txt-li-m li-dgnb ">Remplir toutes les obligations légales et contractuelles du Maître d’Ouvrage.</li>
+                            <li class="txt-li-m li-dgnb ">Constituer l’équipe de conception et participer aux choix des entreprises.</li>
+                            <li class="txt-li-m li-dgnb ">Veiller au respect des budgets et délais fixés.</li>
+                            <li class="txt-li-m li-dgnb ">Prendre les décisions et régler les problèmes dans le cadre du programme défini par le Maître d’Ouvrage.</li>
+                            <li class="txt-li-m li-dgnb ">Faire un reporting régulier au Maître d’Ouvrage et le solliciter pour tout fait hors programme défini.</li>
+                    </ol>
+
+                </div>
             
             </div>
         </div>
@@ -216,9 +219,35 @@
        <img class="img-service-ouvrage img-service-ouvrage-4 active-img" id="4"style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conformite_actif.svg') }}"/>    
     </div>
     <div class="service-ouvrage-div">
-<div class="text-service-ouvrage other-txt-ouvrage">
+<div class="text-service-ouvrage other-txt-ouvrage active-txt-ouvrage" id="1">
          Assistance à la mise au point de l’organisation du projet.<br />Assistance lors de l’élaboration des documents
   contractuels <br />(définition des missions, des responsabilités, des honoraires, …).
+        </div>
+        <div class="text-service-ouvrage other-txt-ouvrage no-active-txt-ouvrage" id="2">
+         Assistance à la définition des besoins et à la mise au point détaillée de<br/>
+         la programmation architecturale et technique.<br/>
+         Rédaction de notes techniques et/ou de synthèse afin de faciliter la prise de décision du Maître d’Ouvrage.<br/>
+         Participation aux réunions de coordination des études et aux autres réunions<br/>
+          et rédaction d’un compte-rendu pour chacune de ces réunions.
+
+        </div>
+        <div class="text-service-ouvrage other-txt-ouvrage no-active-txt-ouvrage " id="3">
+         Participation aux réunions de chantier et autres réunions techniques et rédaction<br/>
+          d’un compte-rendu pour chacune de ces réunions.<br/>
+        Examen critique de tout document technique soumis au Maître d’Ouvrage et rédaction<br/>
+        d’un avis.
+        Contrôle par sondage de la conformité des constructions, installations, … aux<br/>
+         spécifications contractuelles.
+        Assistance lors des négociations techniques et financières pour les modifications<br/>
+         ou avenants aux contrats.
+        Rédaction et fourniture d’un rapport périodique de la situation du projet, d’un <br/>
+        point de vue planning, financier et décisionnel.
+                </div>
+        <div class="text-service-ouvrage other-txt-ouvrage no-active-txt-ouvrage" id="4">
+         Participation aux côtés des bureaux d’études, des entreprises et organismes agréés, aux<br/> 
+         essais de fonctionnement et aux réceptions.<br/>
+        Contrôle de la levée des réserves formulées dans les procès-verbaux de réception.<br/>
+        Rédaction des rapports d’agréation et de l’attestation de conformité de l’ouvrage.<br/>
         </div>
 
 
@@ -259,7 +288,7 @@
         <div class="div-last-info-title"><h1 class="title-last-info">Les services HBH, c'est aussi...</h1></div>
         <div class="div-last-info-propos">
             <div class="last-info-propos info-propos-1 "><a href="{{ path('services_securite_sante') }}"><h1 class="info-propos">Sécurité & santé </h1></a></div>
-            <div class="last-info-propos info-propos-2 "><a href="{{ path('services_espace_collaboratif') }}"><h1 class="info-propos">Espace collaborative </h1></a></div>
+            <div class="last-info-propos info-propos-2 "><a href="{{ path('services_espace_collaboratif') }}"><h1 class="info-propos">Espace collaboratif </h1></a></div>
             <div class="last-info-propos info-propos-3 " ><a href="{{ path('services_labellisation') }}"><h1 class="info-propos">Labellisation </h1></a></div>
         </div>
     </div>

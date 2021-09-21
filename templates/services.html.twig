@@ -18,21 +18,32 @@
         </div>
         </div>
         <div class=" main-div-img-service">
+        
+        <a href="{{ path('services_management_projet') }}">
             <div class="main-div div-img-services div-img-services-man" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main img-services-main-man"  src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}">
+            <p class="title-services">Management <br/>de projets</p>
             </div>
-
+        </a>   
+        
+        <a href="{{ path('services_securite_sante') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})" >
                 <img class="img-services-main"  src="assets/img/secu.png">
+                <p class="title-services">Sécurité <br/>& Santé</p>
             </div>
-
+            </a>
+       <a href="{{ path('services_espace_collaboratif') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main"  src="assets/img/securite.png">
+                <p class="title-services">Espace <br/>collaboratif</p>
             </div>
-
+            </a>
+            <a href="{{ path('services_labellisation') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main"  src="assets/img/labellisation.png">
+                <p class="title-services">Labellisation</p>
             </div>
+            </a>
         </div>
     </div>
     <div class="div-elmt">
