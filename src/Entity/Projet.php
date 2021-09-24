@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ProjetRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass=ProjetRepository::class)
@@ -76,6 +78,10 @@ class Projet
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $fin_travaux;
+      /**
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="projet")
+     */
+    private $images;
 
     public function getId(): ?int
     {
@@ -225,6 +231,35 @@ class Projet
 
         return $this;
     }
+
+/**
+     * @return Collection|Test[]
+     */
+    public function getImages(): ?Collection
+    {
+        return $this->images;
+    }
+
+    public function addImages(Image $image): self
+    {
+            $this->images[] = $image; +
+            $this->images[] = $image;
+            $image->setProjet($this);
+        
+
+        return $this;
+    }
+
+    public function removeImages(Image $images): self
+    {
+        if ($this->tests->removeElement($images)) {
+            // set the owning side to null (unless already changed)
+            
+        }
+
+        return $this;
+    }
+
     public function vars() :array
     {
         $newTbl =get_class_vars(get_class($this));
@@ -250,6 +285,8 @@ class Projet
      $tbl[9]= "string";
      $tbl[10]= "string";
      $tbl[11]= "string";
+     $tbl[12]= "string";
+     $tbl[13]= "image";
      return $tbl;
     }
     public function val() :array
