@@ -7,6 +7,7 @@ namespace App\Controller\admin;
 use App\Entity\Actualite;
 use App\Entity\Projet;
 use App\Entity\Contact;
+use App\Entity\Image;
 use App\Form\AdminForm\ObjectAddType;
 use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -33,6 +34,7 @@ class AdminController extends AbstractController
         $this->Actualiterepository = $entityManager->getRepository(Actualite::class);
         $this->Contactrepository = $entityManager->getRepository(Contact::class);
         $this->Projetrepository = $entityManager->getRepository(Projet::class);
+        $this->imagerepository = $entityManager->getRepository(Image::class);
         $categorieCms = $repository->findBy(
             array(),
             array('div_num' => 'ASC')
@@ -194,6 +196,7 @@ class AdminController extends AbstractController
         $name1 ='App\Entity\\'.$name;
         $obj =new $name1();
         $Repository = $name."repository";
+
         $repository = $this->{$Repository};
         $class = $obj;
         

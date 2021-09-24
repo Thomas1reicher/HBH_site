@@ -54,8 +54,21 @@
 					<a href="{{ path('accueil') }}">Acceuil</a>
 				</li>
 				<li class="li-link-nav">
-					<a href="{{ path('services') }}">Nos services</a>
+					<a href="{{ path('services') }}"><span style="float: left">Nos services</span> </a><img class="fleche-blanche-nav" src="{{ asset('assets/img/fleche_blanche.svg') }}"/>
 				</li>
+                <li class="li-link-nav li-link-nav-sous">
+					<a href="{{ path('services') }}">Management de projet</a>
+				</li>
+                <li class="li-link-nav li-link-nav-sous">
+					<a href="{{ path('services') }}">Sécurité & santé</a>
+				</li>
+                <li class="li-link-nav li-link-nav-sous">
+					<a href="{{ path('services') }}">Espace collaboratif</a>
+				</li>
+                <li class="li-link-nav li-link-nav-sous">
+					<a href="{{ path('services') }}">Labellisation</a>
+				</li>
+                
 				<li class="li-link-nav">
 					<a href="{{ path('projets') }}">Nos projets</a>
 				</li>

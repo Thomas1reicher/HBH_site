@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\ActualiteRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass=ActualiteRepository::class)
@@ -37,6 +39,11 @@ class Actualite
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $pdf;
+
+        /**
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="actualite")
+     */
+    private $images;
 
     
     public function getId(): ?int
@@ -91,6 +98,33 @@ class Actualite
 
         return $this;
     }
+
+      /**
+     * @return Collection|Test[]
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImages(Image $images): self
+    {
+        if (!$this->taux->contains($images)) {
+           
+        }
+
+        return $this;
+    }
+
+    public function removeImages(Image $images): self
+    {
+        if ($this->tests->removeElement($images)) {
+            // set the owning side to null (unless already changed)
+            
+        }
+
+        return $this;
+    }
     public function vars() :array
     {
         $newTbl =get_class_vars(get_class($this));
@@ -109,6 +143,7 @@ class Actualite
      $tbl[2]= "date";
      $tbl[3]= "textarea";
      $tbl[4]= "string";
+     $tbl[5]= "image";
      return $tbl;
     }
     public function val() :array

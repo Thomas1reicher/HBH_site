@@ -8,6 +8,8 @@ use App\Entity\BddCms;
 use App\Entity\Credit;
 use App\Entity\Taux;
 use App\Entity\User;
+use App\Entity\Image;
+use Form\AdminForm\Type\ImageClassType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -20,6 +22,7 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Doctrine\ORM\EntityManagerInterface;
@@ -156,6 +159,7 @@ class ObjectAddType extends AbstractType
                     for($o = 0 ; $o<count($liste) ; $o++){
                         $tbl[$o]=$liste[$o]->getNom();
                     }
+                   
                     if($var[$i]=="credit"){
                     $builder->add($namevar[$i], EntityType::class, [
                                 'class' =>  Credit::class ,
@@ -166,15 +170,31 @@ class ObjectAddType extends AbstractType
                                 
                                 
                             ]);}
+                    else if($var[$i]=="image"){
+                        $image = new Image();
+                        $this->object->addImages($image);
+                        $builder->add(
+                            'images',
+                            CollectionType::class,
+                            [
+                                'label' => false,
+                                'entry_type' => ImageClassType::class,
+                                'prototype'    => true,
+                                'by_reference' => false,
+                                'allow_add' => true,
+                                'allow_delete' => true,
+                            ]
+                        );}
+                                           
 
                         
                     
                
                    
 
-            }
+            }}
         }
-    }
+    
 
     /**
      * @return mixed|null
