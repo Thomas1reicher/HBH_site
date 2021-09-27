@@ -242,8 +242,7 @@ class Projet
 
     public function addImages(Image $image): self
     {
-            $this->images[] = $image; +
-            $this->images[] = $image;
+            $this->images[] = $image;   
             $image->setProjet($this);
         
 

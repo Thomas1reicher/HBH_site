@@ -161,7 +161,37 @@
                     slidesToScroll: 4,
                     autoplay: false,
                     autoplaySpeed: 2000,
-                    arrows: false
+                    arrows: false,
+                    responsive: [
+                                    {
+                                    breakpoint: 1500,
+                                    settings: {
+                                        slidesToShow: 4,
+                                        slidesToScroll: 3
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 1250,
+                                    settings: {
+                                        slidesToShow: 3,
+                                        slidesToScroll: 3
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 925,
+                                    settings: {
+                                        slidesToShow:2,
+                                        slidesToScroll: 2
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 620,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1
+                                    }
+                                    }
+                                ]
                 });
             </script>
 
@@ -175,8 +205,8 @@
            
 </div>
  <div class="div-elmt-2"></div>
-    <div class="main-div">
-        <div class="div-img-propos-main  " >
+    <div class="main-div no-main-div">
+        <div class="div-img-propos-main no-main-div " >
             <img class="img-propos-main  " src="assets/img/img2.png">
         </div>
         <div class="main-div a-propos-main-div" style="float: right;width: 50%">
@@ -192,7 +222,7 @@
         </div>
         <div class="text-center-mob">
             <a href="">
-                <button class="btn-propos-main" style="background-color: #103182;color: white"><span>À PROPOS</span></button>
+                <button class="btn-propos-main mb-110" style="background-color: #103182;color: white"><span>À PROPOS</span></button>
             </a>
         </div>
     </div>
@@ -209,7 +239,7 @@
         style="color: white;background-color: #103182;text-align: center">
         <div >
             <div class="main-title-page">
-                <h1 class="montserrat-bold-white-50px min-padding-elmt">Les actualités HBH</h1>
+                <h1 class="montserrat-bold-white-50px min-padding-elmt title-page-resp">Les actualités HBH</h1>
             </div>
             <div>
                 <div class="p-home-proj p-actu montserrat-light-white-16px" >
@@ -326,7 +356,37 @@
                 slidesToScroll: 4,
                 autoplay: false,
                 autoplaySpeed: 2000,
-                arrows: false
+                arrows: false,
+                  responsive: [
+                                    {
+                                    breakpoint: 1500,
+                                    settings: {
+                                        slidesToShow: 4,
+                                        slidesToScroll: 3
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 1250,
+                                    settings: {
+                                        slidesToShow: 3,
+                                        slidesToScroll: 3
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 925,
+                                    settings: {
+                                        slidesToShow:2,
+                                        slidesToScroll: 2
+                                    }
+                                    },
+                                    {
+                                    breakpoint: 620,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1
+                                    }
+                                    }
+                                ]
             });
         </script>
          <div class="div-btn-nos-proj" style="text-align: center">

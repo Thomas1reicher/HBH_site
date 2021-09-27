@@ -578,12 +578,14 @@ color:
     color: 
     #39428f;
       font-weight: 700;
+      width: 60%;
   }
   .p-pres{
     color: var(--chicago);
   font-size: var(--font-size-m);
   font-weight: 300;
   margin-top: 4%;
+  width: 60%;
   }
   .elmt-propos-1{
     
@@ -2822,12 +2824,182 @@ input{
   
       @media (max-width:420px) {
         .main-title-page{
-          font-size: 30px!important;
+          font-size: 32px!important;
           line-height: 40px;
         
         }
+        .teams{
+          display:none;
+        }
+        .man{
+          width: 225px!important;
+        }
+        .slider-teams{
+          display: block!important;
+          width: 80%;
+          /* color: white; */
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .presentation-title{
+          width:100%;
+        }
+        .div-elmt-services-1 {
+          height: 100px!important;
+          top: 348px!important;
+          left: -41px!important;
+      }
+        .div-btn-nos-proj {
+          margin-top: 20%;
+
+
+        }
+        .p-pres{
+          width: 100%;
+        }
+        .propos-text-1{
+          width: 100%;
+        }
+        .div-other{
+          height: 650px!important;
+        }
+        .other-service-div{
+          width:80%!important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .slide-img-serv{
+          width: 300px !important;
+          height: 315px!important;
+        }
+        
+        .elmt-services-2 {
+          top: 620px!important;
+          width: 47%;
+      }
+        .main-service-div {
+          width: 75%!important;
+          margin-top: 10%;
+      }
+      .main-service {
+        padding-left: 10%;
+    } 
+    .main-service-div-txt{
+      width: 85%!important;
+    }
+    .intro-main-div-service{
+      font-size: 16px;
+    }
+    .elmt-projet-1{
+      display: none;
+    }
+    .project-card{
+      width:100%
+    }
+    .div-elmt-projet-2 {
+      height: 0px;
+      position: relative;
+      width: 100%;
+      right: 0px; 
+      top: -225px;
+  }
+  .elmt-projet-2 {
+    height: auto;
+    width: 100%;
+}   
+.info-projet-div {
+  margin-top: 80%;
+  min-height: 270px;
+  height: 270px;
+}
+.title-info-projet{
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+.btn-info-service{
+  width: 100%;
+  margin-bottom: 5%;
+}
+.btn-info-contact{
+  width: 100%;
+}
+.div-btn-info{
+  width: 60%;
+  margin: auto;
+}
+.div-info{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+}
+.info-projet {
+  width: 100%;
+  padding: 0;
+}
+    .proj-div {
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+  }
+  .actu-div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.a-propos-div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+    .img-service-desk{
+      display:none;
+    }
+    .slider-services{
+      display:block!important;
+      width: 80%;
+      /* color: white; */
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-services-main-man {
+      width:auto !important;
+
+    }
+    .main-div-img-service {
+      float: left;
+      padding-left: initial!important;
+      width: 100%!important;
+      margin-bottom: initial!important;
+  }
+    .slide-img{
+    
+    }
+    .div-img-services {
+
+      width: 100% !important;
+    }
+    
+        .slider-actu{
+          width: 80%;
+          padding-right: 5%;
+        }
+        .actu-main .div-btn-nos-proj{
+          margin-bottom: 5%;
+        }
+        .p-actu {
+          width: 80%;
+        }
+        .title-page-resp{
+          font-size: 25px!important;
+        }
+        .div-p-home-proj {
+          width: 90%;
+          margin: auto;
+      }
         .slide{
-          width: 200px !important;
+          width: 240px !important;
         }
         .no-mob{
           display: none;
@@ -2842,6 +3014,13 @@ input{
           width:80%!important;
           margin-right: auto;
           margin-left:auto;
+          margin-top: 40%;
+
+        }
+        .slider-proj {
+          width: 80%;
+          padding-right: 5%;
+
         }
         .intro-main-div{
           line-height: 23px;
@@ -2851,8 +3030,80 @@ input{
           padding-top:30%;
         }
         .div-proj {
-          height: 950px;
+          height: 820px;
       }
+      .div-img-propos-main {
+        width: 100%;
+        position: relative;
+        top: 305px;
+        height: 0px;
+    }
+    .main-div-serv-mob{
+      height: 600px;
+    }
+    .elmt-propos-1{
+      width: 100%;
+    }
+    .div-elmt-propos-1 {
+      float: right;
+      position: relative;
+      top: -785px;
+      height: 0px;
+      width: 78%;
+  }
+    .presentation-txt {
+      width: 78%;
+
+    }
+    .div-other{
+      width: 100%;
+      padding-left: 10%;
+      height: 500px;
+    }
+    .txt-other{
+      display: none;
+    }
+    .mb-50{
+      margin-bottom: 50%;
+    }
+    .mb-80{
+      margin-bottom: 80%;
+    }
+    .mb-110{
+      margin-bottom: 110%;
+    }
+    .div-elmt-5 {
+      top: 110px;
+      height: 100px;
+      width: 110%;
+      left: -8px;
+  }
+    .img-propos-main {
+      width: 80%;
+    margin-left: 10%;
+  }
+    .a-propos-main{
+      font-size: 28px;
+      text-align: center;
+    }
+    .p-propos-main{    
+      width: 100%;
+      text-align: center;
+    }
+    .a-propos-main{
+      font-size: 28px;
+      text-align: center;
+    }
+    .p-propos-main{    
+      width: 100%;
+      text-align: center;
+    }
+    .text-center-mob{
+      text-align: center;
+      }
+    .btn-propos-main{
+      margin-top:5%;
+    }
       .intro-main-div{
         margin-bottom: 10%;
         line-height: 20px;
@@ -2865,6 +3116,7 @@ input{
         width: 80%!important;
         margin-left: auto;
         margin-right: auto;
+        
       }
       .div-elmt-2{
         left: -10px;
@@ -2889,10 +3141,10 @@ input{
           top: 500px;
         }
         .no-main-div{
-          float:initial;
+          float:initial!important;
         }
         .home-section{
-          height: 910px!important;
+          height: 780px!important;
       }
       
       
@@ -3070,8 +3322,17 @@ transform: translateY(-12px) translateX(10px) skew(-20deg);
 
 /* MENU Text part */
 
-
-
+.li-link-lg{
+  margin-top: 40%!important;
+  width: auto;
+  margin: auto!important;
+  text-align: center!important;
+}
+.li-link-lg a{
+  font-size: 20px;
+    font-weight: 100;
+  
+}
 .device {
 position: relative;
 width: 345px;
@@ -3093,19 +3354,24 @@ box-shadow: 0 0 0 10px rgba(0,0,0,.1);
   margin-bottom: 30%;
 }
 .li-link-nav{
-  margin-left: 30%!important;
+  margin-left:15%!important;
 }
-.li-link-nav-sous{
-  display: none!important;
+.li-link-nav-sous {
+  display: none;
 }
-
+.li-link-nav-sous a{
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
 .fleche-blanche-nav{
   float: left;
 width: 7%;
 padding: 2%;
 display: block;
     opacity: 1;
-    transform: translateY(0);
+    transform: rotate(
+180deg);
     position: relative;
     top: -11px;
     left: 4px;
@@ -3551,4 +3817,16 @@ select.form-control:focus::-ms-value {
 	.form-inline .has-feedback .form-control-feedback {
 		top: 0
 	}
+}
+.main-service-div{
+  width: 60%;
+}
+.main-service-div-txt{
+  width: 60%;  
+}
+.slider-services{
+  display:none;
+}
+.other-service-div{
+       width:60%   
 }

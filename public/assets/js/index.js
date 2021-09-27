@@ -12,17 +12,18 @@ burger.click(function() {
 	nav.classList.toggle('is-open');
 });
 $(".fleche-blanche-nav").click(function() {
-    if(!$(this).hasClass("rotate-in-center")){
+    if($(this).hasClass("rotate-out-center")  ){
         $(this).removeClass("rotate-out-center");
     $(this).addClass("rotate-in-center");
     $('.li-link-nav-sous').each(function(){
-        $(this).show();
+        $(this).hide();
     });
     }else{
         $(this).removeClass("rotate-in-center");
         $(this).addClass("rotate-out-center");
+        console.log($('.li-link-nav-sous'));
         $('.li-link-nav-sous').each(function(){
-            $(this).hide();
+            $(this).show();
         });
     }
 });
@@ -34,7 +35,7 @@ let clickEvent = new Event('click');
 
 window.addEventListener('load', function(e) {
 
-	burger.dispatchEvent(clickEvent);
+
 	
 	setTimeout(function(){
 		burger.dispatchEvent(clickEvent);

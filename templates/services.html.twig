@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="main-div">
+    <div class="main-div main-div-serv-mob">
     <div class="main-service">
-        <div class="main-div " style="width: 60%;">
+        <div class="main-div main-service-div" style="">
             <div class="main-title-page">
                 Nos services
             </div>
         </div>
-        <div class="main-div" style="width: 60%;">
+        <div class="main-div main-service-div-txt" >
             <p class="intro-main-div-service">
                 HBH gère vos projets de construction et répond aux besoins de ses clients, tant<br/>
                 en assistance au Maître d’Ouvrageque pour la gestion de la sécurité et la santé<br/>
@@ -19,33 +19,170 @@
         </div>
         <div class=" main-div-img-service">
         
-        <a href="{{ path('services_management_projet') }}">
+        <a class="img-service-desk" href="{{ path('services_management_projet') }}">
             <div class="main-div div-img-services div-img-services-man" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main img-services-main-man"  src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}">
             <p class="title-services">Management <br/>de projets</p>
             </div>
         </a>   
         
-        <a href="{{ path('services_securite_sante') }}">
+        <a class="img-service-desk" href="{{ path('services_securite_sante') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})" >
                 <img class="img-services-main"  src="assets/img/secu.png">
                 <p class="title-services">Sécurité <br/>& Santé</p>
             </div>
             </a>
-       <a href="{{ path('services_espace_collaboratif') }}">
+       <a class="img-service-desk" href="{{ path('services_espace_collaboratif') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main"  src="assets/img/securite.png">
                 <p class="title-services">Espace <br/>collaboratif</p>
             </div>
             </a>
-            <a href="{{ path('services_labellisation') }}">
+            <a class="img-service-desk" href="{{ path('services_labellisation') }}">
             <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                 <img class="img-services-main"  src="assets/img/labellisation.png">
                 <p class="title-services">Labellisation</p>
             </div>
             </a>
+            <div class="slider-services">
+         <!-- <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>
+                <div class="slide " style="background-color: white">
+                    <div class="slide-img">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                    </div>
+                    <div class="slide-txt">
+                        <div class="cat-slide-txt">Management de projet</div>
+                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                    </div>
+                    <div class="div-arrow ">
+                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
+                    </div>
+                </div>-->
+               
+                <div class="slide-img-serv  " style="background-color: white">
+                        <div class="main-div div-img-services div-img-services-man" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main img-services-main-man"  src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}">
+            </div>
+                <p class="title-services">Management <br/>de projets</p>
+                </div>
+                <div class="slide-img-serv  " style="background-color: white">
+                    <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})" >
+                <img class="img-services-main"  src="assets/img/secu.png">
+            </div>
+              <p class="title-services">Sécurité <br/>& Santé</p>
+                </div>
+                <div class="slide-img-serv  " style="background-color: white">
+                    <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main"  src="assets/img/securite.png">
+            </div>
+              <p class="title-services">Espace <br/>collaboratif</p>
+                </div>
+                <div class="slide-img-serv   " style="background-color: white">
+                    <div class="main-div div-img-services" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
+                <img class="img-services-main"  src="assets/img/labellisation.png">
+            </div>
+            <p class="title-services">Labellisation</p>
+                </div>
+    </div>
         </div>
     </div>
+ 
+        <script type="text/javascript">
+                $('.slider-services').slick({
+                    dots: false,
+                    vertical: false,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    arrows: false,
+                });
+            </script>
     <div class="div-elmt">
     <div class="div-elmt-services-1"></div>
     </div>
@@ -54,12 +191,12 @@
     </div>
     <div class="main-div" style="color: white;background-color: #102242;">
     <div class="div-other">
-        <div class="main-div" style="width: 60%;">
+        <div class="main-div other-service-div" >
             <div class="main-title-page other-title-page">
                 Autres services
             </div>
         </div>
-        <div class="main-div" style="width: 60%;">
+        <div class="main-div other-service-div" >
             <div>
             <p class="txt-other-bold">
                 HBH peut offrir à un Maître d'Ouvrage des services complémentaires à ceux de son core<br/> business en tant que nouveau
@@ -77,4 +214,5 @@
         </div>
     </div>
     </div>
+ 
 {% endblock %}
