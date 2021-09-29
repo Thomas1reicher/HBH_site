@@ -1355,6 +1355,7 @@ button span{
 }
 .service-title-div{
   margin-bottom: 2%;
+  height: 100px;
 }
 .service-text{
   color: 
@@ -2823,26 +2824,218 @@ input{
       }
   
       @media (max-width:420px) {
+        .no-desktop{
+          display: block!important;
+        }
         .main-title-page{
           font-size: 32px!important;
           line-height: 40px;
         
         }
+        .div-widget-rgpd {
+          float: left;
+          width: 10%!important;
+      }
+      .div-text-rgpd {
+        float: left;
+        width: 85%!important;
+        padding-left: 5%;
+        padding-bottom: 50px;
+    }
+    .div-btn-contact button {
+      width: 55%;
+
+    }
+    .service-title {
+
+      font-size: 35px;
+
+      line-height: 42px;
+
+  }
+    .div-service-manage-img {
+      width: 100%!important;
+  }
+  .service-text-div {
+    width: 95%;
+  }
+  .service-key {
+    margin-bottom: 5%;
+
+  }
+  .elmt-service-m-2 {
+    float: right;
+    width: 70%;
+    position: relative;
+    top: 0px;
+}
+.div-ouvrage{
+  padding-left: 5%;
+  padding-top: 0%;
+}
+.title-ouvrage {
+  font-size: 30px;
+  line-height: 35px;
+  width: 60%;
+  margin-bottom: 8%;
+}
+.intro-ouvrage-div {
+  width: 80%;
+}
+.text-ouvrage-div {
+  width: 90%;
+}
+.div-mission{
+width: 100%;
+height: 535px;
+}
+.div-mission-container {
+  width: 85%;
+  padding-left: 8%;
+}
+.mission-title{
+  margin-top: 5%;
+}
+
+
+  .div-service {
+    width: 90%;
+    padding-left: 5%;
+    float: left;
+    padding-top: 0%;
+  }
+  .service-manage-img {
+    width: 85%;
+    top: 45px;
+  }
+        .div-rgpd {
+          margin: auto;
+          width: 90%!important;
+      } 
+      .div-widget-rgpd input{
+
+      }
+        .desktop-footer{
+          display: none;
+        }
+        .mobile-footer{
+          display: block!important;
+        }
+        .div-footer-mob{
+          width:50%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+
+        }
+        .linkedin-footer-mob{
+          width:10%;
+        }
+        .madein-footer-mob{
+          width:35%;
+        }
+        .mobile-footer-link{
+          margin-top: 5%;
+          margin-bottom: 5%;
+        }
+        .mobile-footer-info{
+          margin-top:2%;
+        }
         .teams{
           display:none;
         }
         .man{
-          width: 225px!important;
+          width: 255px!important;
+          margin-right: 10px;
+          margin-left: 10px;
         }
+        .container-team {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+      } 
+      .teams-title{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-top: 3%;
+      }
+      .div-elmt-propos-5 {
+        height: 100px;
+        width: 121%;
+        position: relative;
+        float: left;
+        background-color: #102242;
+        top: 115px;
+        transform: rotateZ( 
+    3.0deg);
+        left: -9px;
+    } 
+    .contact-div {
+      margin-left: 9%;
+  }
+    .contact-info{
+      width: 50%;
+      margin-left: 9%;
+      margin-bottom: 80%;
+
+    }
+    .div-elmt-contact-1 {
+      float: right;
+      position: relative;
+      top: -515px;
+      height: 0px;
+  }
+    .contact-info .p-left{
+      float:initial;
+      width: 100%;
+    }
+    .contact-info .p-right{
+      float:initial;
+      width: 100%;
+    }
+    .div-elmt-contact-2{
+      display: none;
+    }
+  .elmt-contact-1 {
+    width: 64%;
+    float: right;
+  }
+  .txt-contact{
+    width: 100%;
+  }
+  .contact-div .main-title-page{
+    margin-top:5%;
+    margin-bottom:5%;
+  }
+    .actu-title-div{
+      margin-bottom: 5%;
+    }
+    .schema-philo{
+      display: none;
+    }
+      .philo-div{
+        padding-top: 25%;
+      }
+      .btn-team {
+        height: 40px;
+        background-color: #39428f;
+        width: 75%;
+        margin-bottom: 3%;
+        margin-top: 2%;
+    }
         .slider-teams{
           display: block!important;
-          width: 80%;
+          width: 98%;
           /* color: white; */
           margin-left: auto;
           margin-right: auto;
+          height:450px;
         }
         .presentation-title{
           width:100%;
+          margin-top: 10%;
         }
         .div-elmt-services-1 {
           height: 100px!important;
@@ -2853,6 +3046,14 @@ input{
           margin-top: 20%;
 
 
+        }
+        .main-div-contact input{
+          width: 85%;
+    height: 60px;
+    font-size: 15px;
+    color: #102242;
+    font-weight: 700;
+    padding-left: 2%;
         }
         .p-pres{
           width: 100%;
@@ -3047,10 +3248,18 @@ input{
     .div-elmt-propos-1 {
       float: right;
       position: relative;
-      top: -785px;
+      top: -715px;
       height: 0px;
-      width: 78%;
+      width: 65%
   }
+  .div-elmt-propos-2 {
+    width: 7%;
+    float: right;
+    height: 0px;
+    position: relative;
+    right: 125px;
+    top: -720px;
+}
     .presentation-txt {
       width: 78%;
 
@@ -3068,6 +3277,9 @@ input{
     }
     .mb-80{
       margin-bottom: 80%;
+    }
+    .mt-80{
+      margin-top: 80%;
     }
     .mb-110{
       margin-bottom: 110%;
@@ -3829,4 +4041,25 @@ select.form-control:focus::-ms-value {
 }
 .other-service-div{
        width:60%   
+}
+.mobile-footer{
+  display:none;
+}
+.div-rgpd{
+  margin: auto;width: 50%;
+}
+.div-widget-rgpd{
+  float: left;
+  width: 5%
+}
+.div-text-rgpd{
+  float: left;
+  width: 95%;
+  padding-bottom: 50px;
+}
+.div-service-manage-img{
+  width:30%;
+}
+.no-desktop{
+  display: none;
 }

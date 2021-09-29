@@ -57,16 +57,16 @@
 					<a href="{{ path('services') }}"><span style="float: left">Nos services</span> </a><img class="fleche-blanche-nav" src="{{ asset('assets/img/fleche_blanche.svg') }}"/>
 				</li>
                 <li class="li-link-nav li-link-nav-sous" style="display: none;">
-					<a href="{{ path('services') }}">Management de projet</a>
+					<a href="{{ path('services_management_projet') }}">Management de projet</a>
 				</li>
                 <li class="li-link-nav li-link-nav-sous" style="display: none;">
-					<a href="{{ path('services') }}">Sécurité & santé</a>
+					<a href="{{ path('services_securite_sante') }}">Sécurité & santé</a>
 				</li>
                 <li class="li-link-nav li-link-nav-sous" style="display: none;">
-					<a href="{{ path('services') }}">Espace collaboratif</a>
+					<a href="{{ path('services_espace_collaboratif') }}">Espace collaboratif</a>
 				</li>
                 <li class="li-link-nav li-link-nav-sous" style="display: none;">
-					<a href="{{ path('services') }}">Labellisation</a>
+					<a href="{{ path('services_labellisation') }}">Labellisation</a>
 				</li>
                 
 				<li class="li-link-nav">
@@ -136,7 +136,8 @@
 
 
     <footer>
-        <div class="main-div" style="background-color: black;color: lightgrey;padding-top: 100px;padding-bottom: 100px">
+    <div class="main-div desktop-footer">
+        <div class="main-div " style="background-color: black;color: lightgrey;padding-top: 100px;padding-bottom: 100px">
             <ul style="display: flex;list-style: none;padding: 0;margin: 0;align-items: center">
                 <li style="width: 20%;text-align: center"><img style="width: 120px" src="/assets/img/logo_HBH.png"></li>
                 <li style="width: 20%;border-left: 2px solid orange;padding-left: 10px">Lorem Ipsum azerazegergr terdgrvhtqed ergrgrdhb erbhgrdht arzerazer zerazeraze raze zea rzeredsfze ez rfezgv gr </li>
@@ -156,6 +157,32 @@
         <div class="main-div" style="text-align: center;background-color: black;color: lightgrey;padding-top: 10px;padding-bottom: 10px;
             font-weight: 300!important;font-size:13px;">
             Mentions légales - Gestion des données - CGU<br>@2021 - Agence de communication A3COM
+        </div>
+        </div>
+        <div class="main-div mobile-footer">
+        <div class="main-div " style="background-color: black;color: lightgrey;padding-top: 50px;padding-bottom: 50px">
+            <div class="mobile-footer-logo div-footer-mob">
+                <img class="logo-footer-mob" src="{{ asset('assets/img/logo_HBH_blanc.svg') }}"/>
+            </div>
+            <div class="mobile-footer-info div-footer-mob">
+                <p class="mobile-info-footer">16, rue Robert Stümper</p>
+                <p class="mobile-info-footer">L-2557 Luxembourg</p>
+                <p class="mobile-info-footer">T : +352 40.49.901 </p>
+                <p class="mobile-info-footer">F : +352 40.49.93</p>
+                <p class="mobile-info-footer">E : hbh@hbh.lu</p>
+            </div>
+            <div class="mobile-footer-link div-footer-mob">
+                <a target="_blank" href="https://lu.linkedin.com/company/hbh-s-a-"><img class="linkedin-footer-mob" src="/assets/img/linkedin-logo.png"/></a>
+            </div>
+            <div class="mobile-footer-madein div-footer-mob">
+                <img class="madein-footer-mob" src="/assets/img/LUX.png" />
+            </div>
+            
+        </div>
+        <div class="main-div" style="text-align: center;background-color: black;color: lightgrey;padding-top: 10px;padding-bottom: 10px;
+            font-weight: 100!important;font-size:10px;">
+            Mentions légales - Gestion des données - CGU<br>@2021 - Agence de communication A3COM
+        </div>
         </div>
     </footer>
     </body>
