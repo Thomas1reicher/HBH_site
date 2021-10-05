@@ -221,6 +221,42 @@
        <img class="img-service-ouvrage img-service-ouvrage-4 no-active-img" id="4" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conformite.svg') }}"/>
        <img class="img-service-ouvrage img-service-ouvrage-4 active-img" id="4"style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conformite_actif.svg') }}"/>    
     </div>
+    <div class="slider-service-ouvrage" style="display:none">
+        <div class="slide-ouvrage">
+            <img class="img-service-ouvrage img-service-ouvrage-1 no-active-img" id="1" style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_initiale_simple.svg') }}"/>
+            <img class="img-service-ouvrage img-service-ouvrage-1 active-img" id="1"src="{{ asset('assets/img/Services_management_de_projet/phase_initiale.svg') }}"/>
+        </div>
+        <div class="slide-ouvrage">
+            <img class="img-service-ouvrage img-service-ouvrage-2  no-active-img" id="2" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conception.svg') }}"/>
+            <img class="img-service-ouvrage img-service-ouvrage-2 active-img" id="2"style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conception_actif.svg') }}"/>
+       
+        </div>
+        <div class="slide-ouvrage">
+            <img class="img-service-ouvrage img-service-ouvrage-3 no-active-img" id="3" src="{{ asset('assets/img/Services_management_de_projet/phase_de_realisation.svg') }}"/>
+            <img class="img-service-ouvrage img-service-ouvrage-3 active-img" id="3" style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_de_realisation_actif.svg') }}"/>
+
+        </div>
+        <div class="slide-ouvrage">
+            <img class="img-service-ouvrage img-service-ouvrage-4 no-active-img" id="4" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conformite.svg') }}"/>
+            <img class="img-service-ouvrage img-service-ouvrage-4 active-img" id="4"style="display:none" src="{{ asset('assets/img/Services_management_de_projet/phase_de_conformite_actif.svg') }}"/>    
+
+        </div>
+
+
+    </div>
+    <script type="text/javascript">
+                $('.slider-service-ouvrage').slick({
+                    dots: false,
+                    vertical: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    arrows: false
+                });
+    </script>
     <div class="service-ouvrage-div">
 <div class="text-service-ouvrage other-txt-ouvrage active-txt-ouvrage" id="1">
          Assistance à la mise au point de l’organisation du projet.<br />Assistance lors de l’élaboration des documents

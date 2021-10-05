@@ -1634,6 +1634,7 @@ background-color: #102242;
   background-color: #103182;
   padding-top: 7%;
   margin-top: 10%;
+  padding-bottom: 10%;
 }
 .div-last-info-title{
   width: 50%;
@@ -2826,6 +2827,199 @@ input{
       @media (max-width:420px) {
         .no-desktop{
           display: block!important;
+        } 
+        .main-colaboratif{
+          width: 70%!important;
+          float: initial;
+        }
+        .main-colaboratif img{
+          width: 357px!important;
+          top: 81px!important;
+        }
+        .div-colab .service-title-div{
+          margin-bottom: 15%;
+        }
+        .div-colab-img-container {
+          width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+          margin-bottom: 140%;
+          float: left;
+      }
+        .div-colab-left-text {
+          width: 85%;
+          margin-left: 8%;
+          float: left;
+          margin-top: 5%;
+      }
+      .div-colab-right-text {
+        width: 85%;
+        margin-left: 8%;
+
+        
+    }
+    .elmt-colab-2 {
+      position: relative;
+      width: 66%;
+      top: -505px;
+  }
+  .elmt-colab-4 {
+    height: 81px;
+    width: 111%;
+    top: -45px;
+ 
+}
+.div-mob-img-label{
+  width: 60%;
+  float: right;
+}
+.div-mob-img-label img{
+  top: 81px!important;
+  width: 100%!important;
+}    
+.div-mob-img-label .service-label-man-img{
+  height: 441px;
+} 
+.div-lbl-mob{
+  padding-top: 15%!important;
+}
+.div-lbl-mob .service-key-img{
+  margin-bottom: 90%;
+}
+.elmt-label-2 {
+  position: relative;
+  top: -496px;
+  width: 100%;
+}
+.elmt-label-1 {
+  width: 56%;
+  top: -695px;
+  position: relative;
+  left: -4px;
+}
+.div-dgnb {
+  width: 77%;
+  margin-left: 9%;
+}
+    
+        .div-colab {
+          width: 85%;
+          padding-left: 8%;
+          padding-top: 13%;
+      }
+        .main-colaboratif .service-man-img{
+          height: 400px;
+        }
+        .div-secu-mob{
+           width: 60%;
+        float: right;
+        }
+        .service-service-title {
+          font-weight: 700;
+        }
+        .inner-sante {
+          padding-left: 8%;
+      }
+      .div-sante .service-key-div{
+        margin-top: 12%;
+        margin-bottom: 110%!important;
+      }
+      .elmt-sante-1 {
+        width: 65%;
+        top: -391px;
+    }
+    .elmt-sante-2 {
+      position: relative;
+      width: 40%;
+      top: -160px;
+      right: 5px;
+  }
+  .div-coordinateur {
+    margin-left: auto;
+    margin-right: auto;
+    width: 89%;
+    margin-bottom: 25%;
+    padding-left: 8%;
+  }
+  .pilotage-title {
+    float: left;
+    margin-top: 35%;
+    font-size: 35px;
+    line-height: 41px;
+  }
+  .pilotage-text-intro {
+    font-weight: 500;
+    float: left;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.pilotage-sante-mob{
+  font-size: 20px!important;
+    padding-top: 4px;
+}
+.div-elmt-secu {
+
+  left:-34px;
+  height: 84px;
+}
+.div-securite-title{
+  float: left;
+  margin-top:-10%;
+  width: 90%;
+}
+.div-securite{
+  height: auto;
+}
+
+.elmt-sante-3 {
+  height: 95px;
+  width: 113%;
+  top: 30px;
+}
+.div-last-info-title {
+  width: 80%;
+  text-align: center;
+}
+.last-info-propos {
+  float: left;
+  text-align: left;
+  width: 97%;
+}
+.div-last-info-propos{
+  width:70%;
+}
+.info-propos {
+  margin-bottom: 6%;
+  font-size: 25px;
+}
+.title-last-info {
+
+  font-size: 30px;
+}
+.securite-title {
+  font-size: 32px;
+  padding-bottom: 16%;
+}
+.securite-text {
+  width: 93%;
+}
+.div-securite-container {
+  width: 88%;
+  padding-left: 8%;
+}
+      .sante-text-div {
+        width: 90%;
+      }
+      .service-title-div {
+        margin-bottom: 2%;
+        height: 65px;
+    }
+        .div-sante {
+          width: 100%;
+          padding-top: 40%;
+        }
+        .service-man-img{
+          background-size: 131%;
         }
         .main-title-page{
           font-size: 32px!important;
@@ -2888,15 +3082,100 @@ input{
 .div-mission{
 width: 100%;
 height: 535px;
+margin-bottom: 150%;
 }
 .div-mission-container {
   width: 85%;
   padding-left: 8%;
 }
 .mission-title{
-  margin-top: 5%;
+  margin-top: 10%;
 }
+.elmt-service-m-3 {
+  width: 69%;
+  position: relative;
+  top: -962px;
+}
+.div-pilotage {
+  width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.pilotage-container {
+  width:90%!important;
+  padding-bottom:20%;
+}
+.div-elmt-ouvrage {
+  height: 102px;
+  transform: rotateZ( 
+-5.0deg);
+  left: -68px;
+  top: -51px;
+}
+.slide-ouvrage {
+  width: 20%!important;
+}
+.title-service-ouvrage {
+  width: 54%;
+  font-size: 35px;
+}
+.img-service-ouvrage-div{
+  display: none;
+}
+.slider-service-ouvrage{
+  display: block!important;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding-left: 5%;
+}
+.img-service-ouvrage {
+  width: 95%;
+}
+.container-ouvrage {
+  padding-bottom: 10%;
 
+}
+.div-elmt-ouvrage-2 {
+  height: 122px;
+  top: -13px;
+  transform: rotateZ( 
+5deg);
+}
+.div-pilotage-other .pilotage-title {
+  font-size: 33px;
+  line-height: 38px;
+  width: 73%;
+  padding-top: 35%;
+}
+.div-pilotage-other .pilotage-text-intro {
+  width: 85%;
+  margin-top: 10%;
+}
+.text-service-ouvrage {
+  width: 93%;
+}
+.service-ouvrage-div {
+  width: 100%;
+  padding-left: 5%;
+
+}
+.div-block-key-title {
+  padding-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  height: 30px;
+}
+.block-key-title{
+  font-size: 25px;
+    font-weight: 900;
+    width: 80%;
+}
+.img-block-key-title {
+  width: 7%;
+  padding-top: 3%;
+  margin-right: auto;
+  margin-left: 9%;
+}
 
   .div-service {
     width: 90%;
@@ -4062,4 +4341,12 @@ select.form-control:focus::-ms-value {
 }
 .no-desktop{
   display: none;
+}
+@media (min-width:420px) {
+.slider-teams{
+  display: none!important;
+}
+}
+.main-colaboratif{
+  width:40%;
 }
