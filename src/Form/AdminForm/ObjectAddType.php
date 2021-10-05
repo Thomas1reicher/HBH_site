@@ -55,28 +55,36 @@ class ObjectAddType extends AbstractType
             switch ($var[$i]) {
               case 'string':
                     $builder->add($namevar[$i],TextType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'textarea':
                     $builder->add($namevar[$i],TextareaType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'String':
                         $builder->add($namevar[$i],TextType::class,[
-
+                            'attr' => [
+                                'class' => 'input-form'
+                            ],
                             'required' => false,
     
                         ]);
                  break;
                 case 'int' :
                     $builder->add($namevar[$i],IntegerType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
@@ -84,42 +92,54 @@ class ObjectAddType extends AbstractType
                 case 'file' :
                         $builder->add($namevar[$i],FileType::class, [
                             'mapped' => false,
-
+                            'attr' => [
+                                'class' => 'input-form'
+                            ],
                             'required' => false,
  
                         ]);
                     break;
                 case 'num':
                     $builder->add($namevar[$i],NumberType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case "email":
                     $builder->add("$namevar[$i]",EmailType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'password':
                     $builder->add($namevar[$i],PasswordType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'tel':
                     $builder->add($namevar[$i],TelType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'date':
                     $builder->add($namevar[$i],DateType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
@@ -136,18 +156,31 @@ class ObjectAddType extends AbstractType
                     break;
                 case 'float':
                      $builder->add($namevar[$i],NumberType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
                 case 'range':
                     $builder->add($namevar[$i],RangeType::class,[
-
+                        'attr' => [
+                            'class' => 'input-form'
+                        ],
                         'required' => false,
 
                     ]);
                     break;
+                 case 'img':
+                        $builder->add($namevar[$i],FileType::class,[
+                            'attr' => [
+                                'class' => 'input-form'
+                            ],
+                            'required' => false,
+    
+                        ]);
+                        break;
                 default :
                     $categorieCms = $this->repository->findAll();
                  
@@ -171,7 +204,7 @@ class ObjectAddType extends AbstractType
                                 
                             ]);}
                     else if($var[$i]=="image"){
-                        $image = new Image();
+                        /*$image = new Image();
                         $this->object->addImages($image);
                         $builder->add(
                             'images',
@@ -184,7 +217,7 @@ class ObjectAddType extends AbstractType
                                 'allow_add' => true,
                                 'allow_delete' => true,
                             ]
-                        );}
+                        );*/}
                                            
 
                         

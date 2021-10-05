@@ -7,6 +7,7 @@ namespace App\Controller\admin;
 use App\Entity\Actualite;
 use App\Entity\Projet;
 use App\Entity\Contact;
+use App\Entity\Team;
 use App\Entity\Image;
 use App\Form\AdminForm\ObjectAddType;
 use Doctrine\ORM\Mapping\Entity;
@@ -27,6 +28,7 @@ class AdminController extends AbstractController
     private $Actualiterepository;
     private $Contactrepository;
     private $Projetrepository;
+    private $Teamrepository;
 
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -34,6 +36,7 @@ class AdminController extends AbstractController
         $this->Actualiterepository = $entityManager->getRepository(Actualite::class);
         $this->Contactrepository = $entityManager->getRepository(Contact::class);
         $this->Projetrepository = $entityManager->getRepository(Projet::class);
+        $this->Teamrepository = $entityManager->getRepository(Team::class);
         $this->imagerepository = $entityManager->getRepository(Image::class);
         $categorieCms = $repository->findBy(
             array(),
@@ -103,6 +106,17 @@ class AdminController extends AbstractController
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
             $obj = $form->getData(); 
+            if($name == "Team"){
+                $file = $form->get('image_profil')->getData();
+                $file->move('assets/images/upload', $file->getClientOriginalName());
+                $obj->setImageProfil($file->getClientOriginalName());
+                
+            }
+            elseif ($name == "Actualité" || $name == "Projet"){
+                $file = $form->get('image')->getData();
+                $file->move('assets/images/upload', $file->getClientOriginalName());
+                $obj->setImageProfil($file->getClientOriginalName());
+            }
             $entityManager->persist($obj);
             $entityManager->flush();
             return $this->redirectToRoute("catAdmin", array(
@@ -135,6 +149,45 @@ class AdminController extends AbstractController
     public function CatCmsUpdate (string $name,int $id,Request $request):Response
     {   
    
+        $entityManager = $this->getDoctrine()->getManager();
+        $repository = $this->nameClass($name,"repository");
+        $object =$repository->find($id);
+        $form = $this->createForm(ObjectAddType::class, $object,  array(
+            'attr' => array('class' => $name ,
+                'object' => $object,
+            )));
+            if($_POST){
+     
+                $form->handleRequest($request);
+                if ($form->isSubmitted() && $form->isValid()) {
+              
+            
+                $entityManager->flush();
+                return $this->redirectToRoute("catAdmin", array(
+                    'name' => $name
+                ));
+            }
+        }
+            return $this->render('admin/admin_add_object.html.twig', [
+                'itemsMenu' => $this->itemsMenu,
+                'name' => $name,
+                'form' => $form->createView(),
+                'edit' => true,
+                'id'   => $id
+
+            ]
+        );
+
+    }
+        /**
+     *
+     *
+     * @Route("/admin/images/{name}/{id}", name="catAdminImages")
+     */
+    public function CatAdminImages (string $name,int $id,Request $request):Response
+    {   
+        var_dump("test");
+        die();
         $entityManager = $this->getDoctrine()->getManager();
         $repository = $this->nameClass($name,"repository");
         $object =$repository->find($id);

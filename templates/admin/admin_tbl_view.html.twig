@@ -16,14 +16,24 @@
             <div class="col-md-12">
                 <div class="bgc-white bd bdrs-3 p-20">
                     <h4 class="c-grey-900 mB-40">Liste des {{ name }}s</h4>
-
+                    {% set image = false %}
+                    {% set images = false %}
 		{%  if(objects is not empty) %}
 
 			<table id="table-liste" class="table table-sortable table-hover table-striped table-bordered table-condensed">
                     <thead><tr>
                         {% for key, variable  in tbl_var%}
                         <td>{{ variable }}</td>
+                        
+                        {% if variable|slice(0,6) == 'images'%}
+                            {% set images = key %}
+                         
+                        {% elseif variable|slice(0,5) == 'image'%}
+                            {% set image = key %}
+                        
+                        {% endif %}
                         {% endfor %}
+                       
                         <td style="text-align: center">Action</td>
                         </tr></thead>
                 <tbody id="#sortable">
@@ -31,7 +41,7 @@
                    <tr>
                        {% set vals =  object.val  %}
                        {% for key3, val  in vals %}
-                            
+                        
                         {% if val|length == 0 %}
                             {% if val.nom is defined %}
                             <td >{{ val.nom }}</td>
@@ -39,9 +49,17 @@
                             <td >{{ val }}</td>
                              {% endif %}
                           {% else %}
+                          {% if key3 == image and key3 != false %}
+                        <td style="    text-align: center;"><img class="img-admin" src="/assets/images/upload/{{val}}" /></td>
+                          {% elseif key3 == images %}
+                          {% else %}
                        <td >{{ val }}</td>
+                       {% endif %}
                             {% endif %}
                        {% endfor %}
+                       {% if name == 'Actualite' or name == 'Projet' %}
+                            <td><a class="btn cur-p " style="background: blanchedalmond;" href='{{url('catAdminImages',{'name': name , 'id' : object.id})}}'>Images</a></td>
+                        {% endif %}
                        <td class="center">
                             <form method="DELETE" action="{{url('catAdminDelete',{'name': name , 'id' : object.id})}}">
                                 <a class="btn cur-p btn-warning" href='{{url('catAdminUpdate',{'name': name , 'id' : object.id})}}'>Modifier</a>

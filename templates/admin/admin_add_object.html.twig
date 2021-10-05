@@ -13,9 +13,9 @@
 			</h4>
 			
             {% if (edit)%}
-			<form action="{{ path('catAdminUpdate',{id: id,name: name}) }}" method="post">
+			<form enctype="multipart/form-data" action="{{ path('catAdminUpdate',{id: id,name: name}) }}" method="post">
 			{% else %}
-			<form action="{{ path('catAdminAdd',{name: name}) }}" method="post">
+			<form enctype="multipart/form-data" action="{{ path('catAdminAdd',{name: name}) }}" method="post">
 			{% endif %}
 			<div id="exTab3" class="">
 				<div class="mT-30">

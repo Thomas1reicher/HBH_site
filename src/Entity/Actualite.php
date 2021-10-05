@@ -127,11 +127,15 @@ class Actualite
     }
     public function vars() :array
     {
-        $newTbl =get_class_vars(get_class($this));
-        $newTbl =array_keys($newTbl);
-      
-
-        return $newTbl;
+        $tbl = [];
+        $tbl[0]= "id";
+        $tbl[1]= "titre";
+        $tbl[2]= "date_publication";
+        $tbl[3]= "text";
+        $tbl[4]= "pdf";
+        $tbl[5]= "images";
+        $tbl[6]= "image";
+        return $tbl;
 
 
     }
@@ -155,7 +159,7 @@ class Actualite
         $tbl[2]=$this->getDatePublication()->format('Y-m-d');
         $tbl[3]=$this->getText();
         $tbl[4]=$this->getPdf();
-
+      
         
         return $tbl;
 

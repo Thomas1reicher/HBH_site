@@ -79426,3 +79426,16 @@ style > < style type
 .container-checkbox input:checked ~ .checkmark:after {
 	left: 5px;
 }
+.input-form{
+  width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: #102242;
+    display: block;
+}
+.img-admin{
+	width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}

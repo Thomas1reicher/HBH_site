@@ -274,11 +274,11 @@ class Projet
      $tbl = [];
      $tbl[0]= "int";
      $tbl[1]= "String";
-     $tbl[2]= "String";
-     $tbl[3]= "textarea";
-     $tbl[4]= "String";
-     $tbl[5]= "textarea";
-     $tbl[6]= "string";
+     $tbl[2]= "img";
+     $tbl[3]= "string";
+     $tbl[4]= "textarea";
+     $tbl[5]= "string";
+     $tbl[6]= "textarea";
      $tbl[7]= "string";
      $tbl[8]= "string";
      $tbl[9]= "string";
@@ -305,7 +305,7 @@ class Projet
         $tbl[10]=$this->getArchitecte();
         $tbl[11]=$this->getDelais();
         $tbl[12]=$this->getFinTravaux();
-
+       
         return $tbl;
 
 
