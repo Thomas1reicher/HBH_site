@@ -29,6 +29,7 @@ class AdminController extends AbstractController
     private $Contactrepository;
     private $Projetrepository;
     private $Teamrepository;
+    private $imagerepository;
 
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -115,7 +116,7 @@ class AdminController extends AbstractController
             elseif ($name == "Actualité" || $name == "Projet"){
                 $file = $form->get('image')->getData();
                 $file->move('assets/images/upload', $file->getClientOriginalName());
-                $obj->setImageProfil($file->getClientOriginalName());
+                $obj->setImage($file->getClientOriginalName());
             }
             $entityManager->persist($obj);
             $entityManager->flush();
@@ -137,6 +138,66 @@ class AdminController extends AbstractController
                     'name' => $name,
                     'form' => $form->createView(),
                     'edit' => false
+                ]
+            );
+        }
+    }
+    /**
+     *
+     *
+     * @Route("/admin/images/create/{name}/{id}", name="catAdminAddImg")
+     */
+    public function CatCmsAddImg(string $name,int $id ,Request $request) : Response
+    {
+     
+        $entityManager = $this->getDoctrine()->getManager();
+        $objectMain = $this->nameClass($name,"class");
+        $objectMainRepo = $this->nameClass($name,"repository");
+        $objectMain =$objectMainRepo->find($id);
+        $object = new Image();
+        $form = $this->createForm(ObjectAddType::class, (object)  $object ,  array(
+            'attr' => array('class' => $name ,
+                'object' => $object,
+            )));
+        if($_POST){
+        
+            /*for($i=0;$i<count($object->typeVars());$i++){
+            if($tbl[$object->typeVars()[$i]] != null){
+
+            }*/
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+            $obj = $form->getData(); 
+
+                $file = $form->get('nom_img')->getData();
+                $file->move('assets/images/upload', $file->getClientOriginalName());
+                $obj->setNomImg($file->getClientOriginalName());
+                $objectMain->addImages($obj);
+              
+            $entityManager->persist($obj);
+            $entityManager->flush();
+            return $this->redirectToRoute("catAdminImages", array(
+                'name' => $name,
+                'id' => $id
+            ));
+        }
+        return $this->render('admin/admin_add_object_img.html.twig', [
+            'itemsMenu' => $this->itemsMenu,
+            'name' => $name,
+            'form' => $form->createView(),
+            'edit' => false,
+            'id' => $id
+
+        ]
+    );
+        }
+        else{
+            return $this->render('admin/admin_add_object_img.html.twig', [
+                    'itemsMenu' => $this->itemsMenu,
+                    'name' => $name,
+                    'form' => $form->createView(),
+                    'edit' => false,
+                    'id' => $id
                 ]
             );
         }
@@ -186,34 +247,21 @@ class AdminController extends AbstractController
      */
     public function CatAdminImages (string $name,int $id,Request $request):Response
     {   
-        var_dump("test");
-        die();
-        $entityManager = $this->getDoctrine()->getManager();
         $repository = $this->nameClass($name,"repository");
-        $object =$repository->find($id);
-        $form = $this->createForm(ObjectAddType::class, $object,  array(
-            'attr' => array('class' => $name ,
-                'object' => $object,
-            )));
-            if($_POST){
-     
-                $form->handleRequest($request);
-                if ($form->isSubmitted() && $form->isValid()) {
-              
-            
-                $entityManager->flush();
-                return $this->redirectToRoute("catAdmin", array(
-                    'name' => $name
-                ));
-            }
+        $Objects = $repository->find($id);
+        if($Objects == null){
+            $listImg =$Objects;
+        }else{
+            $listImg=$Objects->getImages();
         }
-            return $this->render('admin/admin_add_object.html.twig', [
+        $obj = $this->nameClass($name,"class");
+        $tbl_var[0] = "Image";
+        return $this->render('admin/admin_tbl_view_img.html.twig', [
                 'itemsMenu' => $this->itemsMenu,
+                'objects' => $listImg,
+                'tbl_var' => $tbl_var,
                 'name' => $name,
-                'form' => $form->createView(),
-                'edit' => true,
-                'id'   => $id
-
+                'id' =>$id
             ]
         );
 
@@ -233,6 +281,30 @@ class AdminController extends AbstractController
         $entityManager->flush();
         return $this->redirectToRoute("catAdmin", array(
             'name' => $name
+        ));
+
+    }
+    /**
+     *
+     *
+     * @Route("/admin/delete/image/{name}/{id}", name="catAdminDeleteImg")
+     */
+    public function CatCmsDeleteImg(string $name,int $id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $object =$this->imagerepository->find($id);
+      
+        if($name == "Projet"){
+        $id = $object->getProjet()->getId();
+        }else{
+            $id = $object->getActualite()->getId();
+        }
+        $entityManager->remove($object);
+        $entityManager->flush();
+        return $this->redirectToRoute("catAdminImages", array(
+            'name' => $name,
+            'id' => $id
         ));
 
     }

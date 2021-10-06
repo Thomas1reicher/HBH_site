@@ -11,6 +11,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Component\Request;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Actualite;
+use App\Entity\Projet;
+use App\Entity\Contact;
+use App\Entity\Team;
 
 class HomeController extends AbstractController
 {
@@ -88,18 +92,33 @@ class HomeController extends AbstractController
      */
     public function projets()
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Projet::class);
+        $List = $repoTeam->findAll();
         return $this->render('projets.html.twig', [
-            'title' => 'projets'
+            'title' => 'projets',
+            'list' => $List, 
         ]);
     }
         /**
-     * @Route("/projet", name="projet")
+     * @Route("/projet/{id}", name="projet")
      * @return Response
      */
-    public function projet()
+    public function projet(int $id)
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Projet::class);
+        $obj = $repoTeam->find($id);
+        $objall = $repoTeam->findAll();
+        if(count($objall)<3){
+       
+        }else{
+            $objall = array_rand($objall , 3);
+        }
         return $this->render('projet.html.twig', [
-            'title' => 'projets'
+            'title' => 'projets',
+            'obj' => $obj,
+            'objall' => $objall
         ]);
     }
 
@@ -109,9 +128,12 @@ class HomeController extends AbstractController
      */
     public function presentation()
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Team::class);
+        $ListTeam = $repoTeam->findAll();
         return $this->render('presentation.html.twig', [
-            'title' => 'presentation'
-        ]);
+            'title' => 'presentation',
+            'list' => $ListTeam,        ]);
     }
 
     /**
@@ -119,19 +141,30 @@ class HomeController extends AbstractController
      * @return Response
      */
     public function actualites()
-    {
+    {  
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Actualite::class);
+        $List = $repoTeam->findAll();
         return $this->render('actualites.html.twig', [
-            'title' => 'actualites'
+            'title' => 'actualites',
+            'list' => $List
         ]);
     }
         /**
-     * @Route("/actualite", name="actualite")
+     * @Route("/actualite/{id}", name="actualite")
      * @return Response
      */
-    public function actualite()
+    public function actualite(int $id)
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Actualite::class);
+        $obj = $repoTeam->find($id);
+        $objall = $repoTeam->findAll();
+        $objall = array_rand($objall , 3);
         return $this->render('actualite.html.twig', [
-            'title' => 'actualites'
+            'title' => 'actualites',
+            'obj' => $obj,
+            'objall' => $objall
         ]);
     }
  

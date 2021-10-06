@@ -39,11 +39,20 @@ class Actualite
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $pdf;
-
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
         /**
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="actualite")
      */
     private $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
 
     
     public function getId(): ?int
@@ -134,7 +143,7 @@ class Actualite
         $tbl[3]= "text";
         $tbl[4]= "pdf";
         $tbl[5]= "images";
-        $tbl[6]= "image";
+
         return $tbl;
 
 
@@ -159,7 +168,7 @@ class Actualite
         $tbl[2]=$this->getDatePublication()->format('Y-m-d');
         $tbl[3]=$this->getText();
         $tbl[4]=$this->getPdf();
-      
+    
         
         return $tbl;
 
@@ -171,6 +180,40 @@ class Actualite
 
        /* $tbl=$this->getEmail()."-".$this->getFullName().'-'.$this->getPassword().'-'.$this->getUsername();
         */return "";
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setActualite($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getActualite() === $this) {
+                $image->setActualite(null);
+            }
+        }
+
+        return $this;
     }
 
 }

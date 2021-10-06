@@ -43,185 +43,40 @@
             Notre équipe
         </div>
         <div class="teams">
+        {%  for team in list %}
             <div class="man">
                 <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
+                    <img style="width:100%" src="/assets/images/upload/{{team.imageprofil}}">
                 </div>
                 <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
+                    <h3 class="name-man">{{team.prenom}}{{team.nom}}</h3>
+                    <p class="worker-man">{{team.poste}}</p>
+                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>{{team.email}}</p>
+                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>{{team.tel}}</p>
                 </div>
             </div>
-          <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
+        {% endfor %}
+        
+            
         </div>
         <div class="main-div">
          <div class="slider-teams">
+         {%  for team in list %}
          <div class="man">
                 <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
+                    <img style="width:100%" src="/assets/images/upload/{{team.imageprofil}}">
                 </div>
                 <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
+                    <h3 class="name-man">{{team.prenom}}{{team.nom}}</h3>
+                    <p class="worker-man">{{team.poste}}</p>
+                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>{{team.email}}</p>
+                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>{{team.tel}}</p>
                 </div>
             </div>
-          <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-ma">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
-             <div class="man no-first-man">
-                <div class="img-man">
-                    <img style="width:100%" src="assets/img/A_propos/exemple_tribonoscope.png">
-                </div>
-                <div class="man-txt">
-                    <h3 class="name-man">Lorem Ipsum</h3>
-                    <p class="worker-man">PDG de HBH</p>
-                    <p class="mail-man"><span class="icon-team"><i class="far fa-envelope"></i></span>lorem.ipsum@hbh.lu</p>
-                    <p class="tel-man"><span class="icon-team"><i class="fas fa-phone-alt"></i></span>123 456 789</p>
-                </div>
-            </div>
+              {% endfor %}
+          
+       
+    
               </div> 
              
     </div>

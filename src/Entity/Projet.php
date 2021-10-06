@@ -25,6 +25,10 @@ class Projet
     private $titre;
 
     /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $date_publication;
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
@@ -82,6 +86,11 @@ class Projet
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="projet")
      */
     private $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -316,5 +325,39 @@ class Projet
 
        /* $tbl=$this->getEmail()."-".$this->getFullName().'-'.$this->getPassword().'-'.$this->getUsername();
         */return "";
+    }
+
+    public function getDatePublication(): ?\DateTimeInterface
+    {
+        return $this->date_publication;
+    }
+
+    public function setDatePublication(?\DateTimeInterface $date_publication): self
+    {
+        $this->date_publication = $date_publication;
+
+        return $this;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setProjet($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getProjet() === $this) {
+                $image->setProjet(null);
+            }
+        }
+
+        return $this;
     }
 }

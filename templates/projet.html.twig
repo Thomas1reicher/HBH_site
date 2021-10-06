@@ -4,20 +4,20 @@
 <div class="div-main-actu main-div">
 <div class="div-left-proj">
     <div class="div-title-actu">
-        <h1 class="title-actu">Lorem ipsum dolor sit amet</h1>
-        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> 07-06-2021</span></p>
+        <h1 class="title-actu">{{obj.titre}}</h1>
+        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> {{obj.datepublication}}</span></p>
     </div>
     <div class="div-img-actu">
-        <img class="img-actu" src="{{ asset('assets/img/Nos_projets_single/exemple_projet.png') }}"/>
+        <img class="img-actu" src="/assets/images/upload/{{ obj.image }}"/>
     </div>
     <div class="div-text-actu">
     <div >
-        <h1 class="title-actu-text">Notre mission</h1>
-        <p class="text-actu">Le groupe a mis l’accent sur le respect de l’environnement et vise une triple certification environnementale à dimension européenne (DGNB, BREEAM, HQE)</p>
+        <h1 class="title-actu-text">{{obj.titre1}}</h1>
+        <p class="text-actu">{{obj.text1}}</p>
 </div>
     <div class="text-para">
-        <h1 class="title-actu-text">Description du projet</h1>
-        <p class="text-actu">Construction de 2 bâtiments reliés entre eux par un socle commun. L’un des bâtiments, de couleur blanche, comportera 14 étages tandis que l’autre, de couleur noire, comportera 6 étages. L’ensemble représentera une surface totale de 51.500m2. Le site comprendra également des espaces verts dont un parc avec terrasses et des chemins pédestres.</p>
+        <h1 class="title-actu-text">{{obj.titre2}}</h1>
+        <p class="text-actu">{{obj.text2}}</p>
 </div>
 </div>
  
@@ -26,12 +26,12 @@
 <div class="div-right-proj">
     <div class="div-info-proj">
         <h1 class="title-new-actu margin-info-proj" >Informations du projet</h1>
-        <p class="p-info-proj">Maître d’ouvrage : <span class="span-info-proj">BGL BNP PARIBAS</span></p>
-        <p class="p-info-proj">Type de marché : <span class="span-info-proj">secteur bancaire</span></p>
-        <p class="p-info-proj">Budget : <span class="span-info-proj">confidentiel</span></p>
-        <p class="p-info-proj">Architecte : <span class="span-info-proj">M3 Architectes S.A.</span></p>
-        <p class="p-info-proj">Délai : <span class="span-info-proj">30 mois</span></p>
-        <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">fin 2016</span></p>
+        <p class="p-info-proj">Maître d’ouvrage : <span class="span-info-proj">{{obj.maitreouvrage}}</span></p>
+        <p class="p-info-proj">Type de marché : <span class="span-info-proj">{{obj.typemarche}}</span></p>
+        <p class="p-info-proj">Budget : <span class="span-info-proj">{{obj.budget}}</span></p>
+        <p class="p-info-proj">Architecte : <span class="span-info-proj">{{obj.architecte}}</span></p>
+        <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
+        <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
         <div class="div-img-share-actu">
         <img class="img-share-actu" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
         </div>
@@ -89,42 +89,23 @@ d’une main de maître. »</h1>
            
 
             <div class="slider-project slider-proj">
+            {%  for obj in objall %}
+            <a href="{{ path('projet', {id : obj.id  }) }}">
                 <div class="slide slide-proj proj-float " style="background-color: white">
                     <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
                     </div>
                     <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                        <div class="cat-slide-txt">{{ obj.titre }}</div>
+                        <div class="slide-txt-1">{{ obj.text1 }}</div>
                     </div>
                     <div class="div-arrow ">
                         <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
                     </div>
                 </div>
-                <div class="slide slide-proj proj-float" style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide slide-proj proj-float" style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
+                </a>
+            {% endfor %}
+                
           
             
       

@@ -69,4 +69,38 @@ class Image
 
         return $this;
     }
+    public function vars() :array
+    {
+        $newTbl =[];
+        $newTbl[0]="nom_img"; 
+      
+
+        return $newTbl;
+
+
+    }
+    public function typeVars() :array
+    {
+     $tbl = [];
+     $tbl[0]="img";
+
+     return $tbl;
+    }
+    public function val() :array
+    {
+    
+       $tbl = [];
+        $tbl[0]=$this->getNomImg();
+       
+        return $tbl;
+
+
+    }
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+
+       /* $tbl=$this->getEmail()."-".$this->getFullName().'-'.$this->getPassword().'-'.$this->getUsername();
+        */return "";
+    }
 }

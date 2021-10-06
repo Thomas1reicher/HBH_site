@@ -1,0 +1,42 @@
+{% extends 'admin/admin_master_view.html.twig' %}
+   {% block leftsidebaradmin %}
+       {% include 'admin/_parts/admin_left_sidebar.html.twig' with {'itemsMenu': itemsMenu} %}
+   {% endblock %}
+   {% block contenuadmin %}
+<div class="row gap-20 masonry pos-r" style="position: relative;">
+	<div class="masonry-sizer col-md-12">
+		<div class="bgc-white p-20 bd">
+	
+			
+			<h4 class="c-grey-900">
+				Ajout d'une image
+			</h4>
+			
+      
+			<form enctype="multipart/form-data" action="{{ path('catAdminAddImg',{name: name , id:id}) }}" method="post">
+			
+			<div id="exTab3" class="">
+				<div class="mT-30">
+					<div class="tab-content clearfix">
+						<div class="tab-pane active">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12">
+								{{ form(form) }}
+									
+							
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12" style="text-align: right; padding: 0;">
+							<button type="submit" class="btn btn-primary">
+								Ajouter
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+            </form>
+		</div>
+	</div>
+</div>
+   {% endblock %}
