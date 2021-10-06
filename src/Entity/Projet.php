@@ -282,9 +282,9 @@ class Projet
     {
      $tbl = [];
      $tbl[0]= "int";
-     $tbl[1]= "String";
-     $tbl[2]= "img";
-     $tbl[3]= "string";
+     $tbl[1]= "string";
+     $tbl[2]= "date";
+     $tbl[3]= "img";
      $tbl[4]= "textarea";
      $tbl[5]= "string";
      $tbl[6]= "textarea";
@@ -294,7 +294,7 @@ class Projet
      $tbl[10]= "string";
      $tbl[11]= "string";
      $tbl[12]= "string";
-     $tbl[13]= "image";
+     $tbl[13]= "string";
      return $tbl;
     }
     public function val() :array
@@ -302,7 +302,7 @@ class Projet
     
        $tbl = [];
         $tbl[0]=$this->getId();
-        $tbl[1]=$this->getTitre1();
+        $tbl[1]=$this->getTitre();
         $tbl[2]=$this->getImage();
         $tbl[3]=$this->getTitre1();
         $tbl[4]=$this->getText1();
