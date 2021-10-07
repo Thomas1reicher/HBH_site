@@ -53,102 +53,20 @@
             </div>
 
             <div class="slider-proj">
+            {% for item in list %}
                 <div class="slide " style="background-color: white">
                     <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ item.image }}">
                     </div>
                     <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
+                        <div class="cat-slide-txt">{{ item.titre }}</div>
+                        <div class="slide-txt-1">{{ item.text1  }}</div>
                     </div>
                     <div class="div-arrow ">
                         <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
                     </div>
                 </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
-                <div class="slide " style="background-color: white">
-                    <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/img/slide-img.png">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="cat-slide-txt">Management de projet</div>
-                        <div class="slide-txt-1">Nouveaux locaux de Lorem ipsum immobilier<br/>à Bertrange</div>
-                    </div>
-                    <div class="div-arrow ">
-                        <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
-                    </div>
-                </div>
+            {% endfor %}
             </div>
 
             <script type="text/javascript">

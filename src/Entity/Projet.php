@@ -23,15 +23,16 @@ class Projet
      * @ORM\Column(type="string", length=255)
      */
     private $titre;
+      /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
 
     /**
      * @ORM\Column(type="date", nullable=true)
      */
     private $date_publication;
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $image;
+  
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -304,16 +305,17 @@ class Projet
         $tbl[0]=$this->getId();
         $tbl[1]=$this->getTitre();
         $tbl[2]=$this->getImage();
-        $tbl[3]=$this->getTitre1();
-        $tbl[4]=$this->getText1();
-        $tbl[5]=$this->getTitre2();
-        $tbl[6]=$this->getText2();
-        $tbl[7]=$this->getMaitreouvrage();
-        $tbl[8]=$this->getTypeMarche();
-        $tbl[9]=$this->getBudget();
-        $tbl[10]=$this->getArchitecte();
-        $tbl[11]=$this->getDelais();
-        $tbl[12]=$this->getFinTravaux();
+        $tbl[3]=$this->getDatePublication()->format('Y-m-d');
+        $tbl[4]=$this->getTitre1();
+        $tbl[5]=$this->getText1();
+        $tbl[6]=$this->getTitre2();
+        $tbl[7]=$this->getText2();
+        $tbl[8]=$this->getMaitreouvrage();
+        $tbl[9]=$this->getTypeMarche();
+        $tbl[10]=$this->getBudget();
+        $tbl[11]=$this->getArchitecte();
+        $tbl[12]=$this->getDelais();
+        $tbl[13]=$this->getFinTravaux();
        
         return $tbl;
 

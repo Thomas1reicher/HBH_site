@@ -5,7 +5,7 @@
 <div class="div-left-proj">
     <div class="div-title-actu">
         <h1 class="title-actu">{{obj.titre}}</h1>
-        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> {{obj.datepublication}}</span></p>
+        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> {{obj.datepublication|date('Y-m-d')}}</span></p>
     </div>
     <div class="div-img-actu">
         <img class="img-actu" src="/assets/images/upload/{{ obj.image }}"/>

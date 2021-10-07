@@ -167,7 +167,7 @@ button, select{
     margin-right: 5%;
     height: 250px;
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: contain;
 }
 
 .li-border-actualites{
@@ -431,15 +431,15 @@ footer{
     top: -110px;
   }
   .div-elmt-2{
-    height: 199px;
+    height: 157px;
     width: 127%;
     background-color: #102242;
     float: left;
     transform: rotateZ( 
-4.7deg);
+3.7deg);
     position: relative;
-    left: -196px;
-    top: -74px;
+    left: -166px;
+    top: -64px;
 }
     
   .div-proj{
@@ -627,7 +627,7 @@ color:
 
   }
   .man{
-    width:22%;
+    width:23%;
     margin-right:3% ;
     min-height: 380px;
     float: left;
@@ -2526,6 +2526,7 @@ letter-spacing: 0;
 padding-top: 4%;
 margin-bottom: 1%;
 text-align: left;
+line-height: 35px;
 }
 .title-services-hover{
  color:var(--teal-blue) ;
@@ -2729,7 +2730,7 @@ input{
     height: 970px;
   }
   .min-padding-elmt{
-    padding-top:10%;
+    padding-top:2%;
   }
     }
       @media(min-width: 1560px) and (max-width: 1736px) {
@@ -2747,6 +2748,50 @@ input{
       top: 102px;
     }
   }
+  @media(min-width: 1490px) {
+    .div-elmt-5 {
+      top: 170px;
+      left: -56px;
+      width: 172%;
+      height: 117px;
+  }
+  .min-padding-elmt {
+    padding-top: 0%;
+}
+.div-proj {
+  height: 742px;
+}
+  }
+  @media (min-width: 1616px){
+.div-elmt-5 {
+  top: 182px;
+  left: -31px;
+  width: 172%;
+  height: 117px;
+}
+  }
+  @media (min-width: 1757px){
+.div-elmt-5 {
+  top: 199px;
+  left: -56px;
+  width: 172%;
+  height: 139px;
+}
+  }
+  @media (min-width: 1891px){
+.div-elmt-5 {
+  top: 221px;
+  left: -185px;
+  width: 172%;
+  height: 146px;
+}
+  }
+  @media(min-width: 1390px) {
+
+.div-proj {
+  height: 742px;
+}
+  }
     @media(max-width: 1560px) {
       .div-elmt-services-1 {
         height: 121px!important;
@@ -2759,6 +2804,11 @@ input{
     }
     @media(max-width: 1560px) {
     
+      .txt-schema-philo-1 {
+
+        top: -720px;
+
+      }
       .img-home-main{
         top: 180px!important;
         width: 546px!important;
@@ -2771,7 +2821,7 @@ input{
         padding-top: 15%!important;
       }
       .div-proj {
-        height: 800px;
+        height: 746px;
     }
       .actu-main{
         height: auto;
@@ -2784,6 +2834,34 @@ input{
   
       }
     }
+    @media(min-width: 1363px) and(max-width:1617px) {
+    
+      .div-elmt-2 {
+        height: 142px;
+        width: 127%;
+        background-color: #102242;
+        float: left;
+        transform: rotateZ( 
+    4.7deg);
+        position: relative;
+        left: -196px;
+        top: -74px;
+    }
+    }
+    @media(min-width: 1386px) and(max-width:1527px) {
+
+      .div-elmt-propos-5 {
+        height: 162px;
+        width: 121%;
+        position: relative;
+        float: left;
+        background-color: #102242;
+        top: 191px;
+        transform: rotateZ( 
+    3.0deg);
+        left: -234px;
+    }
+    }
     @media(max-width: 1476px) {
     
       .slider-proj{
@@ -2792,8 +2870,43 @@ input{
       .slider-actu{
         height: 325px;
       }
+      .info-projet-div {
+       
+        height: 407px;
     }
- 
+    .elmt-projet-2 {
+      height: 407px;
+  }
+  .div-elmt-contact-1 {
+
+    top: -500px;
+  
+    width: 20%;
+}
+    }
+    @media(max-width: 1688px) and (min-width: 1527px) {
+
+      .div-elmt-propos-5 {
+        height: 135px;
+        width: 121%;
+        position: relative;
+        float: left;
+        background-color: #102242;
+        top: 216px;
+        transform: rotateZ( 
+    3.0deg);
+        left: -234px;
+    }
+
+
+    }
+    @media (max-width: 1560px) and (min-width: 1358px) {
+
+.div-elmt-services-1 {
+
+    left: -746px!important;
+}
+    }
     @media(max-width: 1314px) {
     
       .div-elmt-5{
@@ -4351,3 +4464,15 @@ select.form-control:focus::-ms-value {
 .main-colaboratif{
   width:40%;
 }
+@media (min-width: 2000px){
+.div-elmt-5 {
+  height: 93px;
+  width: 160%;
+  background-color: #103182;
+  position: relative;
+  float: left;
+  top: 234px;
+  transform: rotateZ( 
+-3deg);
+  left: -115px;
+}}

@@ -26,8 +26,15 @@ class HomeController extends AbstractController
      */
     public function home()
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        $repoTeam = $entityManager->getRepository(Projet::class);
+        $List = $repoTeam->findAll();
+        $repoActu= $entityManager->getRepository(Actualite::class);
+        $objall = $repoActu->findAll();
         return $this->render('home.html.twig', [
-            'title' => 'home'
+            'title' => 'home',
+            'list' => $List ,
+            'objall' => $objall
         ]);
     }
 
