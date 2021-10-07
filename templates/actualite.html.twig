@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<!--{{ include('_parts/fil.html.twig') }} -->
+
 <div class="div-main-actu">
 <div class="div-left-actu">
     <div class="div-title-actu">
@@ -65,42 +65,18 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 
-<div class="div-lightgrey" style="width: 100%;min-height: 500px;background-color: var(--nevada);color: white">
-  <div class="txt-low-weight-black txt-part-cred" style="text-align: center;padding-bottom: 30px">Grâce à nos Lorem ipsum, nous sommes en mesure de vous proposer<br>
-   des crédits à des taux défiants toutes concurrences.</div>
-  <div class="slider slider-credits">
 
-    <div class="slide" style="width: 5%">
-        <p class="montserrat-bold-nevada-20px title-credits" style="text-align:center">   test </p>
-        <div class="div-slide-button-align">
-          <div class="taeg montserrat-bold-web-orange-20px">
- 
-          </div>
-          <p class="surname montserrat-light-tundora-16px">
-          </p>
-        </div>
-        <div class="div-dec-btn offrepretslide">
-            <div class="btn-pret">
-               
-            </div>
-        </div>
-    </div>
+  <div class="slider-actu">
+
+  {% for image in obj.images %}
+    <div><img src="/assets/images/upload/{{ image }}" }</div>
+    {% endfor %}
 
 
 
 
   </div>
-  <div class="div-dot">
-    <span class="dot dot-active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>      
-    <span class="dot"></span>
-    <span class="dot"></span>   
-  </div>
-  <div class="cred-typo typo" style="text-align: right;color: white;padding-right: 30px;padding-bottom: 20px;padding-top: 80px">
-      *Taux préférenciel, sous réserve d'acceptation du dossier par la société de crédit.
-  </div>
+
 </div>
 
 <script type="text/javascript">
@@ -109,40 +85,10 @@
         vertical: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 2000,
-        responsive: [
-            {
-              breakpoint: 1500,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 3
-              }
-            },
-            {
-              breakpoint: 1250,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-              }
-            },
-            {
-              breakpoint: 925,
-              settings: {
-                slidesToShow:2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 620,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ]
     });
 
 </script>

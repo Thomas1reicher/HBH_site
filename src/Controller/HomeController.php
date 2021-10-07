@@ -167,7 +167,11 @@ class HomeController extends AbstractController
         $repoTeam = $entityManager->getRepository(Actualite::class);
         $obj = $repoTeam->find($id);
         $objall = $repoTeam->findAll();
-        $objall = array_rand($objall , 3);
+        if(count($objall)<3){
+       
+        }else{
+            $objall = array_rand($objall , 3);
+        }
         return $this->render('actualite.html.twig', [
             'title' => 'actualites',
             'obj' => $obj,

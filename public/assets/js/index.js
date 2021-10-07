@@ -71,7 +71,7 @@ window.addEventListener('load', function(e) {
         elmt1 = $('.elmt-projet-1');
         top_elmt1 = $('.elmt-projet-1').position()["top"];
     }
-    else if(chemin == "/actualite"){
+    else if(chemin.includes("/actualite/")){
         elmt1 = $('.div-right-actu');
         top_elmt1 = $('.div-right-actu').position()["top"];
     }
