@@ -1509,6 +1509,11 @@ button span{
   color: var(--chicago);
   font-weight: 300;
 }
+.pilotage-text-span-plus{
+  color: var(--chicago);
+  font-weight: 300;
+  display: none;
+}
 .pilotage-container{
   margin-left: auto;
   margin-right: auto;
@@ -1675,7 +1680,17 @@ margin-bottom: 20%;
 .sante-text-div{
   width: 65%;
   margin-bottom: 2%;
+  margin-top: 8%;
 
+}
+.service-text-span-plus{
+  color: #5a5a5a;
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 26px;
+    display:none;
 }
 .main-sante{
   margin-bottom: 5%;
@@ -2334,7 +2349,7 @@ background-repeat: no-repeat;
 .img-services-main{
   float: left;
   height: 90%;
-    margin-top: 8.8%;
+  margin-top: 10%;
 }
 .img-services-main-man{
   width:92%;
@@ -2805,6 +2820,14 @@ input{
       top: 318px!important;
     }
     }
+    @media(max-width: 1620px) {
+      .service-title {
+
+        font-size: 50px;
+      }
+
+
+    }
     @media(max-width: 1560px) {
     
       .txt-schema-philo-1 {
@@ -2812,6 +2835,7 @@ input{
         top: -720px;
 
       }
+    
       .img-home-main{
         top: 180px!important;
         width: 546px!important;
@@ -4479,3 +4503,7 @@ select.form-control:focus::-ms-value {
 -3deg);
   left: -115px;
 }}
+.span-plus{
+  color: var(--teal-blue);
+    font-weight: 700;
+}
