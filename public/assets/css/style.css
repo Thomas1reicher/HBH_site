@@ -387,10 +387,12 @@ footer{
     
   }
   .actu-div{
-    margin-left:8%
+    margin-left:8%;
+    
   }
   .proj-div{
-    margin-left:8%
+    margin-left:8%;
+    height: 68vh;
   }
   .a-propos-div{
     margin-left:8%;
@@ -436,14 +438,16 @@ footer{
     background-color: #102242;
     float: left;
     transform: rotateZ( 
-3.7deg);
+  3deg);
     position: relative;
     left: -166px;
-    top: -64px;
+    top: -47px;
+    
 }
     
   .div-proj{
-    height: 800px;
+    height: auto;
+    padding-bottom: 2%;
   }    
   .div-elmt-2::before{
     
@@ -750,15 +754,13 @@ margin-top:2%;
   margin-top:10%;
 }
 .div-elmt-propos-5{
-  height: 150px;
-  width: 121%;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 205px solid #102242;
+  border-right: 2300px solid transparent;
+  top: 173px;
   position: relative;
-  float: left;
-  background-color: #102242;
-  top: 243px;
-  transform: rotateZ( 
-3.0deg);
-  left: -234px;
 }
 .projets-div{
 
@@ -827,8 +829,8 @@ margin-top:2%;
   height: 0px;
   position: relative;
   float: right;
-  width: 26%;
-  top: -172px;
+  width: 16%;
+  top: -133px;
 }
 .elmt-projet-1{
 
@@ -1437,7 +1439,7 @@ button span{
 .div-mission{
   background-color:#102242;
   width:75%;
-  height:400px;
+  height: 370px;
   float:left;
   margin-top:10%;
   margin-bottom: 10%;
@@ -1447,7 +1449,7 @@ button span{
   content: "";
   width: 0;
   height: 0;
-  border-bottom: 400px solid #102242;
+  border-bottom: 370px solid #102242;
   border-right: 210px solid transparent;
   position: absolute;
   right: -210px;
@@ -2229,12 +2231,12 @@ left: 250px;
   top: -280px;
 }
 .elmt-colab-4{
-  height: 148px;
+  height: 156px;
   width: 106%;
   background-color: #103182;
   position: relative;
   float: left;
-  top: -71px;
+  top: -53px;
   right: 27px;
   transform: rotateZ( 
 -4deg);
@@ -2782,7 +2784,7 @@ input{
     padding-top: 0%;
 }
 .div-proj {
-  height: 742px;
+  height: auto;;
 }
   }
   @media (min-width: 1616px){
@@ -2812,7 +2814,7 @@ input{
   @media(min-width: 1390px) {
 
 .div-proj {
-  height: 742px;
+  height: auto;
 }
   }
     @media(max-width: 1560px) {
@@ -2853,7 +2855,7 @@ input{
         padding-top: 15%!important;
       }
       .div-proj {
-        height: 746px;
+        height: auto;
     }
       .actu-main{
         height: auto;
@@ -2919,22 +2921,7 @@ input{
     width: 20%;
 }
     }
-    @media(max-width: 1688px) and (min-width: 1527px) {
-
-      .div-elmt-propos-5 {
-        height: 135px;
-        width: 121%;
-        position: relative;
-        float: left;
-        background-color: #102242;
-        top: 216px;
-        transform: rotateZ( 
-    3.0deg);
-        left: -234px;
-    }
-
-
-    }
+   
     @media (max-width: 1560px) and (min-width: 1358px) {
 
 .div-elmt-services-1 {
@@ -3659,7 +3646,7 @@ margin-bottom: 150%;
           padding-top:30%;
         }
         .div-proj {
-          height: 820px;
+          height: auto;
       }
       .div-img-propos-main {
         width: 100%;
@@ -4554,4 +4541,103 @@ select.form-control:focus::-ms-value {
   font-weight: 100;
     font-size: 13px;
     margin-bottom: 4%;
+}
+@media (min-width: 2014px){
+
+  .img-home-main-colb{
+    width: 630px!important;
+  }
+  .div-colab-left-text {
+    margin-top: -1%;
+}
+
+
+}
+@media (max-width: 1406px) and (min-width: 1226px) {
+
+  .div-elmt-propos-1{
+    top: -492px;
+  }
+
+
+}
+@media (max-width: 1226px) and (min-width: 1000px) {
+
+  .div-elmt-propos-1{
+    top: -481px;
+  }
+
+
+}
+@media (max-width: 2074px) and (min-width: 1702px)  {
+
+  
+  .div-elmt-propos-5 {
+    top: 212px;
+  }
+
+}
+@media (min-width: 2074px) and (max-width:2294px)   {
+
+  
+  .div-elmt-propos-5 {
+    top: 233px;
+    border-bottom: 215px solid #102242;
+  }
+
+}
+@media  (min-width:2294px)   {
+
+  
+  .div-elmt-propos-5 {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 247px solid #102242;
+    border-right: 2462px solid transparent;
+    top: 251px;
+    position: relative;
+  }
+
+}
+@media  (max-width:1218px)   {
+
+  
+  .icon-home{
+    width:25%!important;
+  
+  }
+  .li-header-nav {
+  
+    width: 15%!important;
+    text-align: center;
+}
+.div-elmt-propos-5 {
+ 
+  top: 135px;
+
+}
+.txt-schema-philo-1 {
+  top: -560px;
+  left: 110px;
+}
+}
+.icon-home{
+  width:35%;
+}
+@media  (max-width:1326px)   {
+
+  .div-elmt-2 {
+    height: 157px;
+    width: 127%;
+    background-color: #102242;
+    float: left;
+    transform: rotateZ( 
+2.8deg);
+    position: relative;
+    left: -166px;
+    top: -33px;
+}
+
+
 }

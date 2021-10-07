@@ -4,27 +4,27 @@
 
 <div class="div-main-actu">
 <div class="div-left-actu">
+ <div class="main-div div-fil-arianne">
+    <p class="fil-arianne">
+        <a href="{{ path('accueil') }}">Acceuil</a> /
+        <a href="{{ path('actualites') }}">Actualités</a> /
+        <a style="font-weight:700" href="#">{{obj.titre}}</a>
+        </p>
+</div>
     <div class="div-title-actu">
-        <h1 class="title-actu">Lorem ipsum dolor sit amet</h1>
-        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> 07-06-2021</span></p>
+        <h1 class="title-actu">{{obj.titre}}</h1>
+        <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> {{obj.datepublication|date('Y-m-d')}}</span></p>
     </div>
     <div class="div-img-actu">
-        <img class="img-actu" src="{{ asset('assets/img/Nos_projets_single/exemple_projet.png') }}"/>
+        <img class="img-actu" src="/assets/images/upload/{{ obj.image }}"/>
     </div>
     <div class="div-text-actu">
-        <p class="text-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-  aliqua. Orci phasellus egestas tellus rutrum tellus pellentesque. Nibh tellus molestie nunc non blandit massa enim
-  nec. <br /><br />Et malesuada fames ac turpis. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Cras
-  pulvinar mattis nunc sed blandit. Id velit ut tortor pretium viverra. Sed elementum tempus egestas sed sed risus
-  pretium quam. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Orci phasellus egestas tellus rutrum tellus
-  pellentesque eu tincidunt tortor. <br /><br />Egestas integer eget aliquet nibh praesent tristique magna. Nunc sed
-  augue lacus viverra vitae congue eu consequat. In ornare quam viverra orci sagittis. Facilisi nullam vehicula ipsum a
-  arcu cursus vitae congue mauris. Ultrices sagittis orci a scelerisque purus semper eget. Ullamcorper a lacus
-  vestibulum sed arcu non odio euismod. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a.</p>
-    </div>
+        <p class="text-actu">
+        {{ obj.text}}
+        </div>
      <div class="div-pdf-actu">
-    <p class="pdf-actu"><img class="img-pdf-actu" src="{{ asset('assets/img/picto_pdf.svg') }}" />Télécharger notre Lorem ipsum</p>
-    </p>
+    <a class="pdf-actu" href="{{obj.pdf}}"><img class="img-pdf-actu" src="{{ asset('assets/img/picto_pdf.svg') }}" />Télécharger notre Lorem ipsum</a>
+    </div>
      <div class="div-share-actu">
       
         <p class="share-actu">Partager cet article</p>
@@ -43,18 +43,13 @@
 <div class="div-right-actu">
     <div class="div-ajout-actu">
         <h1 class="title-new-actu">Actualités <br/>récentes</h1>
+        {% for item in objall  %}
         <div class="div-new-actu">
-            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p class="date-new-actu">03-06-2021</p>
+            <p class="p-new-actu">{{  item.titre  }}</p>
+            <p class="date-new-actu">{{item.datepublication|date('Y-m-d')}}</p>
         </div>
-        <div class="div-new-actu">
-            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p class="date-new-actu">03-06-2021</p>
-        </div>
-        <div class="div-new-actu">
-            <p class="p-new-actu">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p class="date-new-actu">03-06-2021</p>
-        </div>
+        {% endfor %}
+     
     </div>
 </div>
 <script
