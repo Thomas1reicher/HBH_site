@@ -4641,3 +4641,18 @@ select.form-control:focus::-ms-value {
 
 
 }
+@media  (min-width:420px)   {
+.slider-services {
+  display: none!important;
+}
+}
+@media  (max-width:1420px)   {
+  .main-div-img-service {
+    float: left;
+    padding-left: 12%;
+    width: 92%;
+    margin-bottom: -20%;
+  }
+  }
+
+
