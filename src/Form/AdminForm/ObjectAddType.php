@@ -27,6 +27,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ObjectAddType extends AbstractType
 {
@@ -45,7 +46,7 @@ class ObjectAddType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-
+        
         $this->setNameOfClass($options['attr']['class']);
         $this->setObject($options['attr']['object']);
 
@@ -89,16 +90,7 @@ class ObjectAddType extends AbstractType
 
                     ]);
                     break;
-                case 'file' :
-                        $builder->add($namevar[$i],FileType::class, [
-                            'mapped' => false,
-                            'attr' => [
-                                'class' => 'input-form'
-                            ],
-                            'required' => false,
- 
-                        ]);
-                    break;
+          
                 case 'num':
                     $builder->add($namevar[$i],NumberType::class,[
                         'attr' => [
@@ -178,9 +170,22 @@ class ObjectAddType extends AbstractType
                                 'class' => 'input-form'
                             ],
                             'required' => false,
-    
+                            'data_class' => null
                         ]);
                         break;
+                  case 'type':
+                            $builder->add($namevar[$i],ChoiceType::class,[
+                                'attr' => [
+                                    'class' => 'input-form'
+                                ],
+                                'required' => false,
+                                'choices' => [
+                                    "Management de projet" => "Management de projet",
+                                    "Sécurité & Santé" => "Sécurité & Santé"
+                                ]
+        
+                            ]);
+                            break;
                 default :
                     $categorieCms = $this->repository->findAll();
                  
@@ -263,6 +268,7 @@ class ObjectAddType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
+        
         if($this->nameOfClass == "user"){
         $resolver->setDefaults([
             'data_class' => User::class,
@@ -280,7 +286,15 @@ class ObjectAddType extends AbstractType
             'data_class' => Taux::class,
             
         ]);
-    }
-    }
+    } else if($this->nameOfClass == "Projet"){
 
-}
+        $resolver->setDefaults([
+            'data_class' => Projet::class,
+            
+        ]);
+
+    }
+    
+    
+
+}}

@@ -10,26 +10,35 @@
             <img class="elmt-projet-1" src="/assets/img/Nos_projets/element-graphic13.svg"/>
         </div>
         <div class="main-div" style="color: #24a6a4">
-            <div style="float: left;width: 20%">
+            <div class="key-proj filtre-proj" id="Management" >
                 MANAGEMENT DE PROJET
             </div>
-            <div style="float: left;width: 20%">
+            <div class="key-proj filtre-proj" id="Sécurité">
                 SÉCURITÉ & SANTÉ
+            </div>
+            <div class="key-proj">
+              
+            </div>
+             <div class="key-proj">
+            
+            </div>
+            <div class="projets-nb key-proj" >
+                {{nb}} PROJETS
             </div>
         </div>
         <div class="main-div projets-div">
            {%  for obj in list %}
-        <a href="{{ path('projet', {id : obj.id  }) }}">
-            <div class="card-actu project-card border-2px-teal-blue" style="background-color: white">
+        <a href="{{ path('projet', {id : obj.id  }) }}" >
+            <div class="card-actu project-card border-2px-teal-blue filtre-all filtre-{{ obj.typeservice }}"  style="background-color: white">
                 <div class="slide-img">
                     <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
                 </div>
                 <div class="slide-txt">
-                    <div class="cat-slide-txt">{{ obj.titre }}</div>
-                    <div class="slide-txt-1">{{ obj.text1 }}</div>
+                    <div class="cat-slide-txt">{{ obj.typeservice }}</div>
+                    <div class="slide-txt-1">{{ obj.titre}}</div>
                 </div>
                 <div class="div-arrow ">
-                    <a><img class="arrow-slide" src="/assets/img/arrow.png"></a>
+                    <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
                 </div>
         </div></a>
            {% endfor %}

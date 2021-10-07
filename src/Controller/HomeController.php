@@ -105,6 +105,7 @@ class HomeController extends AbstractController
         return $this->render('projets.html.twig', [
             'title' => 'projets',
             'list' => $List, 
+            'nb' => count($List)
         ]);
     }
         /**

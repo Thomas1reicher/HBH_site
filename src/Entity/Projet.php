@@ -23,6 +23,10 @@ class Projet
      * @ORM\Column(type="string", length=255)
      */
     private $titre;
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $type_service;
       /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -273,7 +277,7 @@ class Projet
     {
         $newTbl =get_class_vars(get_class($this));
         $newTbl =array_keys($newTbl);
-      
+        array_splice($newTbl, 0, 1); 
 
         return $newTbl;
 
@@ -282,10 +286,10 @@ class Projet
     public function typeVars() :array
     {
      $tbl = [];
-     $tbl[0]= "int";
-     $tbl[1]= "string";
-     $tbl[2]= "date";
-     $tbl[3]= "img";
+     $tbl[0]= "string";
+     $tbl[1]= "type";
+     $tbl[2]= "img";
+     $tbl[3]= "date";
      $tbl[4]= "textarea";
      $tbl[5]= "string";
      $tbl[6]= "textarea";
@@ -302,8 +306,8 @@ class Projet
     {
     
        $tbl = [];
-        $tbl[0]=$this->getId();
-        $tbl[1]=$this->getTitre();
+        $tbl[0]=$this->getTitre();
+        $tbl[1]=$this->getTypeService();
         $tbl[2]=$this->getImage();
         $tbl[3]=$this->getDatePublication()->format('Y-m-d');
         $tbl[4]=$this->getTitre1();
@@ -359,6 +363,18 @@ class Projet
                 $image->setProjet(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTypeService(): ?string
+    {
+        return $this->type_service;
+    }
+
+    public function setTypeService(string $type_service): self
+    {
+        $this->type_service = $type_service;
 
         return $this;
     }

@@ -787,7 +787,9 @@ margin-top:2%;
  
 }
 .elmt-projet-2{
-  height:540px;
+  height: 560px;
+    position: relative;
+    top: -20px;
 }
 .title-info-projet{
   color: #ffffff;
@@ -1784,7 +1786,7 @@ margin-bottom: 5%;
   padding-top: 2%;
 }
 .div-main-actu{
-  padding-top:5%
+  padding-top:2%
 }
 .publication-actu{
   color: var(--teal-blue);
@@ -2906,7 +2908,9 @@ input{
         height: 407px;
     }
     .elmt-projet-2 {
-      height: 407px;
+      height: 427px;
+      position: relative;
+      top: -20px;
   }
   .div-elmt-contact-1 {
 
@@ -4511,7 +4515,20 @@ select.form-control:focus::-ms-value {
   color: var(--teal-blue);
     font-weight: 700;
 }
-
+.key-proj{
+  float: left;
+  width: 20%
+}
+.projets-nb{
+  color: 
+  #102242;
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 1.20px;
+    float: right;
+}
 @media (max-width: 1560px){
 .img-home-main-colb {
     top: 5px!important;
@@ -4532,4 +4549,9 @@ select.form-control:focus::-ms-value {
   top: 191px;
   position: relative;
 }
+}
+.fil-arianne{
+  font-weight: 100;
+    font-size: 13px;
+    margin-bottom: 4%;
 }

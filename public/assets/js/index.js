@@ -68,8 +68,8 @@ window.addEventListener('load', function(e) {
     }
     else if(chemin == "/projets"){
     
-        elmt1 = $('.elmt-projet-1');
-        top_elmt1 = $('.elmt-projet-1').position()["top"];
+       /* elmt1 = $('.elmt-projet-1');
+        top_elmt1 = $('.elmt-projet-1').position()["top"];*/
     }
     else if(chemin.includes("/actualite/")){
         elmt1 = $('.div-right-actu');
@@ -93,7 +93,7 @@ window.addEventListener('load', function(e) {
     
         }
         else if(chemin == "/projets"){
-            ScrollElement(elmt1,top_elmt1,1000);
+            /*ScrollElement(elmt1,top_elmt1,1000);*/
         }
         else if(chemin == "/presentation"){
             ScrollElement(elmt1,top_elmt1,210);
@@ -367,6 +367,13 @@ window.addEventListener('load', function(e) {
                         $('html,body').animate({
                             scrollTop: elem.offset().top
                         }, 1000);
+                    });
+                    $(".filtre-proj").click(function() {
+                      
+                       id = $(this).attr("id");
+                       console.log($('.filtre-all').hide());
+                       console.log($('.filtre-'+id).show());
+                       
                     });
                     $(".span-plus").click(function() {
                         $(this).parent().next().show();
