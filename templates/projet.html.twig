@@ -33,7 +33,7 @@
         <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
         <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
         <div class="div-img-share-actu">
-        <img class="img-share-actu" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
+        <img class="img-share-actu img-share-actu-projet" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
         </div>
     </div>
 
@@ -45,9 +45,9 @@
         <h1 class="slider-title">Le projet en image</h1>
     </div>
 <div class="slick-carou-1">
-  <div>your content</div>
-  <div>your content</div>
-  <div>your content</div>
+    {% for image in obj.images %}
+    <div><img src="/assets/images/upload/{{ image }}" }</div>
+    {% endfor %}
 </div>
 </div>
 <div class="slider-container">
@@ -122,10 +122,10 @@ d’une main de maître. »</h1>
 <script type="text/javascript">
     $(document).ready(function(){
       $('.slick-carou-1').slick({
-        
+        arrows: false,
       });
         $('.slick-carou-2').slick({
-        
+        arrows: false,
       });
     });
   </script>
