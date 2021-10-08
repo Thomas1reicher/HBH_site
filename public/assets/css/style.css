@@ -4966,3 +4966,11 @@ color:#39428f;
 
 color:var(--teal-blue);
 }
+@media (min-width: 1300px){
+  .card-actu {
+    width: 15%;
+    float: left;
+    margin-right: 5%;
+  }
+  }
+ 
