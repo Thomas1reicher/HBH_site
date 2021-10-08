@@ -313,11 +313,16 @@ window.addEventListener('load', function(e) {
                         
                         
                     });
-                    /*$(".img-share-actu").mouseover(function() {
+                    $(".img-share-actu").mouseover(function() {
                         $(".hover-share-actu").show();
+                        function hide(){
+                            $(".hover-share-actu").hide();
+                        }
+                        setTimeout(hide, 8000);
                         
                         
-                    });*/
+                    });
+                   
                     $(".info-propos-1").mouseover(function() {
                        
                         $(this).addClass("hover-info-propos-1");

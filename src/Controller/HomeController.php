@@ -125,7 +125,14 @@ class HomeController extends AbstractController
         $repoTeam = $entityManager->getRepository(Projet::class);
         $obj = $repoTeam->find($id);
         $objall = $repoTeam->findAll();
+        if(count($objall)<3){
        
+        }else{
+            $tbl[0]=$objall[0];
+            $tbl[1]=$objall[1];
+            $tbl[2]=$objall[2];
+            $objall = $tbl;
+        }
         return $this->render('projet.html.twig', [
             'title' => 'projets',
             'obj' => $obj,
@@ -174,7 +181,10 @@ class HomeController extends AbstractController
         if(count($objall)<3){
        
         }else{
-            $objall = array_rand($objall , 3);
+            $tbl[0]=$objall[0];
+            $tbl[1]=$objall[1];
+            $tbl[2]=$objall[2];
+            $objall = $tbl;
         }
         return $this->render('actualite.html.twig', [
             'title' => 'actualites',

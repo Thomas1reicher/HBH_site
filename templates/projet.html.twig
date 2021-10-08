@@ -47,6 +47,11 @@
         <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
         <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
         <div class="div-img-share-actu">
+          <div class="hover-share-actu" style="display:none">
+            <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text1}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><img class=" first-img-hover-share-actu img-hover-share-actu"    src="{{ asset('assets/img/facebook.svg') }}"/></a>
+            <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/></a>
+            <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/></a>
+        </div>
         <img class="img-share-actu img-share-actu-projet" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
         </div>
     </div>
@@ -110,8 +115,8 @@ d’une main de maître. »</h1>
                         <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ object.image }}">
                     </div>
                     <div class="slide-txt">
-                        <div class="cat-slide-txt">{{ object.titre }}</div>
-                        <div class="slide-txt-1">{{ object.text1 }}</div>
+                        <div class="cat-slide-txt">{{ object.typeservice }}</div>
+                        <div class="slide-txt-1">{{ object.titre }}</div>
                     </div>
                     <div class="div-arrow ">
                         <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
