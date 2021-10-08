@@ -2204,14 +2204,14 @@ left: 250px;
   margin: 0;
 }
 .elmt-sante-3{
-  height: 116px;
-  width: 113%;
-  background-color: #103182;
-  position: relative;
-  top: 130px;
-  right: 27px;
-  transform: rotateZ( 
--4deg);
+display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 341px solid #103182;
+    border-left: 2768px solid transparent;
+    top: -67px;
+    position: relative;
+    left: -61px;
 }
 .elmt-colab-1{
   width: 13%;
@@ -4807,4 +4807,31 @@ select.form-control:focus::-ms-value {
   top: 773px;
 
 }
+}
+
+@media (min-width: 2118px){
+
+  .elmt-sante-3 {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 604px solid #103182;
+    border-left: 4018px solid transparent;
+    top: -238px;
+    position: relative;
+    left: -631px;
+}
+
+
+}
+@media (min-width: 1650px) and (max-width: 1800px) {
+.elmt-sante-3 {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 604px solid #103182;
+  border-left: 4018px solid transparent;
+  top: -238px;
+  position: relative;
+  left: -631px;
 }

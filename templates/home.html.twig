@@ -60,8 +60,9 @@
 
             <div class="slider-proj">
             {% for item in list %}
-            <a href="{{ path('projet', {id : item.id  }) }}">
+            
                 <div class="slide " style="background-color: white">
+                <a href="{{ path('projet', {id : item.id  }) }}">
                     <div class="slide-img">
                         <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ item.image }}">
                     </div>
@@ -72,8 +73,9 @@
                     <div class="div-arrow ">
                         <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
                     </div>
+                    </a>
                 </div>
-                </a>
+                
             {% endfor %}
             </div>
 
