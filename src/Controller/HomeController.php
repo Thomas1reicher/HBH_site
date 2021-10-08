@@ -31,10 +31,17 @@ class HomeController extends AbstractController
         $List = $repoTeam->findAll();
         $repoActu= $entityManager->getRepository(Actualite::class);
         $objall = $repoActu->findAll();
+        if(isset($_COOKIE["view"]) ){
+            $splash = false;
+        }else{
+            $splash = true;
+        }
+        
         return $this->render('home.html.twig', [
             'title' => 'home',
             'list' => $List ,
-            'objall' => $objall
+            'objall' => $objall, 
+            'splash' => $splash
         ]);
     }
 

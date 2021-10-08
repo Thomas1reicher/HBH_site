@@ -1,7 +1,31 @@
 $(document).ready(function () {
     
-    
-
+    var chemin = window.location.pathname;
+    if(chemin == "/"){
+        let x = document.cookie;
+        console.log(x);
+        if(x.length < 1){
+        $('footer').hide();
+        $('header').hide();
+        function greet(){
+            $('.loading').hide();
+            $('footer').show();
+            $('header').show();
+            $('.main-section').show();
+          }
+          setTimeout(greet, 4500);
+          const d = new Date();
+          d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
+          document.cookie = "view=true;expires="+d.toUTCString()+"; path=/;";
+          console.log(d.toUTCString());
+        }
+        else{
+            $('.loading').hide();
+            $('footer').show();
+            $('header').show();
+            $('.main-section').show();
+        }
+    }
 
     let burger = $('.open-main-nav'),
 	 nav    = document.getElementById('main-nav'),
@@ -52,8 +76,7 @@ window.addEventListener('load', function(e) {
 
 
 
-    var chemin = window.location.pathname;
-    console.log(chemin);
+  
     currentheight =$(window).height();
     if(chemin == "/"){
     elmt1 = $('.elmt-1');
@@ -380,5 +403,7 @@ window.addEventListener('load', function(e) {
                         $(this).hide();
              
                     });
+                
             
 });
+

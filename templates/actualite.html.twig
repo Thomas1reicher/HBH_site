@@ -44,10 +44,12 @@
     <div class="div-ajout-actu">
         <h1 class="title-new-actu">Actualités <br/>récentes</h1>
         {% for item in objall  %}
+        <a href="{{ path('actualite', {id : item.id  }) }}">
         <div class="div-new-actu">
             <p class="p-new-actu">{{  item.titre  }}</p>
             <p class="date-new-actu">{{item.datepublication|date('Y-m-d')}}</p>
         </div>
+        </a>
         {% endfor %}
      
     </div>
