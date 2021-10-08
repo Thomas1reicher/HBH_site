@@ -2975,7 +2975,7 @@ input{
         }
         .main-colaboratif img{
           width: 357px!important;
-          top: 81px!important;
+          top: 28px!important;
         }
         .div-colab .service-title-div{
           margin-bottom: 15%;
@@ -2996,6 +2996,7 @@ input{
       .div-colab-right-text {
         width: 85%;
         margin-left: 8%;
+        display: inline-table;
 
         
     }
@@ -3007,7 +3008,7 @@ input{
   .elmt-colab-4 {
     height: 81px;
     width: 111%;
-    top: -45px;
+    top: -24px;
  
 }
 .div-mob-img-label{
@@ -3053,7 +3054,7 @@ input{
           height: 400px;
         }
         .div-secu-mob{
-           width: 60%;
+           width: 75%;
         float: right;
         }
         .service-service-title {
@@ -3116,9 +3117,9 @@ input{
 .elmt-sante-3 {
   height: 77px;
   width: 113%;
-  top: 21px;
-  transform: rotateZ( 
--3deg);
+  top: 29px;
+  border-bottom: 184px solid #103182;
+  border-left: 634px solid transparent;
 }
 .div-last-info-title {
   width: 80%;
@@ -3160,7 +3161,7 @@ input{
     }
         .div-sante {
           width: 100%;
-          padding-top: 40%;
+          padding-top: 15%;
         }
         .service-man-img{
           background-size: 131%;
@@ -3531,6 +3532,7 @@ margin-bottom: 150%;
   .elmt-projet-2 {
     height: auto;
     width: 100%;
+    top: 0px;
 }   
 .info-projet-div {
   margin-top: 80%;
@@ -3652,7 +3654,7 @@ margin-bottom: 150%;
           width: 89%;
         }
         .big-padding-mob{
-          padding-top:30%;
+          padding-top:60%;
         }
         .div-proj {
           height: auto;
@@ -3756,7 +3758,7 @@ margin-bottom: 150%;
       }
       .div-elmt-2{
    
-            height: 95px;
+            height: 95px!important;
             width: 127%;
             background-color: #102242;
             float: left;
@@ -3764,7 +3766,7 @@ margin-bottom: 150%;
         2.8deg);
             position: relative;
             left: -97px!important;
-            top: -17px!important;
+            top: -12px!important;
         
       }
         .ul-nav {
@@ -4881,6 +4883,86 @@ select.form-control:focus::-ms-value {
 .div-man-sev-sec{
   height: 602px;
 }
+@media (max-width: 420px){
+.img-home-main {
+    top: 502px!important;
+    width: 329px!important;
+}
+.div-last-info {
+  padding-top: 19%;
+  padding-bottom: 19%;
+}
 .img-home-main-sante{
+  height: 344px;
+}
+.div-label-schema {
+  width: 80%;
+}
+.section-expertise {
+  width: 100%;
+  margin-top: 0%;
+}
+.div-expertise {
+  padding-left: 8%;
+  width: 85%;
   
+}
+.div-vision {
+  width: 85%;
+  margin-left: 8%;
+}
+.elmt-label-4 {
+  border-bottom: 132px solid #103182;
+  border-right: 409px solid transparent;
+  top: 53px;
+}
+.fil-arianne{
+  display:none;
+}
+.div-left-proj {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  padding-left: 0%;
+}
+.title-actu{
+  margin-top: 5%;
+}
+.div-right-proj {
+  width: 88%;
+  padding-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.elmt-projet-simple-1 {
+  border-bottom: 130px solid #103182;
+  border-right: 687px solid transparent;
+  top: 11px; 
+}
+.title-feature{
+  margin-bottom: 10%;
+  font-size: 30px;
+}
+}
+.p-schema{
+      width: 100%;
+    text-align: left;
+    padding-left: 8%;
+    line-height: 24px;
+    margin-top: 5%;
+    font-weight: 100;
+}
+.p-schema-1{
+
+
+}
+.p-schema-2{
+color:#39428f;
+
+}
+.p-schema-3{
+
+color:var(--teal-blue);
 }

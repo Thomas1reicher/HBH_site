@@ -192,6 +192,16 @@ class HomeController extends AbstractController
             'objall' => $objall
         ]);
     }
+        /**
+     * @Route("/mention_legales", name="mentionlegales")
+     * @return Response
+     */
+    public function mention_legales()
+    {
+        return $this->render('mention.html.twig', [
+            'title' => 'Mention légales'
+        ]);
+    }
  
 
     
