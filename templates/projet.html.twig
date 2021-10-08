@@ -103,15 +103,15 @@ d’une main de maître. »</h1>
            
 
             <div class="slider-project slider-proj">
-            {%  for obj in objall %}
-            <a href="{{ path('projet', {id : obj.id  }) }}">
+            {%  for object in objall %}
+            <a href="{{ path('projet', {id : object.id  }) }}">
                 <div class="slide slide-proj proj-float " style="background-color: white">
                     <div class="slide-img">
-                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
+                        <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ object.image }}">
                     </div>
                     <div class="slide-txt">
-                        <div class="cat-slide-txt">{{ obj.titre }}</div>
-                        <div class="slide-txt-1">{{ obj.text1 }}</div>
+                        <div class="cat-slide-txt">{{ object.titre }}</div>
+                        <div class="slide-txt-1">{{ object.text1 }}</div>
                     </div>
                     <div class="div-arrow ">
                         <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
