@@ -142,8 +142,8 @@ class Actualite
         $tbl[2]= "date_publication";
         $tbl[3]= "text";
         $tbl[4]= "pdf";
-        $tbl[5]= "images";
-
+        $tbl[5]= "image";
+        $tbl[6]= "images";
         return $tbl;
 
 
@@ -168,6 +168,7 @@ class Actualite
         $tbl[2]=$this->getDatePublication()->format('Y-m-d');
         $tbl[3]=$this->getText();
         $tbl[4]=$this->getPdf();
+        $tbl[5]=$this->getImage();
     
         
         return $tbl;

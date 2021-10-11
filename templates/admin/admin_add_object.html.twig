@@ -23,9 +23,13 @@
 						<div class="tab-pane active">
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12">
-								{{ form(form) }}
-									
-							
+									{{ form_start(form) }}
+									{% if hintdata is defined %}
+										{% if hintdata|length > 0 %}
+											<input type="hidden" name="hintdata" value="{{hintdata}}" />
+										{% endif %}
+									{% endif %}
+									{{ form_end(form) }}
 								</div>
 							</div>
 						</div>

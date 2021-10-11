@@ -36,12 +36,14 @@
                        
                         <td style="text-align: center">Action</td>
                         </tr></thead>
+                     
                 <tbody id="#sortable">
                 {% for key2, object in objects %}
                    <tr>
+                 
                        {% set vals =  object.val  %}
                        {% for key3, val  in vals %}
-                        
+                
                         {% if val|length == 0 %}
                             {% if val.nom is defined %}
                             <td >{{ val.nom }}</td>

@@ -5261,3 +5261,9 @@ color:var(--teal-blue);
 
 
        }
+       @media  (max-width: 1469px) {
+       .slide-txt-1 {
+        font-size: 14px;
+        line-height: initial;
+       }
+      }

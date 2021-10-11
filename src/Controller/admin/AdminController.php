@@ -113,7 +113,7 @@ class AdminController extends AbstractController
                 $obj->setImageProfil($file->getClientOriginalName());
                 
             }
-            elseif ($name == "Actualité" || $name == "Projet"){
+            elseif ($name == "Actualite" || $name == "Projet"){
                 $file = $form->get('image')->getData();
                 $file->move('assets/images/upload', $file->getClientOriginalName());
                 $obj->setImage($file->getClientOriginalName());
@@ -217,20 +217,51 @@ class AdminController extends AbstractController
             'attr' => array('class' => $name ,
                 'object' => $object,
             )));
+        
             if($_POST){
      
                 $form->handleRequest($request);
                 if ($form->isSubmitted() && $form->isValid()) {
               
-            
+                    if ($name == "Actualite" || $name == "Projet" ){
+                        $file = $form->get('image')->getData();
+                        if ($file != null){
+                            $file->move('assets/images/upload', $file->getClientOriginalName());
+                            $object->setImage($file->getClientOriginalName());
+                        }else{
+                            
+                            $object->setImage($_POST["hintdata"]);
+                        }                                  
+                    }
+                    else if($name == "Team"){
+                        $file = $form->get('image_profil')->getData();
+                        if ($file != null){
+                        $file->move('assets/images/upload', $file->getClientOriginalName());
+                        $object->setImageProfil($file->getClientOriginalName());
+                        }else{
+                            $object->setImageProfil($_POST["hintdata"]);
+                        }
+                        
+                    }
                 $entityManager->flush();
                 return $this->redirectToRoute("catAdmin", array(
                     'name' => $name
                 ));
             }
         }
+        if ($name == "Actualite" || $name == "Projet" ){
+                 $hintdata=$object->getImage();                   
+        }
+        else if($name == "Team"){
+                $hintdata=$object->getImageProfil();
+            
+        }
+        else{
+                $hintdata="";
+        }
             return $this->render('admin/admin_add_object.html.twig', [
                 'itemsMenu' => $this->itemsMenu,
+                'hintdata' => $hintdata,
                 'name' => $name,
                 'form' => $form->createView(),
                 'edit' => true,
