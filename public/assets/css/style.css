@@ -2962,6 +2962,9 @@ input{
       }
   
       @media (max-width:420px) {
+        .inline{
+          display: inline-block;
+        }
         .key-proj {
           float: left;
           width: 100%!important;
@@ -3228,7 +3231,7 @@ input{
 .div-mission{
 width: 100%;
 height: 535px;
-margin-bottom: 150%;
+margin-bottom: 110%;
 }
 .div-mission-container {
   width: 85%;
