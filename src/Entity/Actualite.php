@@ -135,7 +135,7 @@ class Actualite
         return $this;
     }
     public function vars() :array
-    {
+    { 
         $tbl = [];
         $tbl[0]= "id";
         $tbl[1]= "titre";
