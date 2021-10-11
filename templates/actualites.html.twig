@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}{{title}}{% endblock %}
+{% block description %}{{description}}{% endblock %}
 {% block body %}
 <div class="actu-div">
     <div class="main-div">
@@ -19,7 +20,7 @@
                     <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
                 </div>
                 <div class="slide-txt">
-                    <div class="cat-slide-txt">{{ obj.titre }}</div>
+                    <div class="cat-slide-txt">{% if obj.titre|length > 50 %} {{ obj.titre | slice(0, 50) }}...  {% else %} {{ obj.titre}} {% endif %}</div>
                     <div class="slide-txt-1">{{ obj.text }}</div>
                 </div>
                 <div class="div-arrow ">

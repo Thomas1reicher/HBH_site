@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}{{title}}{% endblock %}
+{% block description %}{{description}}{% endblock %}
 {% block body %}
 <div class="proj-div">
     <div class="main-div">
@@ -35,7 +36,8 @@
                 </div>
                 <div class="slide-txt">
                     <div class="cat-slide-txt">{{ obj.typeservice }}</div>
-                    <div class="slide-txt-1">{{ obj.titre}}</div>
+                    
+                    <div class="slide-txt-1">{% if obj.titre|length > 35 %} {{ obj.titre | slice(0, 35) }}...  {% else %} {{ obj.titre}} {% endif %} </div>
                 </div>
                 <div class="div-arrow ">
                     <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>

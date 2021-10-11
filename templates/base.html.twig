@@ -12,6 +12,7 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        <meta name="description" content="{% block description %} Welcome! {% endblock %}">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -106,7 +107,7 @@
                         <a class="link-hover management-link colab" id="3"  href="{{ path('services_espace_collaboratif') }}">Plateforme collaboratif</a><br/>
                         <a class="link-hover management-link label" id="4" href="{{ path('services_labellisation') }}">Labellisation</a><br/>
                     </div>
-                           <div style="width: 12%;float: right;height: 150px;margin-right: 5%;">
+                           <div class="div-img-hover-link" >
                     <div class="hover-management hover-cat slide-in-left-hover" id="1" style="background-image: url({{ asset('assets/img/Services_management_de_projet/Fond_page_service1.png') }})">
                         <img class="img-hover-management-1 slide-in-left-hover-img" src="{{ asset('assets/img/Services_management_de_projet/img_management_de_projet.png') }}"></img>
                     </div>

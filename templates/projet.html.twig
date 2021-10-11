@@ -7,7 +7,7 @@
 <div class="div-left-proj">
     <div class="main-div div-fil-arianne">
     <p class="fil-arianne">
-        <a href="{{ path('accueil') }}">Acceuil</a> /
+        <a href="{{ path('accueil') }}">Accueil</a> /
         <a href="{{ path('projets') }}">Projets</a> /
         {% if obj.typeservice == "Management de projet" %}
         <a href="{{ path('services_management_projet') }}">{{obj.typeservice}}</a> /
@@ -47,7 +47,7 @@
         <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
         <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
         <div class="div-img-share-actu">
-          <div class="hover-share-actu" style="display:none">
+          <div class="hover-share-proj" style="display:none">
             <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text1}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><img class=" first-img-hover-share-actu img-hover-share-actu"    src="{{ asset('assets/img/facebook.svg') }}"/></a>
             <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/></a>
             <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/></a>
@@ -117,7 +117,7 @@ d’une main de maître. »</h1>
         class="main-div div-proj div-project">
         <div >
             <div class="main-title-page">
-                <h1 class="montserrat-bold-white-50px title-feature">Ces projets vous intéressont</h1>
+                <h1 class="montserrat-bold-white-50px title-feature">Ces projets peuvent vous intéresser</h1>
             </div>
            
 

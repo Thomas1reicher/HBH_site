@@ -38,7 +38,8 @@ class HomeController extends AbstractController
         }
         
         return $this->render('home.html.twig', [
-            'title' => 'home',
+            'title' => 'HBH - Société leader pour gérer vos projets de construction',
+            'description' => 'Forte d’une équipe de collaborateurs expérimentés en bâtiment, principalement ingénieurs et architectes, HBH Luxembourg offre un large choix de services.',
             'list' => $List ,
             'objall' => $objall, 
             'splash' => $splash
@@ -52,7 +53,9 @@ class HomeController extends AbstractController
     public function services()
     {
         return $this->render('services.html.twig', [
-            'title' => 'services'
+            'title' => 'HBH - Les services proposés pour vos projets de construction',
+            'description' => 'HBH gère vos projets de construction et répond aux besoins de ses clients, tant
+            en assistance au Maître d’Ouvrage que pour la gestion de la sécurité et la santé'
         ]);
     }
 
@@ -63,7 +66,9 @@ class HomeController extends AbstractController
     public function services_espace_collaboratif()
     {
         return $this->render('services-espace-collaboratif.html.twig', [
-            'title' => 'services-espace-collaboratif'
+            'title' => "HBH - Création d'espaces collaboratifs pour le bien de vos projets ",
+            'description' => "Dans le cadre des missions de Project Management, HBH assure que toutes les parties prenantes ont accès à la
+            bonne information et au bon moment. "
         ]);
     }
 
@@ -74,7 +79,9 @@ class HomeController extends AbstractController
     public function services_labellisation()
     {
         return $this->render('services-labellisation.html.twig', [
-            'title' => 'services-labellisation'
+            'title' => 'HBH - La labellisation de vos projets de construction ',
+            'description' => "Depuis 2019, HBH assiste les investisseurs et les Maîtres d’Ouvrage pour labelliser leurs projets en DGNB, la norme de référence allemande en construction durable.
+            "
         ]);
     }
 
@@ -85,7 +92,8 @@ class HomeController extends AbstractController
     public function services_management_projet()
     {
         return $this->render('services-management-projet.html.twig', [
-            'title' => 'services-management-projet'
+            'title' => "HBH - Le management de projets pour les maîtres d'ouvrages",
+            'description' => "Forte de son expérience de terrain, d’équipes compétentes et de son expertise, HBH répond aux besoins des Maîtres d’Ouvrage et bureaux d’études."
         ]);
     }
 
@@ -96,7 +104,8 @@ class HomeController extends AbstractController
     public function services_securite_sante()
     {
         return $this->render('services-securite-sante.html.twig', [
-            'title' => 'services-securite-sante'
+            'title' => 'HBH - La sécurité et la santé de vos collaborateurs',
+            'description' => "HBH prend en compte tous les types de risques liés à la co-activité, à l’interactivité et à l’environnement du chantier pour la santé de vos ouvriers."
         ]);
     }
 
@@ -110,7 +119,8 @@ class HomeController extends AbstractController
         $repoTeam = $entityManager->getRepository(Projet::class);
         $List = $repoTeam->findAll();
         return $this->render('projets.html.twig', [
-            'title' => 'projets',
+            'title' => 'HBH - Découvrez nos projets au Luxembourg et dans la Grande-Région',
+            'description' => "Management de projet ou sécurité/santé, HBH vous propose de découvrir les derniers projets mis en lumière par nos services",
             'list' => $List, 
             'nb' => count($List)
         ]);
@@ -150,7 +160,8 @@ class HomeController extends AbstractController
         $repoTeam = $entityManager->getRepository(Team::class);
         $ListTeam = $repoTeam->findAll();
         return $this->render('presentation.html.twig', [
-            'title' => 'presentation',
+            'title' => 'HBH - A propos de notre entreprise et de notre équipe',
+            'description' => "Créée en 1988, HBH est aujourd'hui une société leader au Luxembourg en management de projets et en sécurité et santé dans le secteur de la construction.",
             'list' => $ListTeam,        ]);
     }
 
@@ -164,7 +175,8 @@ class HomeController extends AbstractController
         $repoTeam = $entityManager->getRepository(Actualite::class);
         $List = $repoTeam->findAll();
         return $this->render('actualites.html.twig', [
-            'title' => 'actualites',
+            'title' => 'HBH - Découvrez ici nos actualités en rapport avec notre activité',
+            'description' => "Vous retrouverez ici les actualités de l'entreprise HBH au Luxembourg, société leader en projets de construction.",
             'list' => $List
         ]);
     }
@@ -199,7 +211,8 @@ class HomeController extends AbstractController
     public function mention_legales()
     {
         return $this->render('mention.html.twig', [
-            'title' => 'Mention légales'
+            'title' => 'HBH - Nos mentions légales',
+            'description' => "Vous retrouverez ici les mentions légales de l'entreprise HBH au Luxembourg, société leader en projets de consutrction"
         ]);
     }
  

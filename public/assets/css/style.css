@@ -4535,6 +4535,8 @@ select.form-control:focus::-ms-value {
     left: 0;
     letter-spacing: 1.20px;
     float: right;
+    margin-right: 12%;
+
 }
 @media (max-width: 1560px){
 .img-home-main-colb {
@@ -4835,7 +4837,7 @@ select.form-control:focus::-ms-value {
   width: 0;
   border-bottom: 604px solid #103182;
   border-left: 4018px solid transparent;
-  top: -238px;
+  top: -307px;
   position: relative;
   left: -631px;
 }
@@ -4848,6 +4850,7 @@ select.form-control:focus::-ms-value {
   position: relative;
   top: -9px;
   right: 480px;
+  margin-right: 1%;
   border-radius: 0 100em 100em 0;
 }
 .div-mention{
@@ -4973,4 +4976,288 @@ color:var(--teal-blue);
     margin-right: 5%;
   }
   }
- 
+ .div-img-hover-link{
+  width: 12%;
+  float: right;
+  height: 150px;
+  margin-right: 5%;
+ }
+ @media (max-width: 1700px) and (min-width: 1380px){
+  .div-img-hover-link{
+
+    margin-right: 10%;
+  }
+
+ }
+ @media (max-width: 1380px){
+  .div-img-hover-link{
+    margin-right: 15%;
+  }
+
+ }
+ @media (max-width: 1480px){
+  .main-div-img-service {
+    width: 85%;
+  }
+
+ }
+ @media (max-width: 1300px){
+  .main-div-img-service {
+    width: 95%;
+    padding-left: 8%;
+  }
+
+ }
+ @media (max-width: 1890px) and (min-width: 1800px){
+  .elmt-sante-3 {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 410px solid #103182;
+    border-left: 2695px solid transparent;
+    top: -162px;
+    position: relative;
+    left: -61px;
+}
+ }
+ @media (max-width: 1650px) and (min-width: 1530px)   {
+  .elmt-sante-3 {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 604px solid #103182;
+    border-left: 4018px solid transparent;
+    top: -319px;
+    position: relative;
+    left: -631px;
+  }
+  }
+  @media  (max-width: 1530px) and  (min-width: 1450px) {
+    .elmt-sante-3 {
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-bottom: 411px solid #103182;
+      border-left: 3942px solid transparent;
+      top: -209px;
+      position: relative;
+      left: -631px;
+    }
+    }
+    @media  (max-width: 1450px) {
+      .elmt-sante-3 {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-bottom: 341px solid #103182;
+        border-left: 2768px solid transparent;
+        top: -167px;
+        position: relative;
+        left: -61px;
+      }
+      }
+      @media (min-width: 1934px) and (max-width: 2000px) {
+        .hover-share-proj {
+        
+          width: 24%;
+       
+          right: 481px;
+          margin-right: 1%;
+   
+        }
+      
+       }
+       @media  (min-width: 1990px) and (max-width:2070px) {
+        .hover-share-proj {
+          width: 24%;
+          right: 493px;
+          margin-right: 2%;          
+   
+        }
+      
+       }
+       @media  (min-width: 1850px) and (max-width:1905px) {
+        .hover-share-proj {
+          width: 177px;
+          top: -9px;
+          right: 441px;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1800px) and (max-width:1850px) {
+        .hover-share-proj {
+          width: 184px;
+    top: -9px;
+    right: 421px;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1750px) and (max-width:1800px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 406px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1650px) and (max-width:1750px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 376px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+     
+       @media  (min-width: 1600px) and (max-width:1650px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 360px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1550px) and (max-width:1600px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 358px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1500px) and (max-width:1550px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 335px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1450px) and (max-width:1500px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 320px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1400px) and (max-width:1450px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 308px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1350px) and (max-width:1400px) {
+        .hover-share-proj {
+          width: 28%;
+          top: -9px;
+          right: 298px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1300px) and (max-width:1350px) {
+        .hover-share-proj {
+          width: 35%;
+          top: -9px;
+          right: 265px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1250px) and (max-width:1300px) {
+        .hover-share-proj {
+          width: 35%;
+          top: -9px;
+          right: 248px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1200px) and (max-width:1250px) {
+        .hover-share-proj {
+          width: 38%;
+          top: -9px;
+          right: 229px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1150px) and (max-width:1200px) {
+        .hover-share-proj {
+          width: 35%;
+          top: -9px;
+          right: 222px;
+          padding-left: 2%;
+           
+   
+        }
+      
+       }
+       @media  (min-width: 1678px) and (max-width:1880px) {
+        .slider-project {
+          width: 53%;
+          text-align: center;
+      }
+
+
+       }
+       @media  (max-width: 1678px) and (min-width:1482px) {
+        .slider-project {
+          width: 60%;
+          text-align: center;
+      }
+
+
+       }
+       @media  (min-width: 1369px) and (max-width:1482px) {
+        .slider-project {
+          width: 65%;
+          text-align: center;
+      }
+
+
+       }
+       @media  (max-width: 1369px) and (min-width:1188px) {
+        .slider-project {
+          width: 75%;
+          text-align: center;
+      }
+
+
+       }

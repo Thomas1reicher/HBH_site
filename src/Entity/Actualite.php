@@ -156,7 +156,7 @@ class Actualite
      $tbl[2]= "date";
      $tbl[3]= "textarea";
      $tbl[4]= "string";
-     $tbl[5]= "image";
+     $tbl[5]= "img";
      return $tbl;
     }
     public function val() :array
