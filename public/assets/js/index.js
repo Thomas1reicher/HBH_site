@@ -408,7 +408,41 @@ window.addEventListener('load', function(e) {
                         $(this).hide();
              
                     });
-                
+                    $('.num-page-nb').click(function() {
+
+                        id = $(this).html();
+                        $('.project-card').hide();
+                        $(".card-"+id).show();
+                        $(this).addClass('.actif-num');
+                    });
+                    $('.last_actif').click(function() {
+                        id = $('.num-page-nb').length;
+                        $('.project-card').hide();
+                        $(".card-"+id).show();
+                    });
+                    $('.first_actif').click(function() {
+                        $('.project-card').hide();
+                        $(".card-1").show();
+                    });
+                    $('.select-type-proj').change(function() {
+                        val = $(this).val();
+                        $('.filtre-all').hide();
+                        if(val != 'filtre'){
+                        $('.filtre-'+val).show();
+                        }else{
+                            $('.filtre-all').show();
+                        }
+                    });
+                    $(".img-share-actu-projet").mouseover(function() {
+                        $(".hover-share-proj").show();
+                        function hide(){
+                            $(".hover-share-proj").hide();
+                        }
+                        setTimeout(hide, 8000);
+                        
+                        
+                    });
+
             
 });
 

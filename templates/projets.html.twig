@@ -11,10 +11,10 @@
             <img class="elmt-projet-1" src="/assets/img/Nos_projets/element-graphic13.svg"/>
         </div>
         <div class="main-div" style="color: #24a6a4">
-            <div class="key-proj filtre-proj" id="Management" >
+            <div class="key-proj filtre-proj no-mob" id="Management" >
                 MANAGEMENT DE PROJET
             </div>
-            <div class="key-proj filtre-proj" id="Sécurité">
+            <div class="key-proj filtre-proj no-mob" id="Sécurité">
                 SÉCURITÉ & SANTÉ
             </div>
             <div class="key-proj">
@@ -23,14 +23,24 @@
              <div class="key-proj">
             
             </div>
-            <div class="projets-nb key-proj" >
+            <div class="projets-nb key-proj no-mob " >
                 {{nb}} PROJETS
+            </div>
+            <div>
+                <select class="no-desktop select-type-proj">
+                <option value="filtre">FILTRES </option>
+                    <option value="Management">MANAGEMENT DE PROJET </option>
+                    <option value="Sécurité">SÉCURITÉ & SANTÉ</option>
+    	        </select>
             </div>
         </div>
         <div class="main-div projets-div">
-           {%  for obj in list %}
+        {% set nb = 1  %}
+        {% set nbmult  = 0  %}
+           {%  for key , obj in list %}
+           
         <a href="{{ path('projet', {id : obj.id  }) }}" >
-            <div class="card-actu project-card border-2px-teal-blue filtre-all filtre-{{ obj.typeservice }}"  style="background-color: white">
+            <div class="card-actu project-card border-2px-teal-blue filtre-all filtre-{{ obj.typeservice }} card-{{ nb }} {% if key > 9 %} no-mob {% endif %}"  style="background-color: white">
                 <div class="slide-img">
                     <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
                 </div>
@@ -43,8 +53,29 @@
                     <a><img class="arrow-slide" src="/assets/img/arrow-teal.png"></a>
                 </div>
         </div></a>
+        {% if key == 9+nbmult %}
+               {% set nb = nb+1  %}
+                {% set nbmult  = nbmult+10  %} 
+            {% endif %}
            {% endfor %}
         </div>
+    </div>
+    <div class="num-pages no-desktop">
+            <img class="first_actif img-control" src="/assets/img/first_actif.svg" />
+            <img class="first_inactif img-control" src="/assets/img/first_inactif.svg" />
+             <img class="previous_actif img-control" src="/assets/img/previous_actif.svg" />
+            <img class="previous_inactif img-control" src="/assets/img/previous_inactif.svg" />
+            {% for i in 1..nb %}
+                {% if i == 1 %}
+                 <p class="num-page-nb actif-num">{{ i }}</p>
+                 {% else %}
+                <p class="num-page-nb">{{ i }}</p>
+                 {% endif %}
+            {% endfor %}
+            <img class="next_actif img-control" src="/assets/img/next_actif.svg" />
+            <img class="next_inactif img-control" src="/assets/img/next_inactif.svg" />
+            <img class="last_actif img-control" src="/assets/img/last_actif.svg" />
+            <img class="last_inactif img-control" src="/assets/img/last_inactif.svg" />
     </div>
 </div>
 
