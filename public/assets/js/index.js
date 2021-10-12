@@ -399,6 +399,8 @@ window.addEventListener('load', function(e) {
                     $(".filtre-proj").click(function() {
                       
                        id = $(this).attr("id");
+                       $(".filtre-proj").removeClass('filtre-actif');
+                       $(this).addClass("filtre-actif");
                        console.log($('.filtre-all').hide());
                        console.log($('.filtre-'+id).show());
                        

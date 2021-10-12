@@ -633,11 +633,13 @@ color:
 
   }
   .man{
-    width:23%;
-    margin-right:3% ;
-    min-height: 380px;
+    width: 20%;
+    margin-right: 3%;
+    min-height: 370px;
     float: left;
     margin-bottom: 8%;
+    max-height: 392px;
+    height: 100%;
   }
   .teams-title{
     margin-bottom: 4%;
@@ -5337,3 +5339,49 @@ color:var(--teal-blue);
         margin-bottom: 5%;
         margin-top: 5%;
       }
+.filtre-actif{
+  text-decoration: underline;
+    text-decoration-color: #102242;
+    text-underline-position: under;
+}
+
+@media  (max-width: 1795px) {
+  .man{
+    height: 402px;
+    margin-bottom: 3%;
+  }
+
+}
+
+@media  (max-width: 1521px) {
+.worker-man {
+  margin-bottom: 1%;
+  line-height: 20px;
+}
+.man {
+  margin-bottom: 1%;
+  height: 380px;
+}
+}
+@media  (max-width: 1389px) {
+
+  .man {
+    margin-bottom: 0%;
+    height: 350px;
+    min-height: 350px; 
+  }
+  .worker-man {
+    font-size: 13px;
+  }
+  
+}
+@media  (max-width: 1220px) {
+
+  .man {
+    margin-bottom: 0%;
+    height: 317px;
+    min-height: 316px;    
+  }
+
+  
+}
