@@ -110,12 +110,68 @@
             <p class="txt-philo">Pour faire face à un environnement se complexifiant et à une évolution permanente des marchés, HBH a évolué
              vers un concept d'entreprise agile.</p>
         </div>
-        <div class="schema-philo">
+        <div class="schema-philo ">
             <img class="img-schema" src="assets/img/A_propos/schema_notre_philosophie.png">
             <div class="txt-schema-philo-1 schema-txt">- Réduction des hiérarchies<br/>- Organisation matricielle par projet<br/>- Pro activité/Réactivité<br/>- Méthodesde travail (procédures)</div>
             <div class="txt-schema-philo-2 schema-txt"> - Recrutement de qualités humaines<br/>- Diversification des parcours<br/>- Alternance terrain et fonctionnel<br/>-Formation continue<br/>- Disponibilté</div>
             <div class="txt-schema-philo-3 schema-txt"> - Innovation<br/>- Utilisation des nouvelles&nbsp;&nbsp; <br/>&nbsp;&nbsp; technologies de l’information et<br/>&nbsp;&nbsp; de la communication<br/>- Traitement de l’information</div>
         </div>
+        <div class="schema-philo-slider no-desktop">
+            <div class="slider-schema">
+                <div class="slide-schema">
+                    <img src="assets/img/A_propos/agilite_ressources_humaines.svg" />
+                    <div class="schema-slide-txt">
+                    <p>-Recrutement de qualités humaines<br/>
+                    -Diversification<br/>
+                    -Alternance terrain et fonctionnel<br/>
+                    -Formation continue<br/>
+                    -Disponibilité</p>
+                    </div>
+                </div>
+                <div class="slide-schema">
+                     <img src="assets/img/A_propos/agilite_organisationnelle.svg" />  
+                     <div class="schema-slide-txt">
+                     <p>-Réduction des hiérarchies<br/>
+                     -Organisation matricielle par projet<br/>
+                     -Pro activité/Réactivité<br/>
+                     -Méthodes de travail (procédures)</p>
+                     </div>                 
+                </div>
+                <div class="slide-schema">
+                    <img src="assets/img/A_propos/agilite_technologique.svg" />
+                    <div class="schema-slide-txt">
+                    <p>
+                    -Innovation<br/>
+                    -Utilisation des nouvelles <br/>technologies de l'information et <br/> de la communication<br/>
+                    -Traitement de l'information
+                    </p>
+                    </div> 
+                </div>
+            </div>
+         </div>
+         <script type="text/javascript">
+            $('.slider-schema').slick({
+                dots: true,
+                vertical: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                arrows: false,
+                  responsive: [
+                                    
+                                    {
+                                    breakpoint: 620,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1
+                                    }
+                                    }
+                                ]
+            });
+        </script>
         </div>
     </div>
 {% endblock %}

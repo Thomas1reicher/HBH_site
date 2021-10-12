@@ -2964,6 +2964,9 @@ input{
       }
   
       @media (max-width:420px) {
+        .man{
+          max-height: initial!important; 
+        }
         .inline{
           display: inline-block;
         }
@@ -4893,8 +4896,8 @@ select.form-control:focus::-ms-value {
 }
 @media (max-width: 420px){
 .img-home-main {
-    top: 502px!important;
-    width: 329px!important;
+  top: 465px!important;
+  width: 329px!important;
 }
 .div-last-info {
   padding-top: 19%;
@@ -5384,4 +5387,27 @@ color:var(--teal-blue);
   }
 
   
+}
+@media (max-width: 420px){
+.div-elmt-propos-5 {
+    top: 192px;
+    height: 0px;
+    border-bottom: 111px solid #102242;
+}
+}
+.schema-slide-txt{
+  line-height: 24px;
+  margin-top: 5%;
+}
+.slick-dots button{
+  background: #dbdbdbe0;
+  color: transparent;
+  border-radius: 50%;
+}
+.slick-dots{
+  margin: 0px auto 0px auto!important;
+  width: 100px;
+}
+.slick-dots li{
+  margin: 3%;
 }
