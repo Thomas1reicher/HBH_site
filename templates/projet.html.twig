@@ -16,13 +16,39 @@
         {% endif %}
         <a style="font-weight:700" href="#">{{obj.titre}}</a>
         </p>
-</div>
+    </div>
     <div class="div-title-actu">
         <h1 class="title-actu">{{obj.titre}}</h1>
         <p class="publication-actu"><span class="span-publi">PUBLIÉ LE</span><span> {{obj.datepublication|date('Y-m-d')}}</span></p>
     </div>
     <div class="div-img-actu">
         <img class="img-actu" src="/assets/images/upload/{{ obj.image }}"/>
+    </div>
+    <div class="div-right-proj">
+    <div class="div-info-proj">
+        <h1 class="title-new-actu margin-info-proj" >Informations du projet</h1>
+        <p class="p-info-proj">Maître d’ouvrage : <span class="span-info-proj">{{obj.maitreouvrage}}</span></p>
+        <p class="p-info-proj">Type de marché : <span class="span-info-proj">{{obj.typemarche}}</span></p>
+        <p class="p-info-proj">Budget : <span class="span-info-proj">{{obj.budget}}</span></p>
+        <p class="p-info-proj">Architecte : <span class="span-info-proj">{{obj.architecte}}</span></p>
+        <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
+        <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
+        <!--<div class="div-img-share-actu">
+          <div class="hover-share-proj" style="display:none">
+            <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text1}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><img class=" first-img-hover-share-actu img-hover-share-actu"    src="{{ asset('assets/img/facebook.svg') }}"/></a>
+            <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/></a>
+            <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/></a>
+        </div>
+        <img class="img-share-actu img-share-actu-projet" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
+           --> <div class="btn_wrap">
+                <span class="span-share">Share</span>
+                <div class="container">
+                    <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text1}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="div-text-actu no-mob">
     <div >
@@ -37,24 +63,7 @@
  
 </div>
 
-<div class="div-right-proj">
-    <div class="div-info-proj">
-        <h1 class="title-new-actu margin-info-proj" >Informations du projet</h1>
-        <p class="p-info-proj">Maître d’ouvrage : <span class="span-info-proj">{{obj.maitreouvrage}}</span></p>
-        <p class="p-info-proj">Type de marché : <span class="span-info-proj">{{obj.typemarche}}</span></p>
-        <p class="p-info-proj">Budget : <span class="span-info-proj">{{obj.budget}}</span></p>
-        <p class="p-info-proj">Architecte : <span class="span-info-proj">{{obj.architecte}}</span></p>
-        <p class="p-info-proj">Délai : <span class="span-info-proj">{{obj.delais}}</span></p>
-        <p class="p-info-proj">Fin des travaux : <span class="span-info-proj">{{obj.fintravaux}}</span></p>
-        <div class="div-img-share-actu">
-          <div class="hover-share-proj" style="display:none">
-            <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text1}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><img class=" first-img-hover-share-actu img-hover-share-actu"    src="{{ asset('assets/img/facebook.svg') }}"/></a>
-            <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/></a>
-            <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/></a>
-        </div>
-        <img class="img-share-actu img-share-actu-projet" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
-        </div>
-    </div>
+
      <div class="div-text-actu no-desktop">
     <div >
         <h1 class="title-actu-text">{{obj.titre1}}</h1>

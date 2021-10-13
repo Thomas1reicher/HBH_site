@@ -30,12 +30,14 @@
         <p class="share-actu">Partager cet article</p>
         <div class="div-hover-share-actu">
         <div class="out-hover">
-        <div class="hover-share-actu" style="display:none">
-            <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{ obj.text}}&p[url]={{ path('projet', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><img class=" first-img-hover-share-actu img-hover-share-actu"    src="{{ asset('assets/img/facebook.svg') }}"/></a>
-            <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/linkedin.svg') }}"/></a>
-            <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><img class="img-hover-share-actu" src="{{ asset('assets/img/twitter.svg') }}"/></a>
-        </div>
-        <img class="img-share-actu" src="{{ asset('assets/img/Nos_projets_single/button_share.svg') }}" />
+            <div class="btn_wrap margin-btn-wrap">
+                <span class="span-share">Share</span>
+                <div class="container">
+                    <a title="send to Facebook" href="http://www.facebook.com/sharer.php?s=100&p[title]={{obj.titre}}&p[summary]={{obj.text}}&p[url]={{ path('actualite', {id : obj.id  }) }}&p[images][0]=/assets/images/upload/{{ obj.image }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url={{ app.request.uri }}"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/uas/login?session_redirect={{ app.request.uri }}"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         </div>
        

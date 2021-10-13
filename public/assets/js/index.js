@@ -76,7 +76,7 @@ window.addEventListener('load', function(e) {
 
 
 
-  
+    arraychemin = chemin.split('/');
     currentheight =$(window).height();
     if(chemin == "/"){
     elmt1 = $('.elmt-1');
@@ -94,7 +94,7 @@ window.addEventListener('load', function(e) {
        /* elmt1 = $('.elmt-projet-1');
         top_elmt1 = $('.elmt-projet-1').position()["top"];*/
     }
-    else if(chemin.includes("/actualite/")){
+    else if(arraychemin[1] == "actualite"){
         elmt1 = $('.div-right-actu');
         top_elmt1 = $('.div-right-actu').position()["top"];
     }
@@ -108,6 +108,8 @@ window.addEventListener('load', function(e) {
         top_elmt1 = $('.elmt-service-m-4').position()["top"];
         elmt2 = $('.elmt-service-m-5');
         top_elmt2 = $('.elmt-service-m-5').position()["top"];
+        elmt3 = $('.elmt-service-m-6');
+        top_elmt3 = $('.elmt-service-m-6').position()["top"];
     }
     $(window).scroll(function() {
         if(chemin == "/"){
@@ -121,12 +123,13 @@ window.addEventListener('load', function(e) {
         else if(chemin == "/presentation"){
             ScrollElement(elmt1,top_elmt1,210);
         }
-        else if(chemin == "/actualite"){
+        else if(arraychemin[1] == "actualite"){
             ScrollElement(elmt1,top_elmt1,410);
         }
         else if(chemin == "/services_management_projet"){
             Display(elmt1,top_elmt1);
             Display(elmt2,top_elmt2);
+            Display(elmt3,top_elmt3);
         }
        // ScrollElement(elmt3,top_elmt3,350);
        /* if ($(this).scrollTop()>top_elmt1 && $(this).scrollTop()<(top_elmt1+600)  )
@@ -259,6 +262,7 @@ window.addEventListener('load', function(e) {
                     $( ".li-header-nav" ).not(".li-service").mouseover(function() {
                         $(".fleche_menu").removeClass("rotate-in-center");
                         $(".fleche_menu").addClass("rotate-out-center");
+                        
                         $('.hover-service').css('display','none');
                     });
                     $( ".hover-service-container" ).mouseover(function() {
@@ -399,11 +403,18 @@ window.addEventListener('load', function(e) {
                     $(".filtre-proj").click(function() {
                       
                        id = $(this).attr("id");
+                       if(id != "All"){
                        $(".filtre-proj").removeClass('filtre-actif');
                        $(this).addClass("filtre-actif");
                        console.log($('.filtre-all').hide());
                        console.log($('.filtre-'+id).show());
-                       
+                       }else{
+                        $('.filtre-all').show();
+                        $(".filtre-proj").removeClass('filtre-actif');
+                        $(this).addClass("filtre-actif");
+                       }
+                       nb = $('.filtre-all:visible').length;
+                       $('.projets-nb').html(nb+" PROJETS")
                     });
                     $(".span-plus").click(function() {
                         $(this).parent().next().show();

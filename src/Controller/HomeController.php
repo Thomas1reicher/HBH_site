@@ -205,7 +205,7 @@ class HomeController extends AbstractController
         ]);
     }
         /**
-     * @Route("/mention_legales", name="mentionlegales")
+     * @Route("/mentions_legales", name="mentionlegales")
      * @return Response
      */
     public function mention_legales()
