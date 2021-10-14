@@ -41,6 +41,10 @@ class Team
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $tel;
+     /**
+     * @ORM\Column(type="integer", length=255, nullable=true)
+     */
+    private $position;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -131,7 +135,8 @@ class Team
      $tbl[2]= "String";
      $tbl[3]= "string";
      $tbl[4]= "string";
-     $tbl[5]= "img";
+     $tbl[5]= "int";
+     $tbl[6]= "img";
      return $tbl;
     }
     public function val() :array
@@ -143,8 +148,9 @@ class Team
         $tbl[2]=$this->getPoste();
         $tbl[3]=$this->getTel();
         $tbl[4]=$this->getEmail();
-        $tbl[5]=$this->getImageProfil();
-
+        $tbl[5]=$this->getPosition();
+        $tbl[6]=$this->getImageProfil();
+        
         return $tbl;
 
 
@@ -157,7 +163,8 @@ class Team
         $newTbl[2] = 'poste';
         $newTbl[3] = 'tel';
         $newTbl[4] = 'email';
-        $newTbl[5] = 'image_profil';
+        $newTbl[5] = 'position';
+        $newTbl[6] = 'image_profil';
 
         return $newTbl;
 
@@ -169,5 +176,17 @@ class Team
 
        /* $tbl=$this->getEmail()."-".$this->getFullName().'-'.$this->getPassword().'-'.$this->getUsername();
         */return "";
+    }
+
+    public function getPosition(): ?int
+    {
+        return $this->position;
+    }
+
+    public function setPosition(?int $position): self
+    {
+        $this->position = $position;
+
+        return $this;
     }
 }

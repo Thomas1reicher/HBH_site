@@ -38,23 +38,33 @@
                         </tr></thead>
                      
                 <tbody id="#sortable">
+                  {% if false == images %}  
+                        {% set images = -1 %}
+                  {% endif %}
+                  {% if false == image %}  
+                        {% set image = -1 %}
+                  {% endif %}
+
                 {% for key2, object in objects %}
                    <tr>
                  
                        {% set vals =  object.val  %}
                        {% for key3, val  in vals %}
-                
                         {% if val|length == 0 %}
+                        
                             {% if val.nom is defined %}
                             <td >{{ val.nom }}</td>
                              {% else %}
                             <td >{{ val }}</td>
                              {% endif %}
                           {% else %}
+                          
                           {% if key3 == image and key3 != false %}
                         <td style="    text-align: center;"><img class="img-admin" src="/assets/images/upload/{{val}}" /></td>
                           {% elseif key3 == images %}
+                          {{val}}
                           {% else %}
+                          
                        <td >{{ val }}</td>
                        {% endif %}
                             {% endif %}

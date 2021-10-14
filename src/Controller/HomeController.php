@@ -158,7 +158,7 @@ class HomeController extends AbstractController
     {
         $entityManager = $this->getDoctrine()->getManager();
         $repoTeam = $entityManager->getRepository(Team::class);
-        $ListTeam = $repoTeam->findAll();
+        $ListTeam = $repoTeam->findAllAscPosition();
         return $this->render('presentation.html.twig', [
             'title' => 'HBH - A propos de notre entreprise et de notre équipe',
             'description' => "Créée en 1988, HBH est aujourd'hui une société leader au Luxembourg en management de projets et en sécurité et santé dans le secteur de la construction.",

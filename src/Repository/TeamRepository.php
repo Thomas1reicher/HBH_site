@@ -47,4 +47,24 @@ class TeamRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findAllPosition($position){
+
+        return $this->createQueryBuilder('t')
+        ->andWhere('t.position >= :val')
+        ->setParameter('val', $position)
+        ->orderBy('t.position', 'ASC')
+        ->getQuery()
+        ->getResult()
+    ;
+    }
+
+public function findAllAscPosition(){
+
+    return $this->createQueryBuilder('t')
+    ->orderBy('t.position', 'ASC')
+    ->getQuery()
+    ->getResult()
+;
+}
+
 }

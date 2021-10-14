@@ -111,7 +111,13 @@ class AdminController extends AbstractController
                 $file = $form->get('image_profil')->getData();
                 $file->move('assets/images/upload', $file->getClientOriginalName());
                 $obj->setImageProfil($file->getClientOriginalName());
-                
+                $objectMainRepo = $this->nameClass($name,"repository");
+                $objectAll =$objectMainRepo->findAllPosition($obj->getPosition());
+                foreach($objectAll as $object){
+                    $object->setPosition($object->getPosition()+1);
+                }
+                $entityManager->flush();
+               
             }
             elseif ($name == "Actualite" || $name == "Projet"){
                 $file = $form->get('image')->getData();
@@ -241,6 +247,12 @@ class AdminController extends AbstractController
                         }else{
                             $object->setImageProfil($_POST["hintdata"]);
                         }
+                        $objectAll =$repository->findAllPosition($object->getPosition());
+                        foreach($objectAll as $object){
+                            $object->setPosition($object->getPosition()+1);
+                        }
+                        $entityManager->flush();
+
                         
                     }
                 $entityManager->flush();
