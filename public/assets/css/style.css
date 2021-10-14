@@ -291,6 +291,7 @@ footer{
     color: white;
     margin-left: auto;
     margin-right: auto;
+    height: auto!important;
 }
 .div-btn-nos-proj{
     text-align: center;
@@ -382,6 +383,7 @@ footer{
       color: white;
       margin-left: auto;
       margin-right: auto;
+      height:auto!important;
   
   }
   .actu-title-div{
@@ -3493,6 +3495,7 @@ margin-bottom: 110%;
       position: relative;
       top: -515px;
       height: 0px;
+      width: 84%;
   }
     .contact-info .p-left{
       float:initial;
@@ -3550,7 +3553,7 @@ margin-bottom: 110%;
           left: -41px!important;
       }
         .div-btn-nos-proj {
-          margin-top: 20%;
+         
 
 
         }
@@ -3695,7 +3698,7 @@ margin-bottom: 110%;
           padding-right: 5%;
         }
         .actu-main .div-btn-nos-proj{
-          margin-bottom: 5%;
+          margin-bottom: 10%;
         }
         .p-actu {
           width: 80%;
@@ -3713,9 +3716,7 @@ margin-bottom: 110%;
         .no-mob{
           display: none;
         }
-        .li-desktop{
-          display: none;
-        }
+     
         .li-mob{
           display:block;
         }
@@ -3729,7 +3730,7 @@ margin-bottom: 110%;
         .slider-proj {
           width: 80%;
           padding-right: 5%;
-
+          height: 412px!important;
         }
         .intro-main-div{
           line-height: 23px;
@@ -3793,14 +3794,15 @@ margin-bottom: 110%;
       margin-bottom: 110%;
     }
     .div-elmt-5 {
-      top: 110px;
-      height: 100px;
+      top: 56px;
+      height: 83px;
       width: 110%;
       left: -8px;
   }
     .img-propos-main {
-      width: 80%;
-    margin-left: 10%;
+      width: 75%;
+      margin-left: 15%;
+    margin-top: 15%;
   }
     .a-propos-main{
       font-size: 28px;
@@ -4746,7 +4748,7 @@ select.form-control:focus::-ms-value {
 
 
 }
-@media  (min-width:420px)   {
+@media  (min-width:768px)   {
 .slider-services {
   display: none!important;
 }
@@ -5127,7 +5129,7 @@ color:var(--teal-blue);
       left: -631px;
     }
     }
-    @media  (max-width: 1450px) {
+    @media  (max-width: 1450px) and (min-width: 420px)  {
       .elmt-sante-3 {
         display: inline-block;
         height: 0;
@@ -5352,7 +5354,7 @@ color:var(--teal-blue);
       }
       .num-page-nb{
         font-weight: 700;
-        color: #102242;
+        color: #24a7a4;
         float: left;
         margin-right: 4%;
       }
@@ -5372,7 +5374,7 @@ color:var(--teal-blue);
       .previous_inactif{
         float: left;
         width: 6%!important;
-        display:none;
+        
       }
       .next_actif{
         float: left;
@@ -5395,7 +5397,7 @@ color:var(--teal-blue);
     margin-right: 4%;
       }
       .actif-num{
-        color:#24a7a4;
+        color:#102242;
       }
       .select-type-proj{
         -webkit-appearance: none;
@@ -5477,11 +5479,13 @@ color:var(--teal-blue);
 .slick-dots button{
   background: #dbdbdbe0;
   color: transparent;
-  border-radius: 50%;
+  height: 2px;
 }
 .slick-dots{
   margin: 0px auto 0px auto!important;
   width: 100px;
+  justify-content: center;
+    display: flex;
 }
 .slick-dots li{
   margin: 3%;
@@ -5667,3 +5671,176 @@ width:100px;
     opacity: 1;
   }
 }
+.slick-prev{
+  display:none!important;
+}
+.slick-next{
+  margin-left: 4%;
+  color: transparent;
+  background-color: transparent;
+  background-image: url("../../assets/img/arrow-teal.png");
+  height: 27px;
+  width: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.slick-next::after{
+  background: transparent;
+  position: initial;
+}
+.slick-next:hover{
+  
+    color: transparent!important;
+
+}
+@media (max-width: 420px){
+  .slider-actu .slick-list{
+    height: 340px!important;
+  }
+  .slider-proj .slick-list{
+    height: 82%!important;
+  }
+  .div-left-actu {
+    width: 100%;
+    float: left;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+.pdf-actu {
+
+  font-size: 16px;
+}
+.div-hover-share-actu {
+
+  width: 155px;
+  float: right;
+  margin-right: 10%;
+}
+.share-actu {
+  font-size: 16px;
+  float: left;
+  width: 45%;
+  padding-top: 2%;
+}
+.div-right-actu{
+  display:none;
+}
+}
+@media (max-width: 768px){
+.li-desktop{
+  display: none;
+}
+.li-table{
+  display: block;
+}
+}
+@media (max-width: 768px) and (min-width: 420px){
+
+  .intro-main-div {
+    line-height: 26px;
+    width: 91%;
+    font-size: 16px;
+    margin-top: 5%;
+}
+.main-title-page {
+
+  line-height: 60px;
+}
+.div-elmt-2 {
+  height: 121px;
+  top: -25px;
+}
+.a-propos-main-div{
+  float: initial!important;
+  width: 80%!important;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.div-img-propos-main {
+  width: 100%;
+  position: relative;
+  top: 305px;
+  height: 0px;
+  float: initial!important;
+}
+.a-propos-main {
+  font-size: 28px;
+  text-align: center;
+}
+.p-propos-main {
+  width: 100%;
+  text-align: center;
+}
+.btn-propos-main {
+  margin-top: 5%;
+  margin-bottom: 55%;
+}
+.text-center-mob {
+  text-align: center;
+}
+.img-propos-main {
+  width: 40%;
+    margin-left: 30%;
+    margin-top: 11%;
+}
+.div-elmt-5 {
+  top: 110px;
+  height: 99px;
+}
+.key-proj {
+  float: left;
+  width: 33%;
+}
+.projets-nb {
+  float: right;
+   margin-right: 0%; 
+  width: 18%!important;
+}
+.info-projet-div{
+  margin-top: 25%;
+}
+.elmt-projet-2 {
+  height: 297px;
+  position: relative;
+  top: -145px;
+}
+.info-projet {
+  width: 100%;
+  height: auto;
+  float: right;
+  padding: 0%;
+  padding-top: 22%;
+  text-align: center;
+}
+.div-info {
+  margin-left: 0%; 
+}
+.title-info-projet {
+  width: 100%;
+  text-align:center;
+  min-height: 65px;
+  font-size: 30px;
+}
+.div-elmt-propos-1 {
+  top: -595px;
+  
+}
+.elmt-propos-1 {
+  width: 65%;
+  float: right;
+}
+.presentation-txt {
+  width: 78%;
+}
+.presentation-title {
+  width: 95%;
+  font-size: 25px!important;
+}
+.p-pres {
+  width: 90%;
+}
+.man {
+  width: 30%;
+}
+  }

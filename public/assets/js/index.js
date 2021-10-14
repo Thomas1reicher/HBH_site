@@ -425,8 +425,35 @@ window.addEventListener('load', function(e) {
 
                         id = $(this).html();
                         $('.project-card').hide();
+                        $('.actif-num').removeClass('actif-num');
+                        length = $('.project-card').length;
                         $(".card-"+id).show();
-                        $(this).addClass('.actif-num');
+                        $(this).addClass('actif-num');
+                        lastactif = $('.num-page-nb').last();
+                        firstactif = $('.num-page-nb').first();
+                        if(lastactif.text() == $(this).text()){
+                            $('.last_actif').hide();
+                            $('.last_inactif').show();
+                            $('.next_actif').hide();
+                            $('.next_inactif').show();
+                            $('.prevous_actif').show();
+                            $('.prevous_inactif').hide();
+                            $('.first_actif').show();
+                            $('.first_inactif').hide();                               
+                        }
+                        if(firstactif.text() == $(this).text()){
+                            $('.prevous_actif').hide();
+                            $('.prevous_inactif').show();
+                            $('.first_actif').hide();
+                            $('.first_inactif').show();                              
+                        }
+                        elem = $('.main-title-page');
+                        console.log(elem);
+                        $('html,body').animate({
+                            scrollTop: elem.offset().top
+                        }, 500);
+
+
                     });
                     $('.last_actif').click(function() {
                         id = $('.num-page-nb').length;
