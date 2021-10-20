@@ -3,8 +3,16 @@
 {% block description %}{{description}}{% endblock %}
 {% block body %}
 {% if splash %} 
+    <style>
+        header {
+            display:none!important;
+        }
+          .main-section {
+            display:none!important;
+        }
+    </style>
 <div class="loading">
-        <img src="assets/video/HBH_logo.gif" class="loading-logo" alt="logo">
+        <img style="width: 100%;height: 100%;" src="assets/video/HBH_logo.gif" class="loading-logo" alt="logo">
     </div>
     {% endif %}
 <div class="main-section {% if splash %} opacity {% endif %}" {% if splash %} style="display:none" {% endif %}>
@@ -254,5 +262,5 @@
         .slide {
             margin: 5px 20px;
         }
-    </style>
+    </styl>
 {% endblock %}

@@ -20,8 +20,8 @@
                     <img class="hbh-img-slide" style="width: 100%;" src="/assets/images/upload/{{ obj.image }}">
                 </div>
                 <div class="slide-txt">
-                    <div class="cat-slide-txt">{% if obj.titre|length > 50 %} {{ obj.titre | slice(0, 50) }}...  {% else %} {{ obj.titre}} {% endif %}</div>
-                    <div class="slide-txt-1">{{ obj.text }}</div>
+                    <div class="slide-txt-1" >{% if obj.titre|length > 50 %} {{ obj.titre | slice(0, 50) }}...  {% else %} {{ obj.titre}} {% endif %}</div>
+                    <div class="cat-slide-txt">{{ obj.datepublication |date('Y-m-d') }}</div>
                 </div>
                 <div class="div-arrow ">
                     <a><img class="arrow-slide" src="/assets/img/arrow.png"></a>

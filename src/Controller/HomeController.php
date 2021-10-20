@@ -36,7 +36,7 @@ class HomeController extends AbstractController
         }else{
             $splash = true;
         }
-        
+     
         return $this->render('home.html.twig', [
             'title' => 'HBH - Société leader pour gérer vos projets de construction',
             'description' => 'Forte d’une équipe de collaborateurs expérimentés en bâtiment, principalement ingénieurs et architectes, HBH Luxembourg offre un large choix de services.',

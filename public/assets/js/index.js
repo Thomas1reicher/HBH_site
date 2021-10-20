@@ -8,12 +8,13 @@ $(document).ready(function () {
         $('footer').hide();
         $('header').hide();
         function greet(){
+            alert("rest");
             $('.loading').hide();
             $('footer').show();
             $('header').show();
             $('.main-section').show();
           }
-          setTimeout(greet, 4500);
+          setTimeout(greet, 8500);
           const d = new Date();
           d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
           document.cookie = "view=true;expires="+d.toUTCString()+"; path=/;";
