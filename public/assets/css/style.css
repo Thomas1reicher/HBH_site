@@ -5427,11 +5427,40 @@ color:var(--teal-blue);
 
 @media  (max-width: 1795px) {
   .man{
-    height: 323px;
-    min-height: 323px;
+    width: 15%;
+    margin-right: 2%;
     margin-bottom: 3%;
   }
+  .worker-man {
+    font-size: 15px;
+    line-height: 15px;
+  }
 
+}
+
+
+@media  (max-width: 1995px) {
+  .man {
+    width: 16%;
+    margin-right: 3%;
+    min-height: 383px;
+    float: left;
+    margin-bottom: 3%;
+    max-height: 392px;
+    height: 100%;
+}
+}
+
+@media  (max-width: 2145px) {
+  .man {
+    width: 16%;
+    margin-right: 3%;
+    min-height: 396px;
+    float: left;
+    margin-bottom: 3%;
+    max-height: 396px;
+    height: 100%;
+}
 }
 
 @media  (max-width: 1521px) {
